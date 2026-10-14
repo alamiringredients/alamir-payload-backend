@@ -155,72 +155,7 @@ export const pageFields:Field[]=[
                       }
                     ]
                   },
-                  {
-                    "name": "text25",
-                    "label": false,
-                    "type": "group",
-                    "fields": [
-                      {
-                        "name": "values",
-                        "label": "Facebook link label",
-                        "type": "text",
-                        "localized": true
-                      }
-                    ]
-                  },
-                  {
-                    "name": "text26",
-                    "label": false,
-                    "type": "group",
-                    "fields": [
-                      {
-                        "name": "values",
-                        "label": "Instagram link label",
-                        "type": "text",
-                        "localized": true
-                      }
-                    ]
-                  },
-                  {
-                    "name": "text27",
-                    "label": false,
-                    "type": "group",
-                    "fields": [
-                      {
-                        "name": "values",
-                        "label": "LinkedIn link label",
-                        "type": "text",
-                        "localized": true
-                      }
-                    ]
-                  },
-                  {
-                    "name": "text28",
-                    "label": false,
-                    "type": "group",
-                    "fields": [
-                      {
-                        "name": "values",
-                        "label": "YouTube link label",
-                        "type": "text",
-                        "localized": true
-                      }
-                    ]
-                  },
-                  {
-                    "name": "text29",
-                    "label": false,
-                    "type": "group",
-                    "fields": [
-                      {
-                        "name": "values",
-                        "label": "WhatsApp link label",
-                        "type": "text",
-                        "localized": true
-                      }
-                    ]
-                  },
-                  {
+{
                     "name": "enabled",
                     "label": "Enabled",
                     "type": "checkbox"

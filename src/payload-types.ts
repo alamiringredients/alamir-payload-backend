@@ -11935,21 +11935,6 @@ export interface Navigation {
       text24?: {
         values?: string | null;
       };
-      text25?: {
-        values?: string | null;
-      };
-      text26?: {
-        values?: string | null;
-      };
-      text27?: {
-        values?: string | null;
-      };
-      text28?: {
-        values?: string | null;
-      };
-      text29?: {
-        values?: string | null;
-      };
       enabled?: boolean | null;
       body?: {
         values?: {
@@ -12116,31 +12101,6 @@ export interface NavigationSelect<T extends boolean = true> {
                     values?: T;
                   };
               text24?:
-                | T
-                | {
-                    values?: T;
-                  };
-              text25?:
-                | T
-                | {
-                    values?: T;
-                  };
-              text26?:
-                | T
-                | {
-                    values?: T;
-                  };
-              text27?:
-                | T
-                | {
-                    values?: T;
-                  };
-              text28?:
-                | T
-                | {
-                    values?: T;
-                  };
-              text29?:
                 | T
                 | {
                     values?: T;

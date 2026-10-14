@@ -1,3 +1,4 @@
+import * as migration_owned_translations from './20261014_owned_translations';
 import * as migration_20261014_141851_initial_schema from './20261014_141851_initial_schema';
 import * as migration_20261014_150523_email_delivery from './20261014_150523_email_delivery';
 import * as migration_20261014_152034_email_recipient_optional from './20261014_152034_email_recipient_optional';
@@ -36,4 +37,5 @@ export const migrations = [
     down: migration_20261014_public_content.down,
     name: '20261014_public_content'
   },
+  { up: migration_owned_translations.up, down: migration_owned_translations.down, name: '20261014_owned_translations' },
 ];

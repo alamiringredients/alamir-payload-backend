@@ -89729,7 +89729,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "ملخص الفعالية",
                   "summary": "A look back at Gulfood 2025.",
                   "heroImage": {
                     "$seed": {
@@ -89844,7 +89844,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "Retour sur l’événement",
                   "summary": "A look back at Gulfood 2025.",
                   "heroImage": {
                     "$seed": {
@@ -90082,7 +90082,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "ملخص الفعالية",
                   "summary": "A look back at SIAL Middle East 2025.",
                   "heroImage": {
                     "$seed": {
@@ -90197,7 +90197,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "Retour sur l’événement",
                   "summary": "A look back at SIAL Middle East 2025.",
                   "heroImage": {
                     "$seed": {
@@ -90435,7 +90435,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "ملخص الفعالية",
                   "summary": "A look back at Food & Hotel Asia 2025.",
                   "heroImage": {
                     "$seed": {
@@ -90550,7 +90550,7 @@
                 "enabled": true,
                 "mediaPosition": "original",
                 "data": {
-                  "eyebrow": "Event recap",
+                  "eyebrow": "Retour sur l’événement",
                   "summary": "A look back at Food & Hotel Asia 2025.",
                   "heroImage": {
                     "$seed": {
@@ -91890,7 +91890,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Home",
+            "title": "الرئيسية",
             "slug": "home",
             "sourceKey": "home-page",
             "layout": [
@@ -93141,7 +93141,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Home",
+            "title": "Sommaire",
             "slug": "home",
             "sourceKey": "home-page",
             "layout": [
@@ -95688,7 +95688,7 @@
                 "content": {
                   "ctaHref": "/contact",
                   "eyebrow": "الرؤية والرسالة",
-                  "ctaLabel": "Get in touch",
+                  "ctaLabel": "تواصل معنا",
                   "body": {
                     "root": {
                       "type": "root",
@@ -96643,7 +96643,7 @@
                 "content": {
                   "ctaHref": "/contact",
                   "eyebrow": "Vision et mission",
-                  "ctaLabel": "Get in touch",
+                  "ctaLabel": "Contactez-nous",
                   "body": {
                     "root": {
                       "type": "root",
@@ -99303,7 +99303,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Products",
+            "title": "منتجات",
             "slug": "products",
             "sourceKey": "products-page",
             "layout": [
@@ -99645,7 +99645,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Products",
+            "title": "Produits",
             "slug": "products",
             "sourceKey": "products-page",
             "layout": [
@@ -100802,7 +100802,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "News",
+            "title": "أخبار",
             "slug": "news",
             "sourceKey": "news-page",
             "layout": [
@@ -101025,7 +101025,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "News",
+            "title": "Nouvelles",
             "slug": "news",
             "sourceKey": "news-page",
             "layout": [
@@ -103015,7 +103015,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Careers",
+            "title": "وظائف",
             "slug": "careers",
             "sourceKey": "careers-page",
             "layout": [
@@ -103395,7 +103395,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Careers",
+            "title": "Carrières",
             "slug": "careers",
             "sourceKey": "careers-page",
             "layout": [
@@ -104113,7 +104113,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Events",
+            "title": "الفعاليات",
             "slug": "events",
             "sourceKey": "events-page",
             "layout": [
@@ -104443,7 +104443,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Events",
+            "title": "Événements",
             "slug": "events",
             "sourceKey": "events-page",
             "layout": [
@@ -105279,7 +105279,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Book a meeting",
+            "title": "احجز اجتماعاً",
             "slug": "book-a-meeting",
             "sourceKey": "booking-page",
             "layout": [
@@ -105777,7 +105777,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Book a meeting",
+            "title": "Réserver un rendez-vous",
             "slug": "book-a-meeting",
             "sourceKey": "booking-page",
             "layout": [
@@ -111405,7 +111405,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Search",
+            "title": "بحث",
             "slug": "search",
             "sourceKey": "search-page",
             "layout": [
@@ -111546,7 +111546,7 @@
             "relationships": {
               "goals": []
             },
-            "title": "Search",
+            "title": "Rechercher",
             "slug": "search",
             "sourceKey": "search-page",
             "layout": [
@@ -112457,7 +112457,7 @@
                 "blockName": "Destination"
               }
             ],
-            "submitButtonLabel": "Send enquiry",
+            "submitButtonLabel": "إرسال الاستفسار",
             "confirmationType": "redirect",
             "confirmationMessage": {
               "root": {
@@ -112618,7 +112618,7 @@
                 "blockName": "Destination"
               }
             ],
-            "submitButtonLabel": "Send enquiry",
+            "submitButtonLabel": "Envoyer la demande",
             "confirmationType": "redirect",
             "confirmationMessage": {
               "root": {
@@ -114855,19 +114855,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "تسمية خاصة والتعبئة العقد",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "زيارة المنشأة بمدينة السادات",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "التقينا في العرض القادم",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "شيء آخر",
                     "value": "Something else"
                   }
                 ],
@@ -115045,19 +115045,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "Étiquette privée & emballage contractuel",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "Visite des installations à Sadat City",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "Rendez-vous à un prochain spectacle",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "Autre chose",
                     "value": "Something else"
                   }
                 ],
@@ -115640,7 +115640,7 @@
                 "blockName": "Destination"
               }
             ],
-            "submitButtonLabel": "Send enquiry",
+            "submitButtonLabel": "إرسال الاستفسار",
             "confirmationType": "redirect",
             "confirmationMessage": {
               "root": {
@@ -115810,7 +115810,7 @@
                 "blockName": "Destination"
               }
             ],
-            "submitButtonLabel": "Send enquiry",
+            "submitButtonLabel": "Envoyer la demande",
             "confirmationType": "redirect",
             "confirmationMessage": {
               "root": {
@@ -121407,19 +121407,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "تسمية خاصة والتعبئة العقد",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "زيارة المنشأة بمدينة السادات",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "التقينا في العرض القادم",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "شيء آخر",
                     "value": "Something else"
                   }
                 ],
@@ -121606,19 +121606,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "Étiquette privée & emballage contractuel",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "Visite des installations à Sadat City",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "Rendez-vous à un prochain spectacle",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "Autre chose",
                     "value": "Something else"
                   }
                 ],
@@ -122012,19 +122012,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "تسمية خاصة والتعبئة العقد",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "زيارة المنشأة بمدينة السادات",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "التقينا في العرض القادم",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "شيء آخر",
                     "value": "Something else"
                   }
                 ],
@@ -122211,19 +122211,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "Étiquette privée & emballage contractuel",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "Visite des installations à Sadat City",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "Rendez-vous à un prochain spectacle",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "Autre chose",
                     "value": "Something else"
                   }
                 ],
@@ -122617,19 +122617,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "تسمية خاصة والتعبئة العقد",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "زيارة المنشأة بمدينة السادات",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "التقينا في العرض القادم",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "شيء آخر",
                     "value": "Something else"
                   }
                 ],
@@ -122816,19 +122816,19 @@
                     "value": "Chilli concentrate"
                   },
                   {
-                    "label": "Private label & contract packing",
+                    "label": "Étiquette privée & emballage contractuel",
                     "value": "Private label & contract packing"
                   },
                   {
-                    "label": "Facility visit in Sadat City",
+                    "label": "Visite des installations à Sadat City",
                     "value": "Facility visit in Sadat City"
                   },
                   {
-                    "label": "Meet us at an upcoming show",
+                    "label": "Rendez-vous à un prochain spectacle",
                     "value": "Meet us at an upcoming show"
                   },
                   {
-                    "label": "Something else",
+                    "label": "Autre chose",
                     "value": "Something else"
                   }
                 ],
@@ -132438,7 +132438,7 @@
             "sourceId": 176,
             "key": "page.countries.0.value",
             "group": "Countries",
-            "text": "Afghanistan"
+            "text": "أفغانستان"
           },
           "fr": {
             "sourceId": 176,
@@ -132490,13 +132490,13 @@
             "sourceId": 178,
             "key": "page.countries.1.value",
             "group": "Countries",
-            "text": "Albania"
+            "text": "ألبانيا"
           },
           "fr": {
             "sourceId": 178,
             "key": "page.countries.1.value",
             "group": "Countries",
-            "text": "Albania"
+            "text": "Albanie"
           }
         }
       },
@@ -132542,13 +132542,13 @@
             "sourceId": 180,
             "key": "page.countries.2.value",
             "group": "Countries",
-            "text": "Algeria"
+            "text": "الجزائر"
           },
           "fr": {
             "sourceId": 180,
             "key": "page.countries.2.value",
             "group": "Countries",
-            "text": "Algeria"
+            "text": "Algérie"
           }
         }
       },
@@ -132594,13 +132594,13 @@
             "sourceId": 182,
             "key": "page.countries.3.value",
             "group": "Countries",
-            "text": "Andorra"
+            "text": "أندورا"
           },
           "fr": {
             "sourceId": 182,
             "key": "page.countries.3.value",
             "group": "Countries",
-            "text": "Andorra"
+            "text": "Andorre"
           }
         }
       },
@@ -132646,7 +132646,7 @@
             "sourceId": 184,
             "key": "page.countries.4.value",
             "group": "Countries",
-            "text": "Angola"
+            "text": "أنغولا"
           },
           "fr": {
             "sourceId": 184,
@@ -132698,13 +132698,13 @@
             "sourceId": 186,
             "key": "page.countries.5.value",
             "group": "Countries",
-            "text": "Antigua and Barbuda"
+            "text": "أنتيغوا وبربودا"
           },
           "fr": {
             "sourceId": 186,
             "key": "page.countries.5.value",
             "group": "Countries",
-            "text": "Antigua and Barbuda"
+            "text": "Antigua-et-Barbuda"
           }
         }
       },
@@ -132750,13 +132750,13 @@
             "sourceId": 188,
             "key": "page.countries.6.value",
             "group": "Countries",
-            "text": "Argentina"
+            "text": "الأرجنتين"
           },
           "fr": {
             "sourceId": 188,
             "key": "page.countries.6.value",
             "group": "Countries",
-            "text": "Argentina"
+            "text": "Argentine"
           }
         }
       },
@@ -132802,13 +132802,13 @@
             "sourceId": 190,
             "key": "page.countries.7.value",
             "group": "Countries",
-            "text": "Armenia"
+            "text": "أرمينيا"
           },
           "fr": {
             "sourceId": 190,
             "key": "page.countries.7.value",
             "group": "Countries",
-            "text": "Armenia"
+            "text": "Arménie"
           }
         }
       },
@@ -132854,13 +132854,13 @@
             "sourceId": 192,
             "key": "page.countries.8.value",
             "group": "Countries",
-            "text": "Australia"
+            "text": "أستراليا"
           },
           "fr": {
             "sourceId": 192,
             "key": "page.countries.8.value",
             "group": "Countries",
-            "text": "Australia"
+            "text": "Australie"
           }
         }
       },
@@ -132906,13 +132906,13 @@
             "sourceId": 194,
             "key": "page.countries.9.value",
             "group": "Countries",
-            "text": "Austria"
+            "text": "النمسا"
           },
           "fr": {
             "sourceId": 194,
             "key": "page.countries.9.value",
             "group": "Countries",
-            "text": "Austria"
+            "text": "Autriche"
           }
         }
       },
@@ -132958,13 +132958,13 @@
             "sourceId": 196,
             "key": "page.countries.10.value",
             "group": "Countries",
-            "text": "Azerbaijan"
+            "text": "أذربيجان"
           },
           "fr": {
             "sourceId": 196,
             "key": "page.countries.10.value",
             "group": "Countries",
-            "text": "Azerbaijan"
+            "text": "Azerbaïdjan"
           }
         }
       },
@@ -133010,7 +133010,7 @@
             "sourceId": 198,
             "key": "page.countries.11.value",
             "group": "Countries",
-            "text": "Bahamas"
+            "text": "جزر البهاما"
           },
           "fr": {
             "sourceId": 198,
@@ -133062,13 +133062,13 @@
             "sourceId": 200,
             "key": "page.countries.12.value",
             "group": "Countries",
-            "text": "Bahrain"
+            "text": "البحرين"
           },
           "fr": {
             "sourceId": 200,
             "key": "page.countries.12.value",
             "group": "Countries",
-            "text": "Bahrain"
+            "text": "Bahreïn"
           }
         }
       },
@@ -133114,7 +133114,7 @@
             "sourceId": 202,
             "key": "page.countries.13.value",
             "group": "Countries",
-            "text": "Bangladesh"
+            "text": "بنغلاديش"
           },
           "fr": {
             "sourceId": 202,
@@ -133166,13 +133166,13 @@
             "sourceId": 204,
             "key": "page.countries.14.value",
             "group": "Countries",
-            "text": "Barbados"
+            "text": "بربادوس"
           },
           "fr": {
             "sourceId": 204,
             "key": "page.countries.14.value",
             "group": "Countries",
-            "text": "Barbados"
+            "text": "Barbade"
           }
         }
       },
@@ -133218,13 +133218,13 @@
             "sourceId": 206,
             "key": "page.countries.15.value",
             "group": "Countries",
-            "text": "Belarus"
+            "text": "بيلاروسيا"
           },
           "fr": {
             "sourceId": 206,
             "key": "page.countries.15.value",
             "group": "Countries",
-            "text": "Belarus"
+            "text": "Bélarus"
           }
         }
       },
@@ -133270,13 +133270,13 @@
             "sourceId": 208,
             "key": "page.countries.16.value",
             "group": "Countries",
-            "text": "Belgium"
+            "text": "بلجيكا"
           },
           "fr": {
             "sourceId": 208,
             "key": "page.countries.16.value",
             "group": "Countries",
-            "text": "Belgium"
+            "text": "Belgique"
           }
         }
       },
@@ -133322,7 +133322,7 @@
             "sourceId": 210,
             "key": "page.countries.17.value",
             "group": "Countries",
-            "text": "Belize"
+            "text": "بليز"
           },
           "fr": {
             "sourceId": 210,
@@ -133374,13 +133374,13 @@
             "sourceId": 212,
             "key": "page.countries.18.value",
             "group": "Countries",
-            "text": "Benin"
+            "text": "بنين"
           },
           "fr": {
             "sourceId": 212,
             "key": "page.countries.18.value",
             "group": "Countries",
-            "text": "Benin"
+            "text": "Bénin"
           }
         }
       },
@@ -133426,13 +133426,13 @@
             "sourceId": 214,
             "key": "page.countries.19.value",
             "group": "Countries",
-            "text": "Bhutan"
+            "text": "بوتان"
           },
           "fr": {
             "sourceId": 214,
             "key": "page.countries.19.value",
             "group": "Countries",
-            "text": "Bhutan"
+            "text": "Bhoutan"
           }
         }
       },
@@ -133478,13 +133478,13 @@
             "sourceId": 216,
             "key": "page.countries.20.value",
             "group": "Countries",
-            "text": "Bolivia"
+            "text": "بوليفيا"
           },
           "fr": {
             "sourceId": 216,
             "key": "page.countries.20.value",
             "group": "Countries",
-            "text": "Bolivia"
+            "text": "Bolivie"
           }
         }
       },
@@ -133530,13 +133530,13 @@
             "sourceId": 218,
             "key": "page.countries.21.value",
             "group": "Countries",
-            "text": "Bosnia and Herzegovina"
+            "text": "البوسنة والهرسك"
           },
           "fr": {
             "sourceId": 218,
             "key": "page.countries.21.value",
             "group": "Countries",
-            "text": "Bosnia and Herzegovina"
+            "text": "Bosnie-Herzégovine"
           }
         }
       },
@@ -133582,7 +133582,7 @@
             "sourceId": 220,
             "key": "page.countries.22.value",
             "group": "Countries",
-            "text": "Botswana"
+            "text": "بوتسوانا"
           },
           "fr": {
             "sourceId": 220,
@@ -133634,13 +133634,13 @@
             "sourceId": 222,
             "key": "page.countries.23.value",
             "group": "Countries",
-            "text": "Brazil"
+            "text": "البرازيل"
           },
           "fr": {
             "sourceId": 222,
             "key": "page.countries.23.value",
             "group": "Countries",
-            "text": "Brazil"
+            "text": "Brésil"
           }
         }
       },
@@ -133686,7 +133686,7 @@
             "sourceId": 224,
             "key": "page.countries.24.value",
             "group": "Countries",
-            "text": "Brunei"
+            "text": "بروناي"
           },
           "fr": {
             "sourceId": 224,
@@ -133738,13 +133738,13 @@
             "sourceId": 226,
             "key": "page.countries.25.value",
             "group": "Countries",
-            "text": "Bulgaria"
+            "text": "بلغاريا"
           },
           "fr": {
             "sourceId": 226,
             "key": "page.countries.25.value",
             "group": "Countries",
-            "text": "Bulgaria"
+            "text": "Bulgarie"
           }
         }
       },
@@ -133790,7 +133790,7 @@
             "sourceId": 228,
             "key": "page.countries.26.value",
             "group": "Countries",
-            "text": "Burkina Faso"
+            "text": "بوركينا فاسو"
           },
           "fr": {
             "sourceId": 228,
@@ -133842,7 +133842,7 @@
             "sourceId": 230,
             "key": "page.countries.27.value",
             "group": "Countries",
-            "text": "Burundi"
+            "text": "بوروندي"
           },
           "fr": {
             "sourceId": 230,
@@ -133894,13 +133894,13 @@
             "sourceId": 232,
             "key": "page.countries.28.value",
             "group": "Countries",
-            "text": "Cambodia"
+            "text": "كمبوديا"
           },
           "fr": {
             "sourceId": 232,
             "key": "page.countries.28.value",
             "group": "Countries",
-            "text": "Cambodia"
+            "text": "Cambodge"
           }
         }
       },
@@ -133946,13 +133946,13 @@
             "sourceId": 234,
             "key": "page.countries.29.value",
             "group": "Countries",
-            "text": "Cameroon"
+            "text": "الكاميرون"
           },
           "fr": {
             "sourceId": 234,
             "key": "page.countries.29.value",
             "group": "Countries",
-            "text": "Cameroon"
+            "text": "Cameroun"
           }
         }
       },
@@ -133998,7 +133998,7 @@
             "sourceId": 236,
             "key": "page.countries.30.value",
             "group": "Countries",
-            "text": "Canada"
+            "text": "كندا"
           },
           "fr": {
             "sourceId": 236,
@@ -134050,13 +134050,13 @@
             "sourceId": 238,
             "key": "page.countries.31.value",
             "group": "Countries",
-            "text": "Cape Verde"
+            "text": "الرأس الأخضر"
           },
           "fr": {
             "sourceId": 238,
             "key": "page.countries.31.value",
             "group": "Countries",
-            "text": "Cape Verde"
+            "text": "Cap-Vert"
           }
         }
       },
@@ -134102,13 +134102,13 @@
             "sourceId": 240,
             "key": "page.countries.32.value",
             "group": "Countries",
-            "text": "Central African Republic"
+            "text": "جمهورية أفريقيا الوسطى"
           },
           "fr": {
             "sourceId": 240,
             "key": "page.countries.32.value",
             "group": "Countries",
-            "text": "Central African Republic"
+            "text": "République centrafricaine"
           }
         }
       },
@@ -134154,13 +134154,13 @@
             "sourceId": 242,
             "key": "page.countries.33.value",
             "group": "Countries",
-            "text": "Chad"
+            "text": "تشاد"
           },
           "fr": {
             "sourceId": 242,
             "key": "page.countries.33.value",
             "group": "Countries",
-            "text": "Chad"
+            "text": "Tchad"
           }
         }
       },
@@ -134206,13 +134206,13 @@
             "sourceId": 244,
             "key": "page.countries.34.value",
             "group": "Countries",
-            "text": "Chile"
+            "text": "شيلي"
           },
           "fr": {
             "sourceId": 244,
             "key": "page.countries.34.value",
             "group": "Countries",
-            "text": "Chile"
+            "text": "Chili"
           }
         }
       },
@@ -134258,13 +134258,13 @@
             "sourceId": 246,
             "key": "page.countries.35.value",
             "group": "Countries",
-            "text": "China"
+            "text": "الصين"
           },
           "fr": {
             "sourceId": 246,
             "key": "page.countries.35.value",
             "group": "Countries",
-            "text": "China"
+            "text": "Chine"
           }
         }
       },
@@ -134310,13 +134310,13 @@
             "sourceId": 248,
             "key": "page.countries.36.value",
             "group": "Countries",
-            "text": "Colombia"
+            "text": "كولومبيا"
           },
           "fr": {
             "sourceId": 248,
             "key": "page.countries.36.value",
             "group": "Countries",
-            "text": "Colombia"
+            "text": "Colombie"
           }
         }
       },
@@ -134362,13 +134362,13 @@
             "sourceId": 250,
             "key": "page.countries.37.value",
             "group": "Countries",
-            "text": "Comoros"
+            "text": "جزر القمر"
           },
           "fr": {
             "sourceId": 250,
             "key": "page.countries.37.value",
             "group": "Countries",
-            "text": "Comoros"
+            "text": "Comores"
           }
         }
       },
@@ -134414,7 +134414,7 @@
             "sourceId": 252,
             "key": "page.countries.38.value",
             "group": "Countries",
-            "text": "Congo (Brazzaville)"
+            "text": "الكونغو (برازافيل)"
           },
           "fr": {
             "sourceId": 252,
@@ -134466,7 +134466,7 @@
             "sourceId": 254,
             "key": "page.countries.39.value",
             "group": "Countries",
-            "text": "Congo (Kinshasa)"
+            "text": "الكونغو (كينشاسا)"
           },
           "fr": {
             "sourceId": 254,
@@ -134518,7 +134518,7 @@
             "sourceId": 256,
             "key": "page.countries.40.value",
             "group": "Countries",
-            "text": "Costa Rica"
+            "text": "كوستاريكا"
           },
           "fr": {
             "sourceId": 256,
@@ -134570,13 +134570,13 @@
             "sourceId": 258,
             "key": "page.countries.41.value",
             "group": "Countries",
-            "text": "Cote d'Ivoire"
+            "text": "ساحل العاج"
           },
           "fr": {
             "sourceId": 258,
             "key": "page.countries.41.value",
             "group": "Countries",
-            "text": "Cote d'Ivoire"
+            "text": "Côte d'Ivoire"
           }
         }
       },
@@ -134622,13 +134622,13 @@
             "sourceId": 260,
             "key": "page.countries.42.value",
             "group": "Countries",
-            "text": "Croatia"
+            "text": "كرواتيا"
           },
           "fr": {
             "sourceId": 260,
             "key": "page.countries.42.value",
             "group": "Countries",
-            "text": "Croatia"
+            "text": "Croatie"
           }
         }
       },
@@ -134674,7 +134674,7 @@
             "sourceId": 262,
             "key": "page.countries.43.value",
             "group": "Countries",
-            "text": "Cuba"
+            "text": "كوبا"
           },
           "fr": {
             "sourceId": 262,
@@ -134726,13 +134726,13 @@
             "sourceId": 264,
             "key": "page.countries.44.value",
             "group": "Countries",
-            "text": "Cyprus"
+            "text": "قبرص"
           },
           "fr": {
             "sourceId": 264,
             "key": "page.countries.44.value",
             "group": "Countries",
-            "text": "Cyprus"
+            "text": "Chypre"
           }
         }
       },
@@ -134778,13 +134778,13 @@
             "sourceId": 266,
             "key": "page.countries.45.value",
             "group": "Countries",
-            "text": "Czechia"
+            "text": "التشيك"
           },
           "fr": {
             "sourceId": 266,
             "key": "page.countries.45.value",
             "group": "Countries",
-            "text": "Czechia"
+            "text": "République tchèque"
           }
         }
       },
@@ -134830,13 +134830,13 @@
             "sourceId": 268,
             "key": "page.countries.46.value",
             "group": "Countries",
-            "text": "Denmark"
+            "text": "الدنمارك"
           },
           "fr": {
             "sourceId": 268,
             "key": "page.countries.46.value",
             "group": "Countries",
-            "text": "Denmark"
+            "text": "Danemark"
           }
         }
       },
@@ -134882,7 +134882,7 @@
             "sourceId": 270,
             "key": "page.countries.47.value",
             "group": "Countries",
-            "text": "Djibouti"
+            "text": "جيبوتي"
           },
           "fr": {
             "sourceId": 270,
@@ -134934,13 +134934,13 @@
             "sourceId": 272,
             "key": "page.countries.48.value",
             "group": "Countries",
-            "text": "Dominica"
+            "text": "دومينيكا"
           },
           "fr": {
             "sourceId": 272,
             "key": "page.countries.48.value",
             "group": "Countries",
-            "text": "Dominica"
+            "text": "Dominique"
           }
         }
       },
@@ -134986,13 +134986,13 @@
             "sourceId": 274,
             "key": "page.countries.49.value",
             "group": "Countries",
-            "text": "Dominican Republic"
+            "text": "جمهورية الدومينيكان"
           },
           "fr": {
             "sourceId": 274,
             "key": "page.countries.49.value",
             "group": "Countries",
-            "text": "Dominican Republic"
+            "text": "République dominicaine"
           }
         }
       },
@@ -135038,13 +135038,13 @@
             "sourceId": 276,
             "key": "page.countries.50.value",
             "group": "Countries",
-            "text": "Ecuador"
+            "text": "الاكوادور"
           },
           "fr": {
             "sourceId": 276,
             "key": "page.countries.50.value",
             "group": "Countries",
-            "text": "Ecuador"
+            "text": "Équateur"
           }
         }
       },
@@ -135090,13 +135090,13 @@
             "sourceId": 278,
             "key": "page.countries.51.value",
             "group": "Countries",
-            "text": "Egypt"
+            "text": "مصر"
           },
           "fr": {
             "sourceId": 278,
             "key": "page.countries.51.value",
             "group": "Countries",
-            "text": "Egypt"
+            "text": "Égypte"
           }
         }
       },
@@ -135142,7 +135142,7 @@
             "sourceId": 280,
             "key": "page.countries.52.value",
             "group": "Countries",
-            "text": "El Salvador"
+            "text": "السلفادور"
           },
           "fr": {
             "sourceId": 280,
@@ -135194,13 +135194,13 @@
             "sourceId": 282,
             "key": "page.countries.53.value",
             "group": "Countries",
-            "text": "Equatorial Guinea"
+            "text": "غينيا الاستوائية"
           },
           "fr": {
             "sourceId": 282,
             "key": "page.countries.53.value",
             "group": "Countries",
-            "text": "Equatorial Guinea"
+            "text": "Guinée équatoriale"
           }
         }
       },
@@ -135246,13 +135246,13 @@
             "sourceId": 284,
             "key": "page.countries.54.value",
             "group": "Countries",
-            "text": "Eritrea"
+            "text": "إريتريا"
           },
           "fr": {
             "sourceId": 284,
             "key": "page.countries.54.value",
             "group": "Countries",
-            "text": "Eritrea"
+            "text": "Érythrée"
           }
         }
       },
@@ -135298,13 +135298,13 @@
             "sourceId": 286,
             "key": "page.countries.55.value",
             "group": "Countries",
-            "text": "Estonia"
+            "text": "إستونيا"
           },
           "fr": {
             "sourceId": 286,
             "key": "page.countries.55.value",
             "group": "Countries",
-            "text": "Estonia"
+            "text": "Espagne"
           }
         }
       },
@@ -135350,7 +135350,7 @@
             "sourceId": 288,
             "key": "page.countries.56.value",
             "group": "Countries",
-            "text": "Eswatini"
+            "text": "إيسواتيني"
           },
           "fr": {
             "sourceId": 288,
@@ -135402,13 +135402,13 @@
             "sourceId": 290,
             "key": "page.countries.57.value",
             "group": "Countries",
-            "text": "Ethiopia"
+            "text": "أثيوبيا"
           },
           "fr": {
             "sourceId": 290,
             "key": "page.countries.57.value",
             "group": "Countries",
-            "text": "Ethiopia"
+            "text": "Éthiopie"
           }
         }
       },
@@ -135454,13 +135454,13 @@
             "sourceId": 292,
             "key": "page.countries.58.value",
             "group": "Countries",
-            "text": "Fiji"
+            "text": "فيجي"
           },
           "fr": {
             "sourceId": 292,
             "key": "page.countries.58.value",
             "group": "Countries",
-            "text": "Fiji"
+            "text": "Fidji"
           }
         }
       },
@@ -135506,13 +135506,13 @@
             "sourceId": 294,
             "key": "page.countries.59.value",
             "group": "Countries",
-            "text": "Finland"
+            "text": "فنلندا"
           },
           "fr": {
             "sourceId": 294,
             "key": "page.countries.59.value",
             "group": "Countries",
-            "text": "Finland"
+            "text": "Finlande"
           }
         }
       },
@@ -135558,7 +135558,7 @@
             "sourceId": 296,
             "key": "page.countries.60.value",
             "group": "Countries",
-            "text": "France"
+            "text": "فرنسا"
           },
           "fr": {
             "sourceId": 296,
@@ -135610,7 +135610,7 @@
             "sourceId": 298,
             "key": "page.countries.61.value",
             "group": "Countries",
-            "text": "Gabon"
+            "text": "الجابون"
           },
           "fr": {
             "sourceId": 298,
@@ -135662,13 +135662,13 @@
             "sourceId": 300,
             "key": "page.countries.62.value",
             "group": "Countries",
-            "text": "Gambia"
+            "text": "غامبيا"
           },
           "fr": {
             "sourceId": 300,
             "key": "page.countries.62.value",
             "group": "Countries",
-            "text": "Gambia"
+            "text": "Gambie"
           }
         }
       },
@@ -135714,13 +135714,13 @@
             "sourceId": 302,
             "key": "page.countries.63.value",
             "group": "Countries",
-            "text": "Georgia"
+            "text": "جورجيا"
           },
           "fr": {
             "sourceId": 302,
             "key": "page.countries.63.value",
             "group": "Countries",
-            "text": "Georgia"
+            "text": "Géorgie"
           }
         }
       },
@@ -135766,13 +135766,13 @@
             "sourceId": 304,
             "key": "page.countries.64.value",
             "group": "Countries",
-            "text": "Germany"
+            "text": "ألمانيا"
           },
           "fr": {
             "sourceId": 304,
             "key": "page.countries.64.value",
             "group": "Countries",
-            "text": "Germany"
+            "text": "Allemagne"
           }
         }
       },
@@ -135818,7 +135818,7 @@
             "sourceId": 306,
             "key": "page.countries.65.value",
             "group": "Countries",
-            "text": "Ghana"
+            "text": "غانا"
           },
           "fr": {
             "sourceId": 306,
@@ -135870,13 +135870,13 @@
             "sourceId": 308,
             "key": "page.countries.66.value",
             "group": "Countries",
-            "text": "Greece"
+            "text": "اليونان"
           },
           "fr": {
             "sourceId": 308,
             "key": "page.countries.66.value",
             "group": "Countries",
-            "text": "Greece"
+            "text": "Grèce"
           }
         }
       },
@@ -135922,13 +135922,13 @@
             "sourceId": 310,
             "key": "page.countries.67.value",
             "group": "Countries",
-            "text": "Grenada"
+            "text": "غرينادا"
           },
           "fr": {
             "sourceId": 310,
             "key": "page.countries.67.value",
             "group": "Countries",
-            "text": "Grenada"
+            "text": "Grenade"
           }
         }
       },
@@ -135974,7 +135974,7 @@
             "sourceId": 312,
             "key": "page.countries.68.value",
             "group": "Countries",
-            "text": "Guatemala"
+            "text": "غواتيمالا"
           },
           "fr": {
             "sourceId": 312,
@@ -136026,13 +136026,13 @@
             "sourceId": 314,
             "key": "page.countries.69.value",
             "group": "Countries",
-            "text": "Guinea"
+            "text": "غينيا"
           },
           "fr": {
             "sourceId": 314,
             "key": "page.countries.69.value",
             "group": "Countries",
-            "text": "Guinea"
+            "text": "Guinée"
           }
         }
       },
@@ -136078,13 +136078,13 @@
             "sourceId": 316,
             "key": "page.countries.70.value",
             "group": "Countries",
-            "text": "Guinea-Bissau"
+            "text": "غينيا بيساو"
           },
           "fr": {
             "sourceId": 316,
             "key": "page.countries.70.value",
             "group": "Countries",
-            "text": "Guinea-Bissau"
+            "text": "Guinée-Bissau"
           }
         }
       },
@@ -136130,7 +136130,7 @@
             "sourceId": 318,
             "key": "page.countries.71.value",
             "group": "Countries",
-            "text": "Guyana"
+            "text": "غيانا"
           },
           "fr": {
             "sourceId": 318,
@@ -136182,13 +136182,13 @@
             "sourceId": 320,
             "key": "page.countries.72.value",
             "group": "Countries",
-            "text": "Haiti"
+            "text": "هايتي"
           },
           "fr": {
             "sourceId": 320,
             "key": "page.countries.72.value",
             "group": "Countries",
-            "text": "Haiti"
+            "text": "Haïti"
           }
         }
       },
@@ -136234,7 +136234,7 @@
             "sourceId": 322,
             "key": "page.countries.73.value",
             "group": "Countries",
-            "text": "Honduras"
+            "text": "هندوراس"
           },
           "fr": {
             "sourceId": 322,
@@ -136286,7 +136286,7 @@
             "sourceId": 324,
             "key": "page.countries.74.value",
             "group": "Countries",
-            "text": "Hong Kong"
+            "text": "هونج كونج"
           },
           "fr": {
             "sourceId": 324,
@@ -136338,13 +136338,13 @@
             "sourceId": 326,
             "key": "page.countries.75.value",
             "group": "Countries",
-            "text": "Hungary"
+            "text": "هنغاريا"
           },
           "fr": {
             "sourceId": 326,
             "key": "page.countries.75.value",
             "group": "Countries",
-            "text": "Hungary"
+            "text": "Hongrie"
           }
         }
       },
@@ -136390,13 +136390,13 @@
             "sourceId": 328,
             "key": "page.countries.76.value",
             "group": "Countries",
-            "text": "Iceland"
+            "text": "أيسلندا"
           },
           "fr": {
             "sourceId": 328,
             "key": "page.countries.76.value",
             "group": "Countries",
-            "text": "Iceland"
+            "text": "Espagne"
           }
         }
       },
@@ -136442,13 +136442,13 @@
             "sourceId": 330,
             "key": "page.countries.77.value",
             "group": "Countries",
-            "text": "India"
+            "text": "الهند"
           },
           "fr": {
             "sourceId": 330,
             "key": "page.countries.77.value",
             "group": "Countries",
-            "text": "India"
+            "text": "Inde"
           }
         }
       },
@@ -136494,13 +136494,13 @@
             "sourceId": 332,
             "key": "page.countries.78.value",
             "group": "Countries",
-            "text": "Indonesia"
+            "text": "أندونيسيا"
           },
           "fr": {
             "sourceId": 332,
             "key": "page.countries.78.value",
             "group": "Countries",
-            "text": "Indonesia"
+            "text": "Indonésie"
           }
         }
       },
@@ -136546,7 +136546,7 @@
             "sourceId": 334,
             "key": "page.countries.79.value",
             "group": "Countries",
-            "text": "Iran"
+            "text": "إيران"
           },
           "fr": {
             "sourceId": 334,
@@ -136598,7 +136598,7 @@
             "sourceId": 336,
             "key": "page.countries.80.value",
             "group": "Countries",
-            "text": "Iraq"
+            "text": "العراق"
           },
           "fr": {
             "sourceId": 336,
@@ -136650,13 +136650,13 @@
             "sourceId": 338,
             "key": "page.countries.81.value",
             "group": "Countries",
-            "text": "Ireland"
+            "text": "أيرلندا"
           },
           "fr": {
             "sourceId": 338,
             "key": "page.countries.81.value",
             "group": "Countries",
-            "text": "Ireland"
+            "text": "Belgique"
           }
         }
       },
@@ -136702,13 +136702,13 @@
             "sourceId": 340,
             "key": "page.countries.82.value",
             "group": "Countries",
-            "text": "Israel"
+            "text": "إسرائيل"
           },
           "fr": {
             "sourceId": 340,
             "key": "page.countries.82.value",
             "group": "Countries",
-            "text": "Israel"
+            "text": "Israël"
           }
         }
       },
@@ -136754,13 +136754,13 @@
             "sourceId": 342,
             "key": "page.countries.83.value",
             "group": "Countries",
-            "text": "Italy"
+            "text": "إيطاليا"
           },
           "fr": {
             "sourceId": 342,
             "key": "page.countries.83.value",
             "group": "Countries",
-            "text": "Italy"
+            "text": "Italie"
           }
         }
       },
@@ -136806,13 +136806,13 @@
             "sourceId": 344,
             "key": "page.countries.84.value",
             "group": "Countries",
-            "text": "Jamaica"
+            "text": "جامايكا"
           },
           "fr": {
             "sourceId": 344,
             "key": "page.countries.84.value",
             "group": "Countries",
-            "text": "Jamaica"
+            "text": "Jamaïque"
           }
         }
       },
@@ -136858,13 +136858,13 @@
             "sourceId": 346,
             "key": "page.countries.85.value",
             "group": "Countries",
-            "text": "Japan"
+            "text": "اليابان"
           },
           "fr": {
             "sourceId": 346,
             "key": "page.countries.85.value",
             "group": "Countries",
-            "text": "Japan"
+            "text": "Japon"
           }
         }
       },
@@ -136910,13 +136910,13 @@
             "sourceId": 348,
             "key": "page.countries.86.value",
             "group": "Countries",
-            "text": "Jordan"
+            "text": "الأردن"
           },
           "fr": {
             "sourceId": 348,
             "key": "page.countries.86.value",
             "group": "Countries",
-            "text": "Jordan"
+            "text": "Jordanie"
           }
         }
       },
@@ -136962,7 +136962,7 @@
             "sourceId": 350,
             "key": "page.countries.87.value",
             "group": "Countries",
-            "text": "Kazakhstan"
+            "text": "كازاخستان"
           },
           "fr": {
             "sourceId": 350,
@@ -137014,7 +137014,7 @@
             "sourceId": 352,
             "key": "page.countries.88.value",
             "group": "Countries",
-            "text": "Kenya"
+            "text": "كينيا"
           },
           "fr": {
             "sourceId": 352,
@@ -137066,7 +137066,7 @@
             "sourceId": 354,
             "key": "page.countries.89.value",
             "group": "Countries",
-            "text": "Kiribati"
+            "text": "كيريباتي"
           },
           "fr": {
             "sourceId": 354,
@@ -137118,13 +137118,13 @@
             "sourceId": 356,
             "key": "page.countries.90.value",
             "group": "Countries",
-            "text": "Kuwait"
+            "text": "الكويت"
           },
           "fr": {
             "sourceId": 356,
             "key": "page.countries.90.value",
             "group": "Countries",
-            "text": "Kuwait"
+            "text": "Koweït"
           }
         }
       },
@@ -137170,13 +137170,13 @@
             "sourceId": 358,
             "key": "page.countries.91.value",
             "group": "Countries",
-            "text": "Kyrgyzstan"
+            "text": "قيرغيزستان"
           },
           "fr": {
             "sourceId": 358,
             "key": "page.countries.91.value",
             "group": "Countries",
-            "text": "Kyrgyzstan"
+            "text": "Kirghizistan"
           }
         }
       },
@@ -137222,7 +137222,7 @@
             "sourceId": 360,
             "key": "page.countries.92.value",
             "group": "Countries",
-            "text": "Laos"
+            "text": "لاوس"
           },
           "fr": {
             "sourceId": 360,
@@ -137274,13 +137274,13 @@
             "sourceId": 362,
             "key": "page.countries.93.value",
             "group": "Countries",
-            "text": "Latvia"
+            "text": "لاتفيا"
           },
           "fr": {
             "sourceId": 362,
             "key": "page.countries.93.value",
             "group": "Countries",
-            "text": "Latvia"
+            "text": "Lettonie"
           }
         }
       },
@@ -137326,13 +137326,13 @@
             "sourceId": 364,
             "key": "page.countries.94.value",
             "group": "Countries",
-            "text": "Lebanon"
+            "text": "لبنان"
           },
           "fr": {
             "sourceId": 364,
             "key": "page.countries.94.value",
             "group": "Countries",
-            "text": "Lebanon"
+            "text": "Liban"
           }
         }
       },
@@ -137378,7 +137378,7 @@
             "sourceId": 366,
             "key": "page.countries.95.value",
             "group": "Countries",
-            "text": "Lesotho"
+            "text": "ليسوتو"
           },
           "fr": {
             "sourceId": 366,
@@ -137430,13 +137430,13 @@
             "sourceId": 368,
             "key": "page.countries.96.value",
             "group": "Countries",
-            "text": "Liberia"
+            "text": "ليبيريا"
           },
           "fr": {
             "sourceId": 368,
             "key": "page.countries.96.value",
             "group": "Countries",
-            "text": "Liberia"
+            "text": "Libéria"
           }
         }
       },
@@ -137482,13 +137482,13 @@
             "sourceId": 370,
             "key": "page.countries.97.value",
             "group": "Countries",
-            "text": "Libya"
+            "text": "ليبيا"
           },
           "fr": {
             "sourceId": 370,
             "key": "page.countries.97.value",
             "group": "Countries",
-            "text": "Libya"
+            "text": "Libye"
           }
         }
       },
@@ -137534,7 +137534,7 @@
             "sourceId": 372,
             "key": "page.countries.98.value",
             "group": "Countries",
-            "text": "Liechtenstein"
+            "text": "ليختنشتاين"
           },
           "fr": {
             "sourceId": 372,
@@ -137586,13 +137586,13 @@
             "sourceId": 374,
             "key": "page.countries.99.value",
             "group": "Countries",
-            "text": "Lithuania"
+            "text": "ليتوانيا"
           },
           "fr": {
             "sourceId": 374,
             "key": "page.countries.99.value",
             "group": "Countries",
-            "text": "Lithuania"
+            "text": "Lituanie"
           }
         }
       },
@@ -137638,7 +137638,7 @@
             "sourceId": 376,
             "key": "page.countries.100.value",
             "group": "Countries",
-            "text": "Luxembourg"
+            "text": "لوكسمبورغ"
           },
           "fr": {
             "sourceId": 376,
@@ -137690,7 +137690,7 @@
             "sourceId": 378,
             "key": "page.countries.101.value",
             "group": "Countries",
-            "text": "Macao"
+            "text": "ماكاو"
           },
           "fr": {
             "sourceId": 378,
@@ -137742,7 +137742,7 @@
             "sourceId": 380,
             "key": "page.countries.102.value",
             "group": "Countries",
-            "text": "Madagascar"
+            "text": "مدغشقر"
           },
           "fr": {
             "sourceId": 380,
@@ -137794,7 +137794,7 @@
             "sourceId": 382,
             "key": "page.countries.103.value",
             "group": "Countries",
-            "text": "Malawi"
+            "text": "ملاوي"
           },
           "fr": {
             "sourceId": 382,
@@ -137846,13 +137846,13 @@
             "sourceId": 384,
             "key": "page.countries.104.value",
             "group": "Countries",
-            "text": "Malaysia"
+            "text": "ماليزيا"
           },
           "fr": {
             "sourceId": 384,
             "key": "page.countries.104.value",
             "group": "Countries",
-            "text": "Malaysia"
+            "text": "Malaisie"
           }
         }
       },
@@ -137898,7 +137898,7 @@
             "sourceId": 386,
             "key": "page.countries.105.value",
             "group": "Countries",
-            "text": "Maldives"
+            "text": "جزر المالديف"
           },
           "fr": {
             "sourceId": 386,
@@ -137950,7 +137950,7 @@
             "sourceId": 388,
             "key": "page.countries.106.value",
             "group": "Countries",
-            "text": "Mali"
+            "text": "مالي"
           },
           "fr": {
             "sourceId": 388,
@@ -138002,13 +138002,13 @@
             "sourceId": 390,
             "key": "page.countries.107.value",
             "group": "Countries",
-            "text": "Malta"
+            "text": "مالطا"
           },
           "fr": {
             "sourceId": 390,
             "key": "page.countries.107.value",
             "group": "Countries",
-            "text": "Malta"
+            "text": "Malte"
           }
         }
       },
@@ -138054,13 +138054,13 @@
             "sourceId": 392,
             "key": "page.countries.108.value",
             "group": "Countries",
-            "text": "Marshall Islands"
+            "text": "جزر مارشال"
           },
           "fr": {
             "sourceId": 392,
             "key": "page.countries.108.value",
             "group": "Countries",
-            "text": "Marshall Islands"
+            "text": "Îles Marshall"
           }
         }
       },
@@ -138106,13 +138106,13 @@
             "sourceId": 394,
             "key": "page.countries.109.value",
             "group": "Countries",
-            "text": "Mauritania"
+            "text": "موريتانيا"
           },
           "fr": {
             "sourceId": 394,
             "key": "page.countries.109.value",
             "group": "Countries",
-            "text": "Mauritania"
+            "text": "Mauritanie"
           }
         }
       },
@@ -138158,13 +138158,13 @@
             "sourceId": 396,
             "key": "page.countries.110.value",
             "group": "Countries",
-            "text": "Mauritius"
+            "text": "موريشيوس"
           },
           "fr": {
             "sourceId": 396,
             "key": "page.countries.110.value",
             "group": "Countries",
-            "text": "Mauritius"
+            "text": "Maurice"
           }
         }
       },
@@ -138210,13 +138210,13 @@
             "sourceId": 398,
             "key": "page.countries.111.value",
             "group": "Countries",
-            "text": "Mexico"
+            "text": "المكسيك"
           },
           "fr": {
             "sourceId": 398,
             "key": "page.countries.111.value",
             "group": "Countries",
-            "text": "Mexico"
+            "text": "Mexique"
           }
         }
       },
@@ -138262,13 +138262,13 @@
             "sourceId": 400,
             "key": "page.countries.112.value",
             "group": "Countries",
-            "text": "Micronesia"
+            "text": "ميكرونيزيا"
           },
           "fr": {
             "sourceId": 400,
             "key": "page.countries.112.value",
             "group": "Countries",
-            "text": "Micronesia"
+            "text": "Micronésie"
           }
         }
       },
@@ -138314,7 +138314,7 @@
             "sourceId": 402,
             "key": "page.countries.113.value",
             "group": "Countries",
-            "text": "Moldova"
+            "text": "مولدوفا"
           },
           "fr": {
             "sourceId": 402,
@@ -138366,7 +138366,7 @@
             "sourceId": 404,
             "key": "page.countries.114.value",
             "group": "Countries",
-            "text": "Monaco"
+            "text": "موناكو"
           },
           "fr": {
             "sourceId": 404,
@@ -138418,13 +138418,13 @@
             "sourceId": 406,
             "key": "page.countries.115.value",
             "group": "Countries",
-            "text": "Mongolia"
+            "text": "منغوليا"
           },
           "fr": {
             "sourceId": 406,
             "key": "page.countries.115.value",
             "group": "Countries",
-            "text": "Mongolia"
+            "text": "Mongolie"
           }
         }
       },
@@ -138470,13 +138470,13 @@
             "sourceId": 408,
             "key": "page.countries.116.value",
             "group": "Countries",
-            "text": "Montenegro"
+            "text": "الجبل الأسود"
           },
           "fr": {
             "sourceId": 408,
             "key": "page.countries.116.value",
             "group": "Countries",
-            "text": "Montenegro"
+            "text": "Monténégro"
           }
         }
       },
@@ -138522,13 +138522,13 @@
             "sourceId": 410,
             "key": "page.countries.117.value",
             "group": "Countries",
-            "text": "Morocco"
+            "text": "المغرب"
           },
           "fr": {
             "sourceId": 410,
             "key": "page.countries.117.value",
             "group": "Countries",
-            "text": "Morocco"
+            "text": "Maroc"
           }
         }
       },
@@ -138574,7 +138574,7 @@
             "sourceId": 412,
             "key": "page.countries.118.value",
             "group": "Countries",
-            "text": "Mozambique"
+            "text": "موزمبيق"
           },
           "fr": {
             "sourceId": 412,
@@ -138626,7 +138626,7 @@
             "sourceId": 414,
             "key": "page.countries.119.value",
             "group": "Countries",
-            "text": "Myanmar"
+            "text": "ميانمار"
           },
           "fr": {
             "sourceId": 414,
@@ -138678,13 +138678,13 @@
             "sourceId": 416,
             "key": "page.countries.120.value",
             "group": "Countries",
-            "text": "Namibia"
+            "text": "ناميبيا"
           },
           "fr": {
             "sourceId": 416,
             "key": "page.countries.120.value",
             "group": "Countries",
-            "text": "Namibia"
+            "text": "Namibie"
           }
         }
       },
@@ -138730,7 +138730,7 @@
             "sourceId": 418,
             "key": "page.countries.121.value",
             "group": "Countries",
-            "text": "Nauru"
+            "text": "ناورو"
           },
           "fr": {
             "sourceId": 418,
@@ -138782,13 +138782,13 @@
             "sourceId": 420,
             "key": "page.countries.122.value",
             "group": "Countries",
-            "text": "Nepal"
+            "text": "نيبال"
           },
           "fr": {
             "sourceId": 420,
             "key": "page.countries.122.value",
             "group": "Countries",
-            "text": "Nepal"
+            "text": "Népal"
           }
         }
       },
@@ -138834,13 +138834,13 @@
             "sourceId": 422,
             "key": "page.countries.123.value",
             "group": "Countries",
-            "text": "Netherlands"
+            "text": "هولندا"
           },
           "fr": {
             "sourceId": 422,
             "key": "page.countries.123.value",
             "group": "Countries",
-            "text": "Netherlands"
+            "text": "Belgique"
           }
         }
       },
@@ -138886,13 +138886,13 @@
             "sourceId": 424,
             "key": "page.countries.124.value",
             "group": "Countries",
-            "text": "New Zealand"
+            "text": "نيوزيلندا"
           },
           "fr": {
             "sourceId": 424,
             "key": "page.countries.124.value",
             "group": "Countries",
-            "text": "New Zealand"
+            "text": "Nouvelle-Zélande"
           }
         }
       },
@@ -138938,7 +138938,7 @@
             "sourceId": 426,
             "key": "page.countries.125.value",
             "group": "Countries",
-            "text": "Nicaragua"
+            "text": "نيكاراغوا"
           },
           "fr": {
             "sourceId": 426,
@@ -138990,7 +138990,7 @@
             "sourceId": 428,
             "key": "page.countries.126.value",
             "group": "Countries",
-            "text": "Niger"
+            "text": "النيجر"
           },
           "fr": {
             "sourceId": 428,
@@ -139042,13 +139042,13 @@
             "sourceId": 430,
             "key": "page.countries.127.value",
             "group": "Countries",
-            "text": "Nigeria"
+            "text": "نيجيريا"
           },
           "fr": {
             "sourceId": 430,
             "key": "page.countries.127.value",
             "group": "Countries",
-            "text": "Nigeria"
+            "text": "Nigéria"
           }
         }
       },
@@ -139094,13 +139094,13 @@
             "sourceId": 432,
             "key": "page.countries.128.value",
             "group": "Countries",
-            "text": "North Korea"
+            "text": "كوريا الشمالية"
           },
           "fr": {
             "sourceId": 432,
             "key": "page.countries.128.value",
             "group": "Countries",
-            "text": "North Korea"
+            "text": "Corée du Nord"
           }
         }
       },
@@ -139146,13 +139146,13 @@
             "sourceId": 434,
             "key": "page.countries.129.value",
             "group": "Countries",
-            "text": "North Macedonia"
+            "text": "مقدونيا الشمالية"
           },
           "fr": {
             "sourceId": 434,
             "key": "page.countries.129.value",
             "group": "Countries",
-            "text": "North Macedonia"
+            "text": "Macédoine du Nord"
           }
         }
       },
@@ -139198,13 +139198,13 @@
             "sourceId": 436,
             "key": "page.countries.130.value",
             "group": "Countries",
-            "text": "Norway"
+            "text": "النرويج"
           },
           "fr": {
             "sourceId": 436,
             "key": "page.countries.130.value",
             "group": "Countries",
-            "text": "Norway"
+            "text": "Norvège"
           }
         }
       },
@@ -139250,7 +139250,7 @@
             "sourceId": 438,
             "key": "page.countries.131.value",
             "group": "Countries",
-            "text": "Oman"
+            "text": "عمان"
           },
           "fr": {
             "sourceId": 438,
@@ -139302,7 +139302,7 @@
             "sourceId": 440,
             "key": "page.countries.132.value",
             "group": "Countries",
-            "text": "Pakistan"
+            "text": "باكستان"
           },
           "fr": {
             "sourceId": 440,
@@ -139354,13 +139354,13 @@
             "sourceId": 442,
             "key": "page.countries.133.value",
             "group": "Countries",
-            "text": "Palau"
+            "text": "بالاو"
           },
           "fr": {
             "sourceId": 442,
             "key": "page.countries.133.value",
             "group": "Countries",
-            "text": "Palau"
+            "text": "Palaos"
           }
         }
       },
@@ -139406,7 +139406,7 @@
             "sourceId": 444,
             "key": "page.countries.134.value",
             "group": "Countries",
-            "text": "Palestine"
+            "text": "فلسطين"
           },
           "fr": {
             "sourceId": 444,
@@ -139458,7 +139458,7 @@
             "sourceId": 446,
             "key": "page.countries.135.value",
             "group": "Countries",
-            "text": "Panama"
+            "text": "بنما"
           },
           "fr": {
             "sourceId": 446,
@@ -139510,13 +139510,13 @@
             "sourceId": 448,
             "key": "page.countries.136.value",
             "group": "Countries",
-            "text": "Papua New Guinea"
+            "text": "بابوا غينيا الجديدة"
           },
           "fr": {
             "sourceId": 448,
             "key": "page.countries.136.value",
             "group": "Countries",
-            "text": "Papua New Guinea"
+            "text": "Papouasie-Nouvelle-Guinée"
           }
         }
       },
@@ -139562,7 +139562,7 @@
             "sourceId": 450,
             "key": "page.countries.137.value",
             "group": "Countries",
-            "text": "Paraguay"
+            "text": "باراجواي"
           },
           "fr": {
             "sourceId": 450,
@@ -139614,13 +139614,13 @@
             "sourceId": 452,
             "key": "page.countries.138.value",
             "group": "Countries",
-            "text": "Peru"
+            "text": "بيرو"
           },
           "fr": {
             "sourceId": 452,
             "key": "page.countries.138.value",
             "group": "Countries",
-            "text": "Peru"
+            "text": "Pérou"
           }
         }
       },
@@ -139666,13 +139666,13 @@
             "sourceId": 454,
             "key": "page.countries.139.value",
             "group": "Countries",
-            "text": "Philippines"
+            "text": "الفلبين"
           },
           "fr": {
             "sourceId": 454,
             "key": "page.countries.139.value",
             "group": "Countries",
-            "text": "Philippines"
+            "text": "Espagne"
           }
         }
       },
@@ -139718,13 +139718,13 @@
             "sourceId": 456,
             "key": "page.countries.140.value",
             "group": "Countries",
-            "text": "Poland"
+            "text": "بولندا"
           },
           "fr": {
             "sourceId": 456,
             "key": "page.countries.140.value",
             "group": "Countries",
-            "text": "Poland"
+            "text": "Pologne"
           }
         }
       },
@@ -139770,7 +139770,7 @@
             "sourceId": 458,
             "key": "page.countries.141.value",
             "group": "Countries",
-            "text": "Portugal"
+            "text": "البرتغال"
           },
           "fr": {
             "sourceId": 458,
@@ -139822,7 +139822,7 @@
             "sourceId": 460,
             "key": "page.countries.142.value",
             "group": "Countries",
-            "text": "Qatar"
+            "text": "قطر"
           },
           "fr": {
             "sourceId": 460,
@@ -139874,13 +139874,13 @@
             "sourceId": 462,
             "key": "page.countries.143.value",
             "group": "Countries",
-            "text": "Romania"
+            "text": "رومانيا"
           },
           "fr": {
             "sourceId": 462,
             "key": "page.countries.143.value",
             "group": "Countries",
-            "text": "Romania"
+            "text": "Roumanie"
           }
         }
       },
@@ -139926,13 +139926,13 @@
             "sourceId": 464,
             "key": "page.countries.144.value",
             "group": "Countries",
-            "text": "Russia"
+            "text": "روسيا"
           },
           "fr": {
             "sourceId": 464,
             "key": "page.countries.144.value",
             "group": "Countries",
-            "text": "Russia"
+            "text": "Russie"
           }
         }
       },
@@ -139978,7 +139978,7 @@
             "sourceId": 466,
             "key": "page.countries.145.value",
             "group": "Countries",
-            "text": "Rwanda"
+            "text": "رواندا"
           },
           "fr": {
             "sourceId": 466,
@@ -140030,13 +140030,13 @@
             "sourceId": 468,
             "key": "page.countries.146.value",
             "group": "Countries",
-            "text": "Saint Kitts and Nevis"
+            "text": "سانت كيتس ونيفيس"
           },
           "fr": {
             "sourceId": 468,
             "key": "page.countries.146.value",
             "group": "Countries",
-            "text": "Saint Kitts and Nevis"
+            "text": "Saint-Kitts-et-Nevis"
           }
         }
       },
@@ -140082,13 +140082,13 @@
             "sourceId": 470,
             "key": "page.countries.147.value",
             "group": "Countries",
-            "text": "Saint Lucia"
+            "text": "سانت لوسيا"
           },
           "fr": {
             "sourceId": 470,
             "key": "page.countries.147.value",
             "group": "Countries",
-            "text": "Saint Lucia"
+            "text": "Sainte-Lucie"
           }
         }
       },
@@ -140134,13 +140134,13 @@
             "sourceId": 472,
             "key": "page.countries.148.value",
             "group": "Countries",
-            "text": "Saint Vincent and the Grenadines"
+            "text": "سانت فنسنت وجزر غرينادين"
           },
           "fr": {
             "sourceId": 472,
             "key": "page.countries.148.value",
             "group": "Countries",
-            "text": "Saint Vincent and the Grenadines"
+            "text": "Saint-Vincent-et-les Grenadines"
           }
         }
       },
@@ -140186,7 +140186,7 @@
             "sourceId": 474,
             "key": "page.countries.149.value",
             "group": "Countries",
-            "text": "Samoa"
+            "text": "ساموا"
           },
           "fr": {
             "sourceId": 474,
@@ -140238,13 +140238,13 @@
             "sourceId": 476,
             "key": "page.countries.150.value",
             "group": "Countries",
-            "text": "San Marino"
+            "text": "سان مارينو"
           },
           "fr": {
             "sourceId": 476,
             "key": "page.countries.150.value",
             "group": "Countries",
-            "text": "San Marino"
+            "text": "Saint-Marin"
           }
         }
       },
@@ -140290,13 +140290,13 @@
             "sourceId": 478,
             "key": "page.countries.151.value",
             "group": "Countries",
-            "text": "Sao Tome and Principe"
+            "text": "سان تومي وبرينسيبي"
           },
           "fr": {
             "sourceId": 478,
             "key": "page.countries.151.value",
             "group": "Countries",
-            "text": "Sao Tome and Principe"
+            "text": "Sao Tomé-et-Principe"
           }
         }
       },
@@ -140342,13 +140342,13 @@
             "sourceId": 480,
             "key": "page.countries.152.value",
             "group": "Countries",
-            "text": "Saudi Arabia"
+            "text": "المملكة العربية السعودية"
           },
           "fr": {
             "sourceId": 480,
             "key": "page.countries.152.value",
             "group": "Countries",
-            "text": "Saudi Arabia"
+            "text": "Arabie saoudite"
           }
         }
       },
@@ -140394,13 +140394,13 @@
             "sourceId": 482,
             "key": "page.countries.153.value",
             "group": "Countries",
-            "text": "Senegal"
+            "text": "السنغال"
           },
           "fr": {
             "sourceId": 482,
             "key": "page.countries.153.value",
             "group": "Countries",
-            "text": "Senegal"
+            "text": "Sénégal"
           }
         }
       },
@@ -140446,13 +140446,13 @@
             "sourceId": 484,
             "key": "page.countries.154.value",
             "group": "Countries",
-            "text": "Serbia"
+            "text": "صربيا"
           },
           "fr": {
             "sourceId": 484,
             "key": "page.countries.154.value",
             "group": "Countries",
-            "text": "Serbia"
+            "text": "Serbie"
           }
         }
       },
@@ -140498,7 +140498,7 @@
             "sourceId": 486,
             "key": "page.countries.155.value",
             "group": "Countries",
-            "text": "Seychelles"
+            "text": "سيشيل"
           },
           "fr": {
             "sourceId": 486,
@@ -140550,7 +140550,7 @@
             "sourceId": 488,
             "key": "page.countries.156.value",
             "group": "Countries",
-            "text": "Sierra Leone"
+            "text": "سيراليون"
           },
           "fr": {
             "sourceId": 488,
@@ -140602,13 +140602,13 @@
             "sourceId": 490,
             "key": "page.countries.157.value",
             "group": "Countries",
-            "text": "Singapore"
+            "text": "سنغافورة"
           },
           "fr": {
             "sourceId": 490,
             "key": "page.countries.157.value",
             "group": "Countries",
-            "text": "Singapore"
+            "text": "Singapour"
           }
         }
       },
@@ -140654,13 +140654,13 @@
             "sourceId": 492,
             "key": "page.countries.158.value",
             "group": "Countries",
-            "text": "Slovakia"
+            "text": "سلوفاكيا"
           },
           "fr": {
             "sourceId": 492,
             "key": "page.countries.158.value",
             "group": "Countries",
-            "text": "Slovakia"
+            "text": "Slovaquie"
           }
         }
       },
@@ -140706,13 +140706,13 @@
             "sourceId": 494,
             "key": "page.countries.159.value",
             "group": "Countries",
-            "text": "Slovenia"
+            "text": "سلوفينيا"
           },
           "fr": {
             "sourceId": 494,
             "key": "page.countries.159.value",
             "group": "Countries",
-            "text": "Slovenia"
+            "text": "Slovénie"
           }
         }
       },
@@ -140758,13 +140758,13 @@
             "sourceId": 496,
             "key": "page.countries.160.value",
             "group": "Countries",
-            "text": "Solomon Islands"
+            "text": "جزر سليمان"
           },
           "fr": {
             "sourceId": 496,
             "key": "page.countries.160.value",
             "group": "Countries",
-            "text": "Solomon Islands"
+            "text": "Îles Salomon"
           }
         }
       },
@@ -140810,13 +140810,13 @@
             "sourceId": 498,
             "key": "page.countries.161.value",
             "group": "Countries",
-            "text": "Somalia"
+            "text": "الصومال"
           },
           "fr": {
             "sourceId": 498,
             "key": "page.countries.161.value",
             "group": "Countries",
-            "text": "Somalia"
+            "text": "Somalie"
           }
         }
       },
@@ -140862,13 +140862,13 @@
             "sourceId": 500,
             "key": "page.countries.162.value",
             "group": "Countries",
-            "text": "South Africa"
+            "text": "جنوب أفريقيا"
           },
           "fr": {
             "sourceId": 500,
             "key": "page.countries.162.value",
             "group": "Countries",
-            "text": "South Africa"
+            "text": "Afrique du Sud"
           }
         }
       },
@@ -140914,13 +140914,13 @@
             "sourceId": 502,
             "key": "page.countries.163.value",
             "group": "Countries",
-            "text": "South Korea"
+            "text": "كوريا الجنوبية"
           },
           "fr": {
             "sourceId": 502,
             "key": "page.countries.163.value",
             "group": "Countries",
-            "text": "South Korea"
+            "text": "Corée du Sud"
           }
         }
       },
@@ -140966,13 +140966,13 @@
             "sourceId": 504,
             "key": "page.countries.164.value",
             "group": "Countries",
-            "text": "South Sudan"
+            "text": "جنوب السودان"
           },
           "fr": {
             "sourceId": 504,
             "key": "page.countries.164.value",
             "group": "Countries",
-            "text": "South Sudan"
+            "text": "Soudan du Sud"
           }
         }
       },
@@ -141018,13 +141018,13 @@
             "sourceId": 506,
             "key": "page.countries.165.value",
             "group": "Countries",
-            "text": "Spain"
+            "text": "إسبانيا"
           },
           "fr": {
             "sourceId": 506,
             "key": "page.countries.165.value",
             "group": "Countries",
-            "text": "Spain"
+            "text": "Espagne"
           }
         }
       },
@@ -141070,7 +141070,7 @@
             "sourceId": 508,
             "key": "page.countries.166.value",
             "group": "Countries",
-            "text": "Sri Lanka"
+            "text": "سريلانكا"
           },
           "fr": {
             "sourceId": 508,
@@ -141122,13 +141122,13 @@
             "sourceId": 510,
             "key": "page.countries.167.value",
             "group": "Countries",
-            "text": "Sudan"
+            "text": "السودان"
           },
           "fr": {
             "sourceId": 510,
             "key": "page.countries.167.value",
             "group": "Countries",
-            "text": "Sudan"
+            "text": "Soudan"
           }
         }
       },
@@ -141174,7 +141174,7 @@
             "sourceId": 512,
             "key": "page.countries.168.value",
             "group": "Countries",
-            "text": "Suriname"
+            "text": "سورينام"
           },
           "fr": {
             "sourceId": 512,
@@ -141226,13 +141226,13 @@
             "sourceId": 514,
             "key": "page.countries.169.value",
             "group": "Countries",
-            "text": "Sweden"
+            "text": "السويد"
           },
           "fr": {
             "sourceId": 514,
             "key": "page.countries.169.value",
             "group": "Countries",
-            "text": "Sweden"
+            "text": "Suède"
           }
         }
       },
@@ -141278,13 +141278,13 @@
             "sourceId": 516,
             "key": "page.countries.170.value",
             "group": "Countries",
-            "text": "Switzerland"
+            "text": "سويسرا"
           },
           "fr": {
             "sourceId": 516,
             "key": "page.countries.170.value",
             "group": "Countries",
-            "text": "Switzerland"
+            "text": "Suisse"
           }
         }
       },
@@ -141330,13 +141330,13 @@
             "sourceId": 518,
             "key": "page.countries.171.value",
             "group": "Countries",
-            "text": "Syria"
+            "text": "سوريا"
           },
           "fr": {
             "sourceId": 518,
             "key": "page.countries.171.value",
             "group": "Countries",
-            "text": "Syria"
+            "text": "Syrie"
           }
         }
       },
@@ -141382,13 +141382,13 @@
             "sourceId": 520,
             "key": "page.countries.172.value",
             "group": "Countries",
-            "text": "Taiwan"
+            "text": "تايوان"
           },
           "fr": {
             "sourceId": 520,
             "key": "page.countries.172.value",
             "group": "Countries",
-            "text": "Taiwan"
+            "text": "Taïwan"
           }
         }
       },
@@ -141434,13 +141434,13 @@
             "sourceId": 522,
             "key": "page.countries.173.value",
             "group": "Countries",
-            "text": "Tajikistan"
+            "text": "طاجيكستان"
           },
           "fr": {
             "sourceId": 522,
             "key": "page.countries.173.value",
             "group": "Countries",
-            "text": "Tajikistan"
+            "text": "Tadjikistan"
           }
         }
       },
@@ -141486,13 +141486,13 @@
             "sourceId": 524,
             "key": "page.countries.174.value",
             "group": "Countries",
-            "text": "Tanzania"
+            "text": "تنزانيا"
           },
           "fr": {
             "sourceId": 524,
             "key": "page.countries.174.value",
             "group": "Countries",
-            "text": "Tanzania"
+            "text": "Tanzanie"
           }
         }
       },
@@ -141538,13 +141538,13 @@
             "sourceId": 526,
             "key": "page.countries.175.value",
             "group": "Countries",
-            "text": "Thailand"
+            "text": "تايلاند"
           },
           "fr": {
             "sourceId": 526,
             "key": "page.countries.175.value",
             "group": "Countries",
-            "text": "Thailand"
+            "text": "Thaïlande"
           }
         }
       },
@@ -141590,7 +141590,7 @@
             "sourceId": 528,
             "key": "page.countries.176.value",
             "group": "Countries",
-            "text": "Timor-Leste"
+            "text": "تيمور الشرقية"
           },
           "fr": {
             "sourceId": 528,
@@ -141642,7 +141642,7 @@
             "sourceId": 530,
             "key": "page.countries.177.value",
             "group": "Countries",
-            "text": "Togo"
+            "text": "توغو"
           },
           "fr": {
             "sourceId": 530,
@@ -141694,13 +141694,13 @@
             "sourceId": 532,
             "key": "page.countries.178.value",
             "group": "Countries",
-            "text": "Tonga"
+            "text": "تونغا"
           },
           "fr": {
             "sourceId": 532,
             "key": "page.countries.178.value",
             "group": "Countries",
-            "text": "Tonga"
+            "text": "États-Unis"
           }
         }
       },
@@ -141746,13 +141746,13 @@
             "sourceId": 534,
             "key": "page.countries.179.value",
             "group": "Countries",
-            "text": "Trinidad and Tobago"
+            "text": "ترينيداد وتوباغو"
           },
           "fr": {
             "sourceId": 534,
             "key": "page.countries.179.value",
             "group": "Countries",
-            "text": "Trinidad and Tobago"
+            "text": "Trinité-et-Tobago"
           }
         }
       },
@@ -141798,13 +141798,13 @@
             "sourceId": 536,
             "key": "page.countries.180.value",
             "group": "Countries",
-            "text": "Tunisia"
+            "text": "تونس"
           },
           "fr": {
             "sourceId": 536,
             "key": "page.countries.180.value",
             "group": "Countries",
-            "text": "Tunisia"
+            "text": "Tunisie"
           }
         }
       },
@@ -141850,13 +141850,13 @@
             "sourceId": 538,
             "key": "page.countries.181.value",
             "group": "Countries",
-            "text": "Turkey"
+            "text": "تركيا"
           },
           "fr": {
             "sourceId": 538,
             "key": "page.countries.181.value",
             "group": "Countries",
-            "text": "Turkey"
+            "text": "Turquie"
           }
         }
       },
@@ -141902,13 +141902,13 @@
             "sourceId": 540,
             "key": "page.countries.182.value",
             "group": "Countries",
-            "text": "Turkmenistan"
+            "text": "تركمانستان"
           },
           "fr": {
             "sourceId": 540,
             "key": "page.countries.182.value",
             "group": "Countries",
-            "text": "Turkmenistan"
+            "text": "Turkménistan"
           }
         }
       },
@@ -141954,7 +141954,7 @@
             "sourceId": 542,
             "key": "page.countries.183.value",
             "group": "Countries",
-            "text": "Tuvalu"
+            "text": "توفالو"
           },
           "fr": {
             "sourceId": 542,
@@ -142006,13 +142006,13 @@
             "sourceId": 544,
             "key": "page.countries.184.value",
             "group": "Countries",
-            "text": "Uganda"
+            "text": "أوغندا"
           },
           "fr": {
             "sourceId": 544,
             "key": "page.countries.184.value",
             "group": "Countries",
-            "text": "Uganda"
+            "text": "Ouganda"
           }
         }
       },
@@ -142058,7 +142058,7 @@
             "sourceId": 546,
             "key": "page.countries.185.value",
             "group": "Countries",
-            "text": "Ukraine"
+            "text": "أوكرانيا"
           },
           "fr": {
             "sourceId": 546,
@@ -142110,13 +142110,13 @@
             "sourceId": 548,
             "key": "page.countries.186.value",
             "group": "Countries",
-            "text": "United Arab Emirates"
+            "text": "الإمارات العربية المتحدة"
           },
           "fr": {
             "sourceId": 548,
             "key": "page.countries.186.value",
             "group": "Countries",
-            "text": "United Arab Emirates"
+            "text": "Émirats arabes unis"
           }
         }
       },
@@ -142162,13 +142162,13 @@
             "sourceId": 550,
             "key": "page.countries.187.value",
             "group": "Countries",
-            "text": "United Kingdom"
+            "text": "المملكة المتحدة"
           },
           "fr": {
             "sourceId": 550,
             "key": "page.countries.187.value",
             "group": "Countries",
-            "text": "United Kingdom"
+            "text": "Royaume-Uni"
           }
         }
       },
@@ -142214,13 +142214,13 @@
             "sourceId": 552,
             "key": "page.countries.188.value",
             "group": "Countries",
-            "text": "United States"
+            "text": "الولايات المتحدة"
           },
           "fr": {
             "sourceId": 552,
             "key": "page.countries.188.value",
             "group": "Countries",
-            "text": "United States"
+            "text": "États-Unis"
           }
         }
       },
@@ -142266,7 +142266,7 @@
             "sourceId": 554,
             "key": "page.countries.189.value",
             "group": "Countries",
-            "text": "Uruguay"
+            "text": "أوروغواي"
           },
           "fr": {
             "sourceId": 554,
@@ -142318,13 +142318,13 @@
             "sourceId": 556,
             "key": "page.countries.190.value",
             "group": "Countries",
-            "text": "Uzbekistan"
+            "text": "أوزبكستان"
           },
           "fr": {
             "sourceId": 556,
             "key": "page.countries.190.value",
             "group": "Countries",
-            "text": "Uzbekistan"
+            "text": "Ouzbékistan"
           }
         }
       },
@@ -142370,7 +142370,7 @@
             "sourceId": 558,
             "key": "page.countries.191.value",
             "group": "Countries",
-            "text": "Vanuatu"
+            "text": "فانواتو"
           },
           "fr": {
             "sourceId": 558,
@@ -142422,13 +142422,13 @@
             "sourceId": 560,
             "key": "page.countries.192.value",
             "group": "Countries",
-            "text": "Vatican City"
+            "text": "مدينة الفاتيكان"
           },
           "fr": {
             "sourceId": 560,
             "key": "page.countries.192.value",
             "group": "Countries",
-            "text": "Vatican City"
+            "text": "Cité du Vatican"
           }
         }
       },
@@ -142474,7 +142474,7 @@
             "sourceId": 562,
             "key": "page.countries.193.value",
             "group": "Countries",
-            "text": "Venezuela"
+            "text": "فنزويلا"
           },
           "fr": {
             "sourceId": 562,
@@ -142526,7 +142526,7 @@
             "sourceId": 564,
             "key": "page.countries.194.value",
             "group": "Countries",
-            "text": "Vietnam"
+            "text": "فيتنام"
           },
           "fr": {
             "sourceId": 564,
@@ -142578,13 +142578,13 @@
             "sourceId": 566,
             "key": "page.countries.195.value",
             "group": "Countries",
-            "text": "Yemen"
+            "text": "اليمن"
           },
           "fr": {
             "sourceId": 566,
             "key": "page.countries.195.value",
             "group": "Countries",
-            "text": "Yemen"
+            "text": "Yémen"
           }
         }
       },
@@ -142630,13 +142630,13 @@
             "sourceId": 568,
             "key": "page.countries.196.value",
             "group": "Countries",
-            "text": "Zambia"
+            "text": "زامبيا"
           },
           "fr": {
             "sourceId": 568,
             "key": "page.countries.196.value",
             "group": "Countries",
-            "text": "Zambia"
+            "text": "Zambie"
           }
         }
       },
@@ -142682,7 +142682,7 @@
             "sourceId": 570,
             "key": "page.countries.197.value",
             "group": "Countries",
-            "text": "Zimbabwe"
+            "text": "زيمبابوي"
           },
           "fr": {
             "sourceId": 570,
@@ -144754,6 +144754,167 @@
             "key": "email.meeting.help",
             "group": "Meeting emails",
             "text": "If anything changes, reply to this email and we will help."
+          }
+        }
+      },
+      {
+        "key": "translations:navigation.social.facebook",
+        "match": {
+          "key": "navigation.social.facebook"
+        },
+        "data": {
+          "en": {
+            "key": "navigation.social.facebook",
+            "group": "Social links",
+            "text": "Facebook"
+          },
+          "ar": {
+            "key": "navigation.social.facebook",
+            "group": "Social links",
+            "text": "فيسبوك"
+          },
+          "fr": {
+            "key": "navigation.social.facebook",
+            "group": "Social links",
+            "text": "Facebook"
+          }
+        }
+      },
+      {
+        "key": "translations:navigation.social.instagram",
+        "match": {
+          "key": "navigation.social.instagram"
+        },
+        "data": {
+          "en": {
+            "key": "navigation.social.instagram",
+            "group": "Social links",
+            "text": "Instagram"
+          },
+          "ar": {
+            "key": "navigation.social.instagram",
+            "group": "Social links",
+            "text": "انستغرام"
+          },
+          "fr": {
+            "key": "navigation.social.instagram",
+            "group": "Social links",
+            "text": "Instagram"
+          }
+        }
+      },
+      {
+        "key": "translations:navigation.social.linkedin",
+        "match": {
+          "key": "navigation.social.linkedin"
+        },
+        "data": {
+          "en": {
+            "key": "navigation.social.linkedin",
+            "group": "Social links",
+            "text": "LinkedIn"
+          },
+          "ar": {
+            "key": "navigation.social.linkedin",
+            "group": "Social links",
+            "text": "ينكدين"
+          },
+          "fr": {
+            "key": "navigation.social.linkedin",
+            "group": "Social links",
+            "text": "LinkedIn"
+          }
+        }
+      },
+      {
+        "key": "translations:navigation.social.youtube",
+        "match": {
+          "key": "navigation.social.youtube"
+        },
+        "data": {
+          "en": {
+            "key": "navigation.social.youtube",
+            "group": "Social links",
+            "text": "YouTube"
+          },
+          "ar": {
+            "key": "navigation.social.youtube",
+            "group": "Social links",
+            "text": "يوتيوب"
+          },
+          "fr": {
+            "key": "navigation.social.youtube",
+            "group": "Social links",
+            "text": "YouTube"
+          }
+        }
+      },
+      {
+        "key": "translations:navigation.social.whatsapp",
+        "match": {
+          "key": "navigation.social.whatsapp"
+        },
+        "data": {
+          "en": {
+            "key": "navigation.social.whatsapp",
+            "group": "Social links",
+            "text": "WhatsApp"
+          },
+          "ar": {
+            "key": "navigation.social.whatsapp",
+            "group": "Social links",
+            "text": "واتساب"
+          },
+          "fr": {
+            "key": "navigation.social.whatsapp",
+            "group": "Social links",
+            "text": "WhatsApp"
+          }
+        }
+      },
+      {
+        "key": "translations:page.certification.heldToday",
+        "match": {
+          "key": "page.certification.heldToday"
+        },
+        "data": {
+          "en": {
+            "key": "page.certification.heldToday",
+            "group": "Certifications",
+            "text": "held today"
+          },
+          "ar": {
+            "key": "page.certification.heldToday",
+            "group": "Certifications",
+            "text": "سارية اليوم"
+          },
+          "fr": {
+            "key": "page.certification.heldToday",
+            "group": "Certifications",
+            "text": "détenues aujourd’hui"
+          }
+        }
+      },
+      {
+        "key": "translations:page.certification.programme",
+        "match": {
+          "key": "page.certification.programme"
+        },
+        "data": {
+          "en": {
+            "key": "page.certification.programme",
+            "group": "Certifications",
+            "text": "certification programme"
+          },
+          "ar": {
+            "key": "page.certification.programme",
+            "group": "Certifications",
+            "text": "برنامج الاعتماد"
+          },
+          "fr": {
+            "key": "page.certification.programme",
+            "group": "Certifications",
+            "text": "programme de certification"
           }
         }
       }
@@ -150976,21 +151137,6 @@
             "text24": {
               "values": "Alamir Group"
             },
-            "text25": {
-              "values": "Facebook"
-            },
-            "text26": {
-              "values": "Instagram"
-            },
-            "text27": {
-              "values": "LinkedIn"
-            },
-            "text28": {
-              "values": "YouTube"
-            },
-            "text29": {
-              "values": "WhatsApp"
-            },
             "enabled": true,
             "body": {
               "values": {
@@ -151312,21 +151458,6 @@
             "text24": {
               "values": "مجموعة الامير"
             },
-            "text25": {
-              "values": "فيسبوك"
-            },
-            "text26": {
-              "values": "انستغرام"
-            },
-            "text27": {
-              "values": "ينكدين"
-            },
-            "text28": {
-              "values": "يوتيوب"
-            },
-            "text29": {
-              "values": "واتساب"
-            },
             "enabled": true,
             "body": {
               "values": {
@@ -151647,21 +151778,6 @@
             },
             "text24": {
               "values": "Groupe Alamir"
-            },
-            "text25": {
-              "values": "Facebook"
-            },
-            "text26": {
-              "values": "Instagram"
-            },
-            "text27": {
-              "values": "LinkedIn"
-            },
-            "text28": {
-              "values": "YouTube"
-            },
-            "text29": {
-              "values": "WhatsApp"
             },
             "enabled": true,
             "body": {
