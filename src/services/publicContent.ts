@@ -1,10 +1,10 @@
 import {createLocalReq,type CollectionSlug,type GlobalSlug,type Payload,type PayloadRequest} from 'payload'
 import {sql} from '@payloadcms/db-postgres'
 
-export const publicCollections=['pages','products','categories','media','translations','news','news-taxonomies','sustainability','sustainability-goals','jobs','events','meeting-slots','certifications','certification-types','product-applications','product-concentrations','forms'] as const
-export const publicGlobals=['website-settings','navigation'] as const
+const publicCollections=['pages','products','categories','media','translations','news','news-taxonomies','sustainability','sustainability-goals','jobs','events','meeting-slots','certifications','certification-types','product-applications','product-concentrations','forms'] as const
+const publicGlobals=['website-settings','navigation'] as const
 export const publicResources=[...publicCollections,...publicGlobals.map(slug=>`globals/${slug}`)]
-export const sharedFields:Record<string,string[]>={
+const sharedFields:Record<string,string[]>={
  pages:['title','slug','sourceKey','_status'],
  products:['name','slug','sourceId','category','gallery'],
  categories:['name','slug','sourceId','icon','description','page.artwork'],

@@ -1,4 +1,4 @@
-import {sql, type MigrateUpArgs, type MigrateDownArgs} from '@payloadcms/db-postgres'
+import {sql, type MigrateUpArgs} from '@payloadcms/db-postgres'
 import {getBlocksToJsonMigrator} from '@payloadcms/db-postgres/migration-utils'
 import path from 'node:path'
 
@@ -1389,6 +1389,6 @@ DROP TYPE "public"."enum_forms_blocks_upload_upload_collection";`)
  await migrator.migrateEntitiesFromTempFolder(req,{clearBatches:false})
 }
 
-export async function down(_args:MigrateDownArgs):Promise<void>{
+export async function down():Promise<void>{
  throw new Error('Restore the pre-migration database backup to reverse blocks-as-JSON storage.')
 }

@@ -13,4 +13,3 @@ export function recordRelationships(collection:string):Field[]{
  ]:[]
  return fields.length?[{name:'relationships',label:'Related content',type:'group',admin:{position:'sidebar'},fields}]:[]
 }
-export const selectedArticles:Field=relationship('articles','News articles','news',true)

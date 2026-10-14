@@ -1,16 +1,8 @@
 import type { CollectionAfterChangeHook, CollectionBeforeDeleteHook, PayloadRequest } from 'payload'
 import type { Form } from '../payload-types'
-export const formPurposes = [
-  'home',
-  'contact',
-  'quote',
-  'application',
-  'reservation',
-  'search',
-] as const
-export type FormPurpose = (typeof formPurposes)[number]
+export type FormPurpose = 'home' | 'contact' | 'quote' | 'application' | 'reservation' | 'search'
 type FormData = Record<string, unknown>
-export function localized(value: unknown, locale: string, previous?: unknown): unknown {
+function localized(value: unknown, locale: string, previous?: unknown): unknown {
   if (Array.isArray(value))
     return value.map((item, index) =>
       localized(item, locale, Array.isArray(previous) ? previous[index] : undefined),
@@ -89,7 +81,7 @@ export async function copyForm(
     req.fallbackLocale = fallbackLocale
   }
 }
-export function purposes(
+function purposes(
   collection: string,
   doc: { id: number; kind?: unknown; sourceKey?: unknown },
 ): FormPurpose[] {

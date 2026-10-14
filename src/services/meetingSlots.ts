@@ -26,7 +26,7 @@ export function validateMeetingGap(value: unknown): true | string {
   return typeof value === 'number' && Number.isInteger(value) && value >= 0 && value <= 240 || 'The gap must be between 0 and 240 whole minutes.'
 }
 
-export function planMeetingSlots(windows: MeetingWindow[]): Period[] {
+function planMeetingSlots(windows: MeetingWindow[]): Period[] {
   const planned: Period[] = []
   for (const window of windows) {
     const end = Date.parse(window.endsAt), duration = window.duration * 60000
@@ -37,7 +37,7 @@ export function planMeetingSlots(windows: MeetingWindow[]): Period[] {
   return planned.sort((a, b) => Date.parse(a.startsAt) - Date.parse(b.startsAt))
 }
 
-export async function generateMeetingSlots(event: number, windows: MeetingWindow[], req: PayloadRequest) {
+async function generateMeetingSlots(event: number, windows: MeetingWindow[], req: PayloadRequest) {
   const valid = validateMeetingSchedule(windows)
   if (valid !== true) throw new Error(valid)
   if (!windows.length) return 0

@@ -1,5 +1,5 @@
 import type {Field} from 'payload'
-export const navigationLinkFields:Field[]=[
+const navigationLinkFields:Field[]=[
  {name:'label',type:'text',localized:true},
  {name:'linkType',label:'Link to',type:'select',options:[{label:'Website page',value:'page'},{label:'Custom URL',value:'url'}],defaultValue:'page',required:true},
  {name:'page',type:'relationship',relationTo:'pages',validate:(value:unknown,{siblingData}:{siblingData:Record<string,unknown>})=>siblingData.linkType==='page' && !value?'Select a website page.':true,admin:{condition:(_data,sibling)=>sibling.linkType!=='url'}},

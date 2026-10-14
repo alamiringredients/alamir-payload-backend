@@ -39,7 +39,7 @@ const ignored = new Set([
   'generateSlug',
 ])
 
-export function identity(collection: string, doc: Data): Data {
+function identity(collection: string, doc: Data): Data {
   if (collection === 'media') return { filename: doc.filename, prefix: doc.prefix ?? '' }
   if (collection === 'meeting-slots') return { event: doc.event, startsAt: doc.startsAt }
   for (const field of collection === 'forms'

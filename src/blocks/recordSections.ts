@@ -47,7 +47,7 @@ const definitions:Record<ContentCollection,{name:string;label:string;page:string
  ],
 }
 import {galleryField} from '../fields/gallery'
-export const recordSections=Object.entries(definitions).flatMap(([collection,sections])=>sections.map(section=>({...section,collection:collection as ContentCollection,slug:`${({products:'prd',categories:'cat',news:'news',sustainability:'sus',jobs:'job',events:'event'} as Record<string,string>)[collection]}-${section.name==='overview'?'info':section.name==='traceability'?'cta':section.name}`})))
+const recordSections=Object.entries(definitions).flatMap(([collection,sections])=>sections.map(section=>({...section,collection:collection as ContentCollection,slug:`${({products:'prd',categories:'cat',news:'news',sustainability:'sus',jobs:'job',events:'event'} as Record<string,string>)[collection]}-${section.name==='overview'?'info':section.name==='traceability'?'cta':section.name}`})))
 export function recordSettings(collection:ContentCollection):Field[]{
  const owned=recordSections.filter(section=>section.collection===collection).flatMap(section=>section.page)
  return flatten(schemas[collection]).filter(field=>'name' in field && !owned.includes(field.name) && !(collection==='news'&&field.name==='article') && !(collection==='events'&&field.name==='body')).map(field=>({...field,admin:{...field.admin,condition:undefined}} as Field))
@@ -57,7 +57,7 @@ export function recordImageSettings(collection:'products'|'categories'):Field[]{
  const artwork=fields.filter(field=>'name' in field && field.name==='artwork')
  return [{type:'tabs',tabs:[{label:'Card images',fields:artwork},{label:'Record settings',fields:fields.filter(field=>!('name' in field && field.name==='artwork'))}]}]
 }
-export function recordBlocks(collection:ContentCollection):Block[]{
+function recordBlocks(collection:ContentCollection):Block[]{
  const shared=standardBlocks.map(block=>{
   const key=`${collection}_${block.slug}`
   return {...block,dbName:`rb_${createHash('sha1').update(key).digest('hex').slice(0,12)}`,fields:databaseNames(block.fields,key)}

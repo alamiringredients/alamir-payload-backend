@@ -8,7 +8,7 @@ export function pageFields(fields:Field[]):Field[] {
  if(!page || !('fields' in page))return []
  return page.fields.flatMap(field=>field.type==='tabs'?field.tabs.flatMap(tab=>tab.fields):[field])
 }
-export const sectionDefinitions=pageDefinitions.flatMap(page=>{
+const sectionDefinitions=pageDefinitions.flatMap(page=>{
  const fields=pageFields(page.fields)
  if(page.slug==='news'){
   const copy=fields.find((field):field is Extract<Field,{type:'group'}> & {name:string}=>field.type==='group' && 'name' in field && field.name==='copy')!
