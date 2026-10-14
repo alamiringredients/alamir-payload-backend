@@ -126,6 +126,24 @@ describe.skipIf(!database)('production defaults on an isolated PostgreSQL databa
     expect((await payload.count({ collection: 'public-content' })).totalDocs).toBe(19)
   }, 60000)
 
+  it('publishes all seeded interface text in the public content read model', async () => {
+    const { docs } = await payload.find({
+      collection: 'public-content',
+      where: { resource: { equals: 'translations' } },
+      overrideAccess: false,
+      depth: 0,
+    })
+    const published = (docs[0].summary as {
+      docs: { key: string; text: Record<string, string> }[]
+    }).docs
+    expect(published).toHaveLength(expected.collections.translations.length)
+    const messages = new Map(published.map(row => [row.key, row.text]))
+    for (const record of expected.collections.translations)
+      for (const locale of locales)
+        expect(messages.get(String(record.data.en.key))?.[locale], `${record.data.en.key}/${locale}`)
+          .toBe(record.data[locale].text)
+  })
+
   it('preserves administrator edits and booked slots when seeded again without duplicates', async () => {
     const translation = (await payload.find({ collection: 'translations', limit: 1, depth: 0 }))
       .docs[0]

@@ -24,10 +24,19 @@ it('resolves the seeded media records to their existing R2 objects',async()=>{
     expect(doc?.prefix).toBe(source.prefix)
     if(source.mimeType.startsWith('image/'))expect(doc?.thumbnailURL).toBe(source.sourceUrl)
   }
-  const response=await fetch(mediaDefaults[0].sourceUrl,{method:'HEAD',cache:'no-store'})
-  expect(response.status).toBe(200)
-  expect(Number(response.headers.get('content-length'))).toBe(mediaDefaults[0].filesize)
-})
+  const images=mediaDefaults.filter(source=>source.mimeType.startsWith('image/'))
+  for(let index=0;index<images.length;index+=8)
+    await Promise.all(images.slice(index,index+8).map(async source=>{
+      const response=await fetch(source.sourceUrl,{cache:'no-store',signal:AbortSignal.timeout(15000)})
+      expect(response.status,source.sourceUrl).toBe(200)
+      expect(response.headers.get('content-type')?.split(';')[0],source.sourceUrl).toBe(source.mimeType)
+      const bytes=Buffer.from(await response.arrayBuffer())
+      const image=await sharp(bytes).metadata()
+      expect(image.format,source.sourceUrl).toBe(source.mimeType==='image/svg+xml'?'svg':source.mimeType.slice(6))
+      expect(image.width,source.sourceUrl).toBe(source.width)
+      expect(image.height,source.sourceUrl).toBe(source.height)
+    }))
+},60000)
 
 it('uploads and replaces an image in R2, serves its bytes, and removes it on deletion',async()=>{
   const bytes=await sharp({create:{width:2,height:3,channels:4,background:'#c7422d'}}).png().toBuffer()

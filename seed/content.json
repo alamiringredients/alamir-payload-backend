@@ -144917,6 +144917,834 @@
             "text": "programme de certification"
           }
         }
+      },
+      {
+        "key": "translations:overlays-close",
+        "match": {
+          "key": "page.overlays.close"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.close",
+            "group": "Website overlays",
+            "text": "Close"
+          },
+          "ar": {
+            "key": "page.overlays.close",
+            "group": "Website overlays",
+            "text": "إغلاق"
+          },
+          "fr": {
+            "key": "page.overlays.close",
+            "group": "Website overlays",
+            "text": "Fermer"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-closeAnnouncement",
+        "match": {
+          "key": "page.overlays.closeAnnouncement"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.closeAnnouncement",
+            "group": "Website overlays",
+            "text": "Close announcement"
+          },
+          "ar": {
+            "key": "page.overlays.closeAnnouncement",
+            "group": "Website overlays",
+            "text": "إغلاق الإعلان"
+          },
+          "fr": {
+            "key": "page.overlays.closeAnnouncement",
+            "group": "Website overlays",
+            "text": "Fermer l’annonce"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-upcomingEvent",
+        "match": {
+          "key": "page.overlays.upcomingEvent"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.upcomingEvent",
+            "group": "Website overlays",
+            "text": "Upcoming event"
+          },
+          "ar": {
+            "key": "page.overlays.upcomingEvent",
+            "group": "Website overlays",
+            "text": "فعالية قادمة"
+          },
+          "fr": {
+            "key": "page.overlays.upcomingEvent",
+            "group": "Website overlays",
+            "text": "Événement à venir"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-meetUsAt",
+        "match": {
+          "key": "page.overlays.meetUsAt"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.meetUsAt",
+            "group": "Website overlays",
+            "text": "Meet us at"
+          },
+          "ar": {
+            "key": "page.overlays.meetUsAt",
+            "group": "Website overlays",
+            "text": "قابلونا في"
+          },
+          "fr": {
+            "key": "page.overlays.meetUsAt",
+            "group": "Website overlays",
+            "text": "Retrouvez-nous à"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-bookMeeting",
+        "match": {
+          "key": "page.overlays.bookMeeting"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.bookMeeting",
+            "group": "Website overlays",
+            "text": "Book a meeting"
+          },
+          "ar": {
+            "key": "page.overlays.bookMeeting",
+            "group": "Website overlays",
+            "text": "احجز اجتماعاً"
+          },
+          "fr": {
+            "key": "page.overlays.bookMeeting",
+            "group": "Website overlays",
+            "text": "Réserver un rendez-vous"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-viewAll",
+        "match": {
+          "key": "page.overlays.viewAll"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.viewAll",
+            "group": "Website overlays",
+            "text": "View all"
+          },
+          "ar": {
+            "key": "page.overlays.viewAll",
+            "group": "Website overlays",
+            "text": "عرض الكل"
+          },
+          "fr": {
+            "key": "page.overlays.viewAll",
+            "group": "Website overlays",
+            "text": "Tout voir"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-notNow",
+        "match": {
+          "key": "page.overlays.notNow"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.notNow",
+            "group": "Website overlays",
+            "text": "Not right now"
+          },
+          "ar": {
+            "key": "page.overlays.notNow",
+            "group": "Website overlays",
+            "text": "ليس الآن"
+          },
+          "fr": {
+            "key": "page.overlays.notNow",
+            "group": "Website overlays",
+            "text": "Pas maintenant"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-quoteKicker",
+        "match": {
+          "key": "page.overlays.quoteKicker"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.quoteKicker",
+            "group": "Website overlays",
+            "text": "Request a quote"
+          },
+          "ar": {
+            "key": "page.overlays.quoteKicker",
+            "group": "Website overlays",
+            "text": "اطلب عرض سعر"
+          },
+          "fr": {
+            "key": "page.overlays.quoteKicker",
+            "group": "Website overlays",
+            "text": "Demander un devis"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-quoteHeading",
+        "match": {
+          "key": "page.overlays.quoteHeading"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.quoteHeading",
+            "group": "Website overlays",
+            "text": "Tell us what you"
+          },
+          "ar": {
+            "key": "page.overlays.quoteHeading",
+            "group": "Website overlays",
+            "text": "أخبرنا بما"
+          },
+          "fr": {
+            "key": "page.overlays.quoteHeading",
+            "group": "Website overlays",
+            "text": "Dites-nous ce dont vous avez"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-quoteHeadingEmphasis",
+        "match": {
+          "key": "page.overlays.quoteHeadingEmphasis"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.quoteHeadingEmphasis",
+            "group": "Website overlays",
+            "text": "need."
+          },
+          "ar": {
+            "key": "page.overlays.quoteHeadingEmphasis",
+            "group": "Website overlays",
+            "text": "تحتاجه."
+          },
+          "fr": {
+            "key": "page.overlays.quoteHeadingEmphasis",
+            "group": "Website overlays",
+            "text": "besoin."
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-quoteDescription",
+        "match": {
+          "key": "page.overlays.quoteDescription"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.quoteDescription",
+            "group": "Website overlays",
+            "text": "Sealed 1 kg sample plus the technical data sheet within five business days. No obligation."
+          },
+          "ar": {
+            "key": "page.overlays.quoteDescription",
+            "group": "Website overlays",
+            "text": "عينة مختومة بوزن 1 كجم مع ورقة البيانات الفنية خلال خمسة أيام عمل، دون أي التزام."
+          },
+          "fr": {
+            "key": "page.overlays.quoteDescription",
+            "group": "Website overlays",
+            "text": "Un échantillon scellé de 1 kg et sa fiche technique sous cinq jours ouvrés. Sans engagement."
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-cookieLabel",
+        "match": {
+          "key": "page.overlays.cookieLabel"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.cookieLabel",
+            "group": "Website overlays",
+            "text": "Cookie notice"
+          },
+          "ar": {
+            "key": "page.overlays.cookieLabel",
+            "group": "Website overlays",
+            "text": "إشعار ملفات تعريف الارتباط"
+          },
+          "fr": {
+            "key": "page.overlays.cookieLabel",
+            "group": "Website overlays",
+            "text": "Avis sur les cookies"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-cookieDescription",
+        "match": {
+          "key": "page.overlays.cookieDescription"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.cookieDescription",
+            "group": "Website overlays",
+            "text": "We use essential cookies to run this site and optional analytics cookies to understand which pages buyers use. Read the"
+          },
+          "ar": {
+            "key": "page.overlays.cookieDescription",
+            "group": "Website overlays",
+            "text": "نستخدم ملفات تعريف الارتباط الأساسية لتشغيل هذا الموقع وملفات تحليلية اختيارية لفهم الصفحات التي يستخدمها المشترون. اقرأ"
+          },
+          "fr": {
+            "key": "page.overlays.cookieDescription",
+            "group": "Website overlays",
+            "text": "Nous utilisons des cookies essentiels au fonctionnement du site et des cookies analytiques facultatifs pour comprendre les pages consultées. Consultez notre"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-cookieLink",
+        "match": {
+          "key": "page.overlays.cookieLink"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.cookieLink",
+            "group": "Website overlays",
+            "text": "cookie notice"
+          },
+          "ar": {
+            "key": "page.overlays.cookieLink",
+            "group": "Website overlays",
+            "text": "إشعار ملفات تعريف الارتباط"
+          },
+          "fr": {
+            "key": "page.overlays.cookieLink",
+            "group": "Website overlays",
+            "text": "avis sur les cookies"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-acceptAll",
+        "match": {
+          "key": "page.overlays.acceptAll"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.acceptAll",
+            "group": "Website overlays",
+            "text": "Accept all"
+          },
+          "ar": {
+            "key": "page.overlays.acceptAll",
+            "group": "Website overlays",
+            "text": "قبول الكل"
+          },
+          "fr": {
+            "key": "page.overlays.acceptAll",
+            "group": "Website overlays",
+            "text": "Tout accepter"
+          }
+        }
+      },
+      {
+        "key": "translations:overlays-essentialOnly",
+        "match": {
+          "key": "page.overlays.essentialOnly"
+        },
+        "data": {
+          "en": {
+            "key": "page.overlays.essentialOnly",
+            "group": "Website overlays",
+            "text": "Essential only"
+          },
+          "ar": {
+            "key": "page.overlays.essentialOnly",
+            "group": "Website overlays",
+            "text": "الأساسية فقط"
+          },
+          "fr": {
+            "key": "page.overlays.essentialOnly",
+            "group": "Website overlays",
+            "text": "Essentiels uniquement"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-noTimes",
+        "match": {
+          "key": "page.booking.noTimes"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.noTimes",
+            "group": "Meeting booking",
+            "text": "No meeting times are currently available."
+          },
+          "ar": {
+            "key": "page.booking.noTimes",
+            "group": "Meeting booking",
+            "text": "لا توجد مواعيد اجتماعات متاحة حالياً."
+          },
+          "fr": {
+            "key": "page.booking.noTimes",
+            "group": "Meeting booking",
+            "text": "Aucun créneau de rendez-vous n’est disponible actuellement."
+          }
+        }
+      },
+      {
+        "key": "translations:booking-enquiryInstead",
+        "match": {
+          "key": "page.booking.enquiryInstead"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.enquiryInstead",
+            "group": "Meeting booking",
+            "text": "Send an enquiry instead."
+          },
+          "ar": {
+            "key": "page.booking.enquiryInstead",
+            "group": "Meeting booking",
+            "text": "أرسل استفساراً بدلاً من ذلك."
+          },
+          "fr": {
+            "key": "page.booking.enquiryInstead",
+            "group": "Meeting booking",
+            "text": "Envoyez-nous plutôt une demande."
+          }
+        }
+      },
+      {
+        "key": "translations:booking-event",
+        "match": {
+          "key": "page.booking.event"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.event",
+            "group": "Meeting booking",
+            "text": "Event"
+          },
+          "ar": {
+            "key": "page.booking.event",
+            "group": "Meeting booking",
+            "text": "الفعالية"
+          },
+          "fr": {
+            "key": "page.booking.event",
+            "group": "Meeting booking",
+            "text": "Événement"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-previousMonth",
+        "match": {
+          "key": "page.booking.previousMonth"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.previousMonth",
+            "group": "Meeting booking",
+            "text": "Previous month"
+          },
+          "ar": {
+            "key": "page.booking.previousMonth",
+            "group": "Meeting booking",
+            "text": "الشهر السابق"
+          },
+          "fr": {
+            "key": "page.booking.previousMonth",
+            "group": "Meeting booking",
+            "text": "Mois précédent"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-nextMonth",
+        "match": {
+          "key": "page.booking.nextMonth"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.nextMonth",
+            "group": "Meeting booking",
+            "text": "Next month"
+          },
+          "ar": {
+            "key": "page.booking.nextMonth",
+            "group": "Meeting booking",
+            "text": "الشهر التالي"
+          },
+          "fr": {
+            "key": "page.booking.nextMonth",
+            "group": "Meeting booking",
+            "text": "Mois suivant"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-availableDates",
+        "match": {
+          "key": "page.booking.availableDates"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.availableDates",
+            "group": "Meeting booking",
+            "text": "Available dates"
+          },
+          "ar": {
+            "key": "page.booking.availableDates",
+            "group": "Meeting booking",
+            "text": "التواريخ المتاحة"
+          },
+          "fr": {
+            "key": "page.booking.availableDates",
+            "group": "Meeting booking",
+            "text": "Dates disponibles"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-available",
+        "match": {
+          "key": "page.booking.available"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.available",
+            "group": "Meeting booking",
+            "text": "appointments available"
+          },
+          "ar": {
+            "key": "page.booking.available",
+            "group": "Meeting booking",
+            "text": "مواعيد متاحة"
+          },
+          "fr": {
+            "key": "page.booking.available",
+            "group": "Meeting booking",
+            "text": "créneaux disponibles"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-reserved",
+        "match": {
+          "key": "page.booking.reserved"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.reserved",
+            "group": "Meeting booking",
+            "text": "Reserved"
+          },
+          "ar": {
+            "key": "page.booking.reserved",
+            "group": "Meeting booking",
+            "text": "محجوز"
+          },
+          "fr": {
+            "key": "page.booking.reserved",
+            "group": "Meeting booking",
+            "text": "Réservé"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-fullyReserved",
+        "match": {
+          "key": "page.booking.fullyReserved"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.fullyReserved",
+            "group": "Meeting booking",
+            "text": "fully reserved"
+          },
+          "ar": {
+            "key": "page.booking.fullyReserved",
+            "group": "Meeting booking",
+            "text": "محجوز بالكامل"
+          },
+          "fr": {
+            "key": "page.booking.fullyReserved",
+            "group": "Meeting booking",
+            "text": "complet"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-back",
+        "match": {
+          "key": "page.booking.back"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.back",
+            "group": "Meeting booking",
+            "text": "Back"
+          },
+          "ar": {
+            "key": "page.booking.back",
+            "group": "Meeting booking",
+            "text": "رجوع"
+          },
+          "fr": {
+            "key": "page.booking.back",
+            "group": "Meeting booking",
+            "text": "Retour"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-addCalendar",
+        "match": {
+          "key": "page.booking.addCalendar"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.addCalendar",
+            "group": "Meeting booking",
+            "text": "Add to calendar"
+          },
+          "ar": {
+            "key": "page.booking.addCalendar",
+            "group": "Meeting booking",
+            "text": "إضافة إلى التقويم"
+          },
+          "fr": {
+            "key": "page.booking.addCalendar",
+            "group": "Meeting booking",
+            "text": "Ajouter au calendrier"
+          }
+        }
+      },
+      {
+        "key": "translations:booking-addGoogleCalendar",
+        "match": {
+          "key": "page.booking.addGoogleCalendar"
+        },
+        "data": {
+          "en": {
+            "key": "page.booking.addGoogleCalendar",
+            "group": "Meeting booking",
+            "text": "Add to Google Calendar"
+          },
+          "ar": {
+            "key": "page.booking.addGoogleCalendar",
+            "group": "Meeting booking",
+            "text": "إضافة إلى تقويم Google"
+          },
+          "fr": {
+            "key": "page.booking.addGoogleCalendar",
+            "group": "Meeting booking",
+            "text": "Ajouter à Google Agenda"
+          }
+        }
+      },
+      {
+        "key": "translations:events-recap",
+        "match": {
+          "key": "page.events.recap"
+        },
+        "data": {
+          "en": {
+            "key": "page.events.recap",
+            "group": "Events",
+            "text": "Recap"
+          },
+          "ar": {
+            "key": "page.events.recap",
+            "group": "Events",
+            "text": "ملخص"
+          },
+          "fr": {
+            "key": "page.events.recap",
+            "group": "Events",
+            "text": "Récapitulatif"
+          }
+        }
+      },
+      {
+        "key": "translations:events-details",
+        "match": {
+          "key": "page.events.details"
+        },
+        "data": {
+          "en": {
+            "key": "page.events.details",
+            "group": "Events",
+            "text": "Details"
+          },
+          "ar": {
+            "key": "page.events.details",
+            "group": "Events",
+            "text": "التفاصيل"
+          },
+          "fr": {
+            "key": "page.events.details",
+            "group": "Events",
+            "text": "Détails"
+          }
+        }
+      },
+      {
+        "key": "translations:page.shared.globeLabel",
+        "match": {
+          "key": "page.shared.globeLabel"
+        },
+        "data": {
+          "en": {
+            "key": "page.shared.globeLabel",
+            "group": "Shared interface",
+            "text": "Interactive globe showing Alamir export regions"
+          },
+          "ar": {
+            "key": "page.shared.globeLabel",
+            "group": "Shared interface",
+            "text": "كرة أرضية تفاعلية تعرض مناطق تصدير الأمير"
+          },
+          "fr": {
+            "key": "page.shared.globeLabel",
+            "group": "Shared interface",
+            "text": "Globe interactif présentant les régions d’exportation d’Alamir"
+          }
+        }
+      },
+      {
+        "key": "translations:page.events.noUpcoming",
+        "match": {
+          "key": "page.events.noUpcoming"
+        },
+        "data": {
+          "en": {
+            "key": "page.events.noUpcoming",
+            "group": "Events",
+            "text": "No upcoming events are published."
+          },
+          "ar": {
+            "key": "page.events.noUpcoming",
+            "group": "Events",
+            "text": "لا توجد فعاليات قادمة منشورة."
+          },
+          "fr": {
+            "key": "page.events.noUpcoming",
+            "group": "Events",
+            "text": "Aucun événement à venir n’est publié."
+          }
+        }
+      },
+      {
+        "key": "translations:homeContact-badge",
+        "match": {
+          "key": "page.homeContact.badge"
+        },
+        "data": {
+          "en": {
+            "key": "page.homeContact.badge",
+            "group": "Homepage contact",
+            "text": "Start a conversation"
+          },
+          "ar": {
+            "key": "page.homeContact.badge",
+            "group": "Homepage contact",
+            "text": "ابدأ محادثة"
+          },
+          "fr": {
+            "key": "page.homeContact.badge",
+            "group": "Homepage contact",
+            "text": "Engageons la conversation"
+          }
+        }
+      },
+      {
+        "key": "translations:homeContact-button",
+        "match": {
+          "key": "page.homeContact.button"
+        },
+        "data": {
+          "en": {
+            "key": "page.homeContact.button",
+            "group": "Homepage contact",
+            "text": "Contact the team"
+          },
+          "ar": {
+            "key": "page.homeContact.button",
+            "group": "Homepage contact",
+            "text": "تواصل مع الفريق"
+          },
+          "fr": {
+            "key": "page.homeContact.button",
+            "group": "Homepage contact",
+            "text": "Contactez notre équipe"
+          }
+        }
+      },
+      {
+        "key": "translations:homeContact-exportDesk",
+        "match": {
+          "key": "page.homeContact.exportDesk"
+        },
+        "data": {
+          "en": {
+            "key": "page.homeContact.exportDesk",
+            "group": "Homepage contact",
+            "text": "Export desk"
+          },
+          "ar": {
+            "key": "page.homeContact.exportDesk",
+            "group": "Homepage contact",
+            "text": "مكتب التصدير"
+          },
+          "fr": {
+            "key": "page.homeContact.exportDesk",
+            "group": "Homepage contact",
+            "text": "Service export"
+          }
+        }
+      },
+      {
+        "key": "translations:homeContact-enquiryDetails",
+        "match": {
+          "key": "page.homeContact.enquiryDetails"
+        },
+        "data": {
+          "en": {
+            "key": "page.homeContact.enquiryDetails",
+            "group": "Homepage contact",
+            "text": "Enquiry details"
+          },
+          "ar": {
+            "key": "page.homeContact.enquiryDetails",
+            "group": "Homepage contact",
+            "text": "تفاصيل الاستفسار"
+          },
+          "fr": {
+            "key": "page.homeContact.enquiryDetails",
+            "group": "Homepage contact",
+            "text": "Détails de la demande"
+          }
+        }
       }
     ],
     "meeting-slots": [
