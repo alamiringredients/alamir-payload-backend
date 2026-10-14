@@ -1,5 +1,7 @@
 # Alamir Payload backend
 
+Use Node.js 24 LTS for development and deployment. The tooling also supports Node.js 22.13+ (22.x) and Node.js 26+.
+
 The CMS and public API use Payload 3 with its standard admin, Lexical editor, localization, authentication, and PostgreSQL adapter. The separate website is in `../alamir-payload-frontend`.
 
 ## Run locally
