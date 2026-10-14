@@ -1,0 +1,1832 @@
+[
+  {
+    "purpose": "home",
+    "title": "Home form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "name",
+        "label": {
+          "en": "Full name",
+          "ar": "الاسم الكامل",
+          "fr": "Nom complet"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Sarah Ibrahim",
+          "ar": "مثال: سارة إبراهيم",
+          "fr": "p. ex. Sarah Ibrahim"
+        },
+        "blockName": "Full name"
+      },
+      {
+        "blockType": "text",
+        "name": "company",
+        "label": {
+          "en": "Company",
+          "ar": "الشركة",
+          "fr": "Entreprise"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Nile Beverages",
+          "ar": "مثال: شركة النيل للمشروبات",
+          "fr": "p. ex. Nile Beverages"
+        },
+        "blockName": "Company"
+      },
+      {
+        "blockType": "email",
+        "name": "email",
+        "label": {
+          "en": "Work email",
+          "ar": "البريد الإلكتروني للعمل",
+          "fr": "E-mail professionnel"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "name@company.com",
+          "ar": "name@company.com",
+          "fr": "name@company.com"
+        },
+        "blockName": "Work email"
+      },
+      {
+        "blockType": "country",
+        "name": "country",
+        "label": {
+          "en": "Country",
+          "ar": "دولة",
+          "fr": "Pays"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "Select a country",
+          "ar": "اختر بلدا",
+          "fr": "Sélectionner un pays"
+        },
+        "blockName": "Country"
+      },
+      {
+        "blockType": "product-select",
+        "name": "product",
+        "label": {
+          "en": "Product",
+          "ar": "المنتج",
+          "fr": "Produit"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "Select a product",
+          "ar": "اختر منتجاً",
+          "fr": "Sélectionnez un produit"
+        },
+        "blockName": "Product"
+      },
+      {
+        "blockType": "text",
+        "name": "volume",
+        "label": {
+          "en": "Volume",
+          "ar": "الكمية",
+          "fr": "Volume"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. 250 MT / year",
+          "ar": "مثال: 250 طن متري سنوياً",
+          "fr": "p. ex. 250 t par an"
+        },
+        "blockName": "Volume"
+      },
+      {
+        "blockType": "text",
+        "name": "brix",
+        "label": {
+          "en": "Target Brix",
+          "ar": "درجة بريكس المستهدفة",
+          "fr": "Brix cible"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. 28–30 °Bx",
+          "ar": "مثال: 28–30 درجة بريكس",
+          "fr": "p. ex. 28–30 °Bx"
+        },
+        "blockName": "Target Brix"
+      },
+      {
+        "blockType": "text",
+        "name": "destination",
+        "label": {
+          "en": "Destination",
+          "ar": "الوجهة",
+          "fr": "Destination"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "e.g. CIF Jeddah",
+          "ar": "مثال: CIF جدة",
+          "fr": "p. ex. CIF Djeddah"
+        },
+        "blockName": "Destination"
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Send enquiry",
+      "ar": "Send enquiry",
+      "fr": "Send enquiry"
+    },
+    "confirmationType": "redirect",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {
+      "sending": {
+        "en": "Sending...",
+        "ar": "جارٍ الإرسال...",
+        "fr": "Envoi en cours..."
+      },
+      "invalid": {
+        "en": "Please complete the required fields.",
+        "ar": "يرجى استكمال الحقول المطلوبة.",
+        "fr": "Veuillez remplir les champs obligatoires."
+      },
+      "failure": {
+        "en": "Your enquiry could not be sent.",
+        "ar": "تعذر إرسال استفسارك. يرجى المحاولة مرة أخرى.",
+        "fr": "Votre demande n’a pas pu être envoyée. Veuillez réessayer."
+      }
+    }
+  },
+  {
+    "purpose": "contact",
+    "title": "Contact form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "name",
+        "label": {
+          "en": "Full name",
+          "ar": "الاسم الكامل",
+          "fr": "Nom complet"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Sarah Ibrahim",
+          "ar": "مثال: سارة إبراهيم",
+          "fr": "p. ex. Sarah Ibrahim"
+        },
+        "blockName": "Full name"
+      },
+      {
+        "blockType": "text",
+        "name": "jobTitle",
+        "label": {
+          "en": "Job title",
+          "ar": "مسمى وظيفي",
+          "fr": "Titre du poste"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Procurement Manager",
+          "ar": "مثال: مدير المشتريات",
+          "fr": "p. ex. Responsable des achats"
+        },
+        "blockName": "Job title"
+      },
+      {
+        "blockType": "text",
+        "name": "company",
+        "label": {
+          "en": "Company name",
+          "ar": "اسم الشركة",
+          "fr": "Nom de la société"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Nile Beverages Co.",
+          "ar": "مثال: شركة النيل للمشروبات",
+          "fr": "p. ex. Nile Beverages Co."
+        },
+        "blockName": "Company name"
+      },
+      {
+        "blockType": "country",
+        "name": "country",
+        "label": {
+          "en": "Country",
+          "ar": "دولة",
+          "fr": "Pays"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "Select a country",
+          "ar": "اختر بلدا",
+          "fr": "Sélectionner un pays"
+        },
+        "blockName": "Country"
+      },
+      {
+        "blockType": "email",
+        "name": "email",
+        "label": {
+          "en": "Email",
+          "ar": "البريد الإلكتروني",
+          "fr": "E-mail"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. name@company.com",
+          "ar": "مثال: name@company.com",
+          "fr": "p. ex. nom@entreprise.com"
+        },
+        "blockName": "Email"
+      },
+      {
+        "blockType": "text",
+        "name": "phone",
+        "label": {
+          "en": "Phone number",
+          "ar": "رقم التليفون",
+          "fr": "Numéro de téléphone"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. 100 550 5020",
+          "ar": "مثال: 100 550 5020",
+          "fr": "p. ex. 100 550 5020"
+        },
+        "inputType": "tel",
+        "includeDialCode": true,
+        "dialCodePlaceholder": {
+          "en": "Code",
+          "ar": "شفرة",
+          "fr": "Indicatif"
+        },
+        "blockName": "Phone number"
+      },
+      {
+        "blockType": "text",
+        "name": "website",
+        "label": {
+          "en": "Company website",
+          "ar": "موقع الشركة",
+          "fr": "Site web de l'entreprise"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. www.company.com",
+          "ar": "مثال: www.company.com",
+          "fr": "p. ex. www.entreprise.com"
+        },
+        "blockName": "Company website"
+      },
+      {
+        "blockType": "select",
+        "name": "industry",
+        "label": {
+          "en": "Industry",
+          "ar": "صناعة",
+          "fr": "Industrie"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "options": [
+          {
+            "label": {
+              "en": "Beverage",
+              "ar": "المشروبات",
+              "fr": "Boissons"
+            },
+            "value": "Beverage"
+          },
+          {
+            "label": {
+              "en": "Sauces & condiments",
+              "ar": "الصلصات والتوابل",
+              "fr": "Sauces et condiments"
+            },
+            "value": "Sauces & condiments"
+          },
+          {
+            "label": {
+              "en": "Dairy",
+              "ar": "ألبان",
+              "fr": "Produits laitiers"
+            },
+            "value": "Dairy"
+          },
+          {
+            "label": {
+              "en": "Confectionery",
+              "ar": "الحلويات",
+              "fr": "Confiserie"
+            },
+            "value": "Confectionery"
+          },
+          {
+            "label": {
+              "en": "Bakery",
+              "ar": "مخبز",
+              "fr": "Boulangerie"
+            },
+            "value": "Bakery"
+          },
+          {
+            "label": {
+              "en": "Prepared foods",
+              "ar": "الأطعمة الجاهزة",
+              "fr": "Préparations alimentaires"
+            },
+            "value": "Prepared foods"
+          },
+          {
+            "label": {
+              "en": "Other",
+              "ar": "آخر",
+              "fr": "Autres"
+            },
+            "value": "Other"
+          }
+        ],
+        "defaultValue": {
+          "en": "Beverage",
+          "ar": "Beverage",
+          "fr": "Beverage"
+        },
+        "blockName": "Industry"
+      },
+      {
+        "blockType": "product-select",
+        "name": "product",
+        "label": {
+          "en": "Product interest",
+          "ar": "مصلحة المنتج",
+          "fr": "Intérêt des produits"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "blockName": "Product interest"
+      },
+      {
+        "blockType": "text",
+        "name": "volume",
+        "label": {
+          "en": "Estimated annual volume",
+          "ar": "الحجم السنوي المقدر",
+          "fr": "Volume annuel estimé"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. 250 MT per year",
+          "ar": "مثال: 250 طن متري سنوياً",
+          "fr": "p. ex. 250 t par an"
+        },
+        "blockName": "Estimated annual volume"
+      },
+      {
+        "blockType": "select",
+        "name": "channel",
+        "label": {
+          "en": "Preferred channel",
+          "ar": "القناة المفضلة",
+          "fr": "Chaîne préférée"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "options": [
+          {
+            "label": {
+              "en": "WhatsApp",
+              "ar": "واتساب",
+              "fr": "WhatsApp"
+            },
+            "value": "WhatsApp"
+          },
+          {
+            "label": {
+              "en": "Email",
+              "ar": "البريد الإلكتروني",
+              "fr": "E-mail"
+            },
+            "value": "Email"
+          },
+          {
+            "label": {
+              "en": "Call",
+              "ar": "يتصل",
+              "fr": "Appeler"
+            },
+            "value": "Call"
+          }
+        ],
+        "defaultValue": {
+          "en": "WhatsApp",
+          "ar": "WhatsApp",
+          "fr": "WhatsApp"
+        },
+        "blockName": "Preferred channel"
+      },
+      {
+        "blockType": "textarea",
+        "name": "message",
+        "label": {
+          "en": "Message",
+          "ar": "رسالة",
+          "fr": "Message"
+        },
+        "required": false,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "e.g. We are looking for hot break tomato paste, 28-30% Brix, aseptic drums, CIF Jeddah.",
+          "ar": "مثال: نبحث عن معجون طماطم بالكسر الساخن، 28-30% بريكس، براميل معقمة، CIF جدة.",
+          "fr": "p. ex. Nous recherchons du concentré de tomate Hot Break, 28-30 % Brix, en fûts aseptiques, CIF Djeddah."
+        },
+        "blockName": "Message"
+      },
+      {
+        "blockType": "checkbox",
+        "name": "consent",
+        "label": {
+          "en": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the",
+          "ar": "أوافق على أنه يجوز لـ Alamir Ingredients استخدام هذه التفاصيل للإجابة على استفساري، كما هو موضح في",
+          "fr": "Je conviens qu'Alamir Ingredients peut utiliser ces détails pour répondre à ma demande, comme décrit dans la"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "privacyLabel": {
+          "en": "privacy policy",
+          "ar": "سياسة الخصوصية",
+          "fr": "Politique de confidentialité"
+        },
+        "blockName": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the"
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Submit enquiry",
+      "ar": "إرسال الاستفسار",
+      "fr": "Soumettre une demande"
+    },
+    "confirmationType": "redirect",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {
+      "sending": {
+        "en": "Sending...",
+        "ar": "جارٍ الإرسال...",
+        "fr": "Envoi en cours..."
+      },
+      "invalid": {
+        "en": "Please complete the required fields.",
+        "ar": "يرجى استكمال الحقول المطلوبة.",
+        "fr": "Veuillez remplir les champs obligatoires."
+      },
+      "failure": {
+        "en": "Your enquiry could not be sent.",
+        "ar": "تعذر إرسال استفسارك. يرجى المحاولة مرة أخرى.",
+        "fr": "Votre demande n’a pas pu être envoyée. Veuillez réessayer."
+      },
+      "whatsappSales": {
+        "en": "Contact sales on WhatsApp",
+        "ar": "التواصل مع المبيعات على الواتساب",
+        "fr": "Contactez les ventes sur WhatsApp"
+      }
+    }
+  },
+  {
+    "purpose": "quote",
+    "title": "Quote form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "name",
+        "label": {
+          "en": "Full name",
+          "ar": "الاسم الكامل",
+          "fr": "Nom complet"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Sarah Ibrahim",
+          "ar": "مثال: سارة إبراهيم",
+          "fr": "p. ex. Sarah Ibrahim"
+        },
+        "blockName": "Full name"
+      },
+      {
+        "blockType": "text",
+        "name": "company",
+        "label": {
+          "en": "Company name",
+          "ar": "اسم الشركة",
+          "fr": "Nom de la société"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Nile Beverages Co.",
+          "ar": "مثال: شركة النيل للمشروبات",
+          "fr": "p. ex. Nile Beverages Co."
+        },
+        "blockName": "Company name"
+      },
+      {
+        "blockType": "email",
+        "name": "email",
+        "label": {
+          "en": "Work email",
+          "ar": "البريد الإلكتروني للعمل",
+          "fr": "E-mail professionnel"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. name@company.com",
+          "ar": "مثال: name@company.com",
+          "fr": "p. ex. nom@entreprise.com"
+        },
+        "blockName": "Work email"
+      },
+      {
+        "blockType": "text",
+        "name": "country",
+        "label": {
+          "en": "Country",
+          "ar": "دولة",
+          "fr": "Pays"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Egypt",
+          "ar": "مثال: مصر",
+          "fr": "p. ex. Égypte"
+        },
+        "blockName": "Country"
+      },
+      {
+        "blockType": "product-select",
+        "name": "product",
+        "label": {
+          "en": "Product",
+          "ar": "المنتج",
+          "fr": "Produit"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "Select a product line",
+          "ar": "اختر فئة المنتج",
+          "fr": "Sélectionnez une gamme de produits"
+        },
+        "blockName": "Product"
+      },
+      {
+        "blockType": "text",
+        "name": "volume",
+        "label": {
+          "en": "Indicative annual volume",
+          "ar": "الحجم السنوي التقريبي",
+          "fr": "Volume annuel indicatif"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. 120 MT",
+          "ar": "مثال: 120 طن متري",
+          "fr": "p. ex. 120 t"
+        },
+        "blockName": "Indicative annual volume"
+      },
+      {
+        "blockType": "textarea",
+        "name": "message",
+        "label": {
+          "en": "Specification notes",
+          "ar": "ملاحظات المواصفات",
+          "fr": "Notes techniques"
+        },
+        "required": false,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "Brix, packaging format, delivery terms, timing",
+          "ar": "درجة بريكس، صيغة التعبئة، شروط التسليم، التوقيت",
+          "fr": "Brix, conditionnement, conditions de livraison, calendrier"
+        },
+        "blockName": "Specification notes"
+      },
+      {
+        "blockType": "checkbox",
+        "name": "consent",
+        "label": {
+          "en": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the",
+          "ar": "أوافق على أنه يجوز لـ Alamir Ingredients استخدام هذه التفاصيل للإجابة على استفساري، كما هو موضح في",
+          "fr": "Je conviens qu'Alamir Ingredients peut utiliser ces détails pour répondre à ma demande, comme décrit dans la"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "privacyLabel": {
+          "en": "privacy policy",
+          "ar": "سياسة الخصوصية",
+          "fr": "Politique de confidentialité"
+        },
+        "blockName": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the"
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Send request",
+      "ar": "إرسال الطلب",
+      "fr": "Envoyer la demande"
+    },
+    "confirmationType": "message",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {
+      "sending": {
+        "en": "Sending...",
+        "ar": "جارٍ الإرسال...",
+        "fr": "Envoi en cours..."
+      },
+      "invalid": {
+        "en": "Please complete the required fields.",
+        "ar": "يرجى استكمال الحقول المطلوبة.",
+        "fr": "Veuillez remplir les champs obligatoires."
+      },
+      "failure": {
+        "en": "Your request could not be sent.",
+        "ar": "تعذر إرسال طلبك. يرجى المحاولة مرة أخرى.",
+        "fr": "Votre demande n’a pas pu être envoyée. Veuillez réessayer."
+      },
+      "cancel": {
+        "en": "Cancel",
+        "ar": "إلغاء",
+        "fr": "Annuler"
+      },
+      "loadingFailure": {
+        "en": "Your request could not be sent.",
+        "ar": "تعذر إرسال طلبك. يرجى المحاولة مرة أخرى.",
+        "fr": "Votre demande n’a pas pu être envoyée. Veuillez réessayer."
+      }
+    }
+  },
+  {
+    "purpose": "application",
+    "title": "Application form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "name",
+        "label": {
+          "en": "Full name",
+          "ar": "الاسم الكامل",
+          "fr": "Nom complet"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "blockName": "Full name"
+      },
+      {
+        "blockType": "email",
+        "name": "email",
+        "label": {
+          "en": "Email address",
+          "ar": "البريد الإلكتروني",
+          "fr": "Adresse e-mail"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "blockName": "Email address"
+      },
+      {
+        "blockType": "text",
+        "name": "phone",
+        "label": {
+          "en": "Phone number",
+          "ar": "رقم الهاتف",
+          "fr": "Téléphone"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "inputType": "tel",
+        "blockName": "Phone number"
+      },
+      {
+        "blockType": "select",
+        "name": "department",
+        "label": {
+          "en": "Department",
+          "ar": "قسم",
+          "fr": "Département"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "options": [
+          {
+            "label": {
+              "en": "Production",
+              "ar": "Production",
+              "fr": "Production"
+            },
+            "value": "Production"
+          },
+          {
+            "label": {
+              "en": "Engineering",
+              "ar": "Engineering",
+              "fr": "Engineering"
+            },
+            "value": "Engineering"
+          },
+          {
+            "label": {
+              "en": "Quality",
+              "ar": "Quality",
+              "fr": "Quality"
+            },
+            "value": "Quality"
+          },
+          {
+            "label": {
+              "en": "Supply chain",
+              "ar": "Supply chain",
+              "fr": "Supply chain"
+            },
+            "value": "Supply chain"
+          },
+          {
+            "label": {
+              "en": "Sales",
+              "ar": "Sales",
+              "fr": "Sales"
+            },
+            "value": "Sales"
+          },
+          {
+            "label": {
+              "en": "Finance",
+              "ar": "Finance",
+              "fr": "Finance"
+            },
+            "value": "Finance"
+          },
+          {
+            "label": {
+              "en": "Human resources",
+              "ar": "Human resources",
+              "fr": "Human resources"
+            },
+            "value": "Human resources"
+          },
+          {
+            "label": {
+              "en": "Administration",
+              "ar": "Administration",
+              "fr": "Administration"
+            },
+            "value": "Administration"
+          },
+          {
+            "label": {
+              "en": "Corporate",
+              "ar": "Corporate",
+              "fr": "Corporate"
+            },
+            "value": "Corporate"
+          }
+        ],
+        "blockName": "Department"
+      },
+      {
+        "blockType": "upload",
+        "name": "cv",
+        "label": {
+          "en": "CV (PDF or DOCX, up to 10 MB)",
+          "ar": "السيرة الذاتية (PDF أو DOCX، حتى 10 ميجابايت)",
+          "fr": "CV (PDF ou DOCX, 10 Mo maximum)"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "uploadCollection": "application-files",
+        "multiple": false,
+        "maxFileSize": 10485760,
+        "mimeTypes": [
+          {
+            "mimeType": "application/pdf"
+          },
+          {
+            "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          }
+        ],
+        "blockName": "CV (PDF or DOCX, up to 10 MB)"
+      },
+      {
+        "blockType": "textarea",
+        "name": "letter",
+        "label": {
+          "en": "Cover letter (optional)",
+          "ar": "خطاب تقديمي (اختياري)",
+          "fr": "Lettre d'accompagnement (facultative)"
+        },
+        "required": false,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "blockName": "Cover letter (optional)"
+      },
+      {
+        "blockType": "checkbox",
+        "name": "consent",
+        "label": {
+          "en": "I agree to the processing of my details for recruitment.",
+          "ar": "أوافق على معالجة بياناتي لأغراض التوظيف.",
+          "fr": "J’accepte le traitement de mes données pour le recrutement."
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "privacyLabel": {
+          "en": "Privacy policy",
+          "ar": "سياسة الخصوصية",
+          "fr": "Politique de confidentialité"
+        },
+        "blockName": "I agree to the processing of my details for recruitment."
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Send application",
+      "ar": "إرسال الطلب",
+      "fr": "Envoyer la candidature"
+    },
+    "confirmationType": "redirect",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {
+      "sending": {
+        "en": "Submitting…",
+        "ar": "جارٍ الإرسال…",
+        "fr": "Envoi…"
+      },
+      "invalid": {
+        "en": "Please complete the required fields and consent.",
+        "ar": "يرجى استكمال الحقول المطلوبة والموافقة.",
+        "fr": "Veuillez remplir les champs obligatoires et donner votre accord."
+      },
+      "failure": {
+        "en": "Could not submit your application. Please try again.",
+        "ar": "تعذر إرسال طلبك. يرجى المحاولة مرة أخرى.",
+        "fr": "Impossible d’envoyer votre candidature. Veuillez réessayer."
+      },
+      "positionLabel": {
+        "en": "Position",
+        "ar": "الوظيفة",
+        "fr": "Poste"
+      }
+    }
+  },
+  {
+    "purpose": "reservation",
+    "title": "Reservation form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "name",
+        "label": {
+          "en": "Full name",
+          "ar": "الاسم الكامل",
+          "fr": "Nom complet"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Sarah Ibrahim",
+          "ar": "مثال: سارة إبراهيم",
+          "fr": "p. ex. Sarah Ibrahim"
+        },
+        "blockName": "Full name"
+      },
+      {
+        "blockType": "text",
+        "name": "company",
+        "label": {
+          "en": "Company name",
+          "ar": "اسم الشركة",
+          "fr": "Nom de la société"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "e.g. Nile Beverages",
+          "ar": "مثال: شركة النيل للمشروبات",
+          "fr": "p. ex. Nile Beverages"
+        },
+        "blockName": "Company name"
+      },
+      {
+        "blockType": "email",
+        "name": "email",
+        "label": {
+          "en": "Work email",
+          "ar": "البريد الإلكتروني للعمل",
+          "fr": "E-mail professionnel"
+        },
+        "required": true,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "name@company.com",
+          "ar": "name@company.com",
+          "fr": "name@company.com"
+        },
+        "blockName": "Work email"
+      },
+      {
+        "blockType": "country",
+        "name": "country",
+        "label": {
+          "en": "Country",
+          "ar": "دولة",
+          "fr": "Pays"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "Select a country",
+          "ar": "اختر بلدا",
+          "fr": "Sélectionner un pays"
+        },
+        "blockName": "Country"
+      },
+      {
+        "blockType": "text",
+        "name": "phone",
+        "label": {
+          "en": "Phone number",
+          "ar": "رقم التليفون",
+          "fr": "Numéro de téléphone"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "inputType": "tel",
+        "includeDialCode": true,
+        "dialCodePlaceholder": {
+          "en": "Code",
+          "ar": "شفرة",
+          "fr": "Indicatif"
+        },
+        "blockName": "Phone number"
+      },
+      {
+        "blockType": "select",
+        "name": "topic",
+        "label": {
+          "en": "What should we prepare?",
+          "ar": "ما الذي ينبغي علينا تحضيره؟",
+          "fr": "Que devons-nous préparer ?"
+        },
+        "required": false,
+        "visible": true,
+        "width": 50,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "options": [
+          {
+            "label": {
+              "en": "Tomato concentrates",
+              "ar": "مركزات الطماطم",
+              "fr": "Concentrés de tomate"
+            },
+            "value": "Tomato concentrates"
+          },
+          {
+            "label": {
+              "en": "Fruit concentrates",
+              "ar": "مركزات الفاكهة",
+              "fr": "Concentrés de fruits"
+            },
+            "value": "Fruit concentrates"
+          },
+          {
+            "label": {
+              "en": "Fruit purees",
+              "ar": "مهروسات الفاكهة",
+              "fr": "Purées de fruits"
+            },
+            "value": "Fruit purees"
+          },
+          {
+            "label": {
+              "en": "Chilli concentrate",
+              "ar": "مركز الفلفل الحار",
+              "fr": "Concentré de piment"
+            },
+            "value": "Chilli concentrate"
+          },
+          {
+            "label": {
+              "en": "Private label & contract packing",
+              "ar": "Private label & contract packing",
+              "fr": "Private label & contract packing"
+            },
+            "value": "Private label & contract packing"
+          },
+          {
+            "label": {
+              "en": "Facility visit in Sadat City",
+              "ar": "Facility visit in Sadat City",
+              "fr": "Facility visit in Sadat City"
+            },
+            "value": "Facility visit in Sadat City"
+          },
+          {
+            "label": {
+              "en": "Meet us at an upcoming show",
+              "ar": "Meet us at an upcoming show",
+              "fr": "Meet us at an upcoming show"
+            },
+            "value": "Meet us at an upcoming show"
+          },
+          {
+            "label": {
+              "en": "Something else",
+              "ar": "Something else",
+              "fr": "Something else"
+            },
+            "value": "Something else"
+          }
+        ],
+        "defaultValue": {
+          "en": "Tomato concentrates",
+          "ar": "Tomato concentrates",
+          "fr": "Tomato concentrates"
+        },
+        "blockName": "What should we prepare?"
+      },
+      {
+        "blockType": "textarea",
+        "name": "message",
+        "label": {
+          "en": "Anything to send us before the call?",
+          "ar": "هل ترغب في إرسال شيء قبل المكالمة؟",
+          "fr": "Souhaitez-vous nous envoyer quelque chose avant l’appel ?"
+        },
+        "required": false,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "blockName": "Anything to send us before the call?"
+      },
+      {
+        "blockType": "checkbox",
+        "name": "consent",
+        "label": {
+          "en": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the",
+          "ar": "أوافق على أنه يجوز لـ Alamir Ingredients استخدام هذه التفاصيل للإجابة على استفساري، كما هو موضح في",
+          "fr": "Je conviens qu'Alamir Ingredients peut utiliser ces détails pour répondre à ma demande, comme décrit dans la"
+        },
+        "required": true,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "",
+          "ar": "",
+          "fr": ""
+        },
+        "privacyLabel": {
+          "en": "Privacy policy",
+          "ar": "سياسة الخصوصية",
+          "fr": "Politique de confidentialité"
+        },
+        "blockName": "I agree that Alamir Ingredients may use these details to answer my enquiry, as described in the"
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Confirm booking",
+      "ar": "تأكيد الحجز",
+      "fr": "Confirmer la réservation"
+    },
+    "confirmationType": "message",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {
+      "sending": {
+        "en": "Sending...",
+        "ar": "جارٍ الإرسال...",
+        "fr": "Envoi en cours..."
+      },
+      "invalid": {
+        "en": "Please check the required fields and choose a meeting time.",
+        "ar": "يرجى مراجعة الحقول المطلوبة واختيار موعد للاجتماع.",
+        "fr": "Veuillez vérifier les champs obligatoires et choisir un créneau."
+      },
+      "failure": {
+        "en": "Could not book your meeting. Please try again.",
+        "ar": "تعذر حجز اجتماعك. يرجى المحاولة مرة أخرى.",
+        "fr": "Impossible de réserver votre rendez-vous. Veuillez réessayer."
+      },
+      "pickAnotherSlot": {
+        "en": "Pick another slot",
+        "ar": "اختر موعداً آخر",
+        "fr": "Choisir un autre créneau"
+      }
+    }
+  },
+  {
+    "purpose": "search",
+    "title": "Search form default",
+    "fields": [
+      {
+        "blockType": "text",
+        "name": "q",
+        "label": {
+          "en": "Search",
+          "ar": "يبحث",
+          "fr": "Rechercher"
+        },
+        "required": false,
+        "visible": true,
+        "width": 100,
+        "placeholder": {
+          "en": "Search across products, specifications, certifications, downloads, news and open positions.",
+          "ar": "ابحث عبر المنتجات والمواصفات والشهادات والتنزيلات والأخبار والوظائف المفتوحة.",
+          "fr": "Rechercher les produits, spécifications, certifications, téléchargements, nouvelles et positions ouvertes."
+        },
+        "blockName": "Search"
+      }
+    ],
+    "submitButtonLabel": {
+      "en": "Search",
+      "ar": "بحث",
+      "fr": "Rechercher"
+    },
+    "confirmationType": "message",
+    "redirect": {
+      "url": "/thank-you"
+    },
+    "confirmationMessage": {
+      "en": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Thank you. Your request has been received.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ar": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "شكراً لك. تم استلام طلبك.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "fr": {
+        "root": {
+          "type": "root",
+          "version": 1,
+          "direction": null,
+          "format": "",
+          "indent": 0,
+          "children": [
+            {
+              "type": "paragraph",
+              "version": 1,
+              "direction": null,
+              "format": "",
+              "indent": 0,
+              "children": [
+                {
+                  "type": "text",
+                  "version": 1,
+                  "text": "Merci. Votre demande a été reçue.",
+                  "format": 0,
+                  "detail": 0,
+                  "mode": "normal",
+                  "style": ""
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "ui": {}
+  }
+]
