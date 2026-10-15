@@ -1,5 +1,5 @@
 import type { PayloadRequest, Plugin } from 'payload'
-import { batchPublicContent } from '../services/publication'
+import { batchPublicContent, initializePublications } from '../services/publication'
 import { lockPublicContent, publicResources } from '../services/publicContent'
 
 function batchDocumentHooks<Args extends { req: PayloadRequest; doc: unknown }>(
@@ -21,6 +21,10 @@ const contentWriters = new Set([...publicResources, 'form-submissions', 'reserva
 // Acquiring it only in afterChange can deadlock against a concurrent publication.
 export const publicContentWrites: Plugin = (config) => ({
   ...config,
+  onInit: async payload => {
+    initializePublications(payload)
+    await config.onInit?.(payload)
+  },
   collections: config.collections?.map((collection) => {
     if (!contentWriters.has(collection.slug)) return collection
     return {

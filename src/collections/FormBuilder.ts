@@ -3,6 +3,7 @@ import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 import { productSelect } from '../fields/productSelect'
 import { authenticated } from '../access'
 import { can } from '../access/permissions'
+import { bookingReceiptField } from '../services/meetingBooking'
 import { applyFormDefaults } from '../services/forms'
 import { formPolicies, type FormPurpose } from '../services/formPolicy'
 import { revalidatePage, revalidateDeletedPage } from '../hooks/revalidate'
@@ -279,13 +280,7 @@ export const formsPlugin = formBuilderPlugin({
       { name: 'locale', type: 'select', options: ['en', 'ar', 'fr'], required: true },
       { name: 'key', type: 'text', unique: true, required: true },
       { name: 'slotId', type: 'number', admin: { hidden: true } },
-      {
-        name: 'bookingReceipt',
-        type: 'json',
-        virtual: true,
-        admin: { hidden: true },
-        hooks: { afterRead: [({ req }) => req.context.bookingReceipt] },
-      },
+      bookingReceiptField,
       {
         name: 'record',
         type: 'relationship',

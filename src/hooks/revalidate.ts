@@ -1,4 +1,5 @@
 import { publishPublicContent } from '../services/publication'
+import { publicationDependencies } from '../services/publicContentPolicy'
 import type {
   CollectionAfterChangeHook,
   CollectionAfterDeleteHook,
@@ -20,14 +21,7 @@ export const revalidatePage: CollectionAfterChangeHook = async ({
   await publishPublicContent(
     req,
     [collection.slug],
-    [
-      collection.slug,
-      ...(collection.slug === 'events' ? ['meeting-slots'] : []),
-      ...(operation === 'create' &&
-      ['pages', 'jobs', 'events', 'products'].includes(collection.slug)
-        ? ['forms']
-        : []),
-    ],
+    publicationDependencies(collection.slug, operation),
   )
   return doc
 }
@@ -39,11 +33,7 @@ export const revalidateDeletedPage: CollectionAfterDeleteHook = async ({
   await publishPublicContent(
     req,
     [collection.slug],
-    [
-      collection.slug,
-      ...(collection.slug === 'events' ? ['meeting-slots'] : []),
-      ...(['pages', 'jobs', 'events', 'products'].includes(collection.slug) ? ['forms'] : []),
-    ],
+    publicationDependencies(collection.slug, 'delete'),
   )
   return doc
 }

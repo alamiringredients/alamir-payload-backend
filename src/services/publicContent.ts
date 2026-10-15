@@ -7,41 +7,8 @@ import {
 } from 'payload'
 import { sql } from '@payloadcms/db-postgres'
 
-const publicCollections = [
-  'pages',
-  'products',
-  'categories',
-  'media',
-  'translations',
-  'news',
-  'news-taxonomies',
-  'sustainability',
-  'sustainability-goals',
-  'jobs',
-  'events',
-  'meeting-slots',
-  'certifications',
-  'certification-types',
-  'product-applications',
-  'product-concentrations',
-  'forms',
-] as const
-const publicGlobals = ['website-settings', 'navigation'] as const
-export const publicResources = [
-  ...publicCollections,
-  ...publicGlobals.map((slug) => `globals/${slug}`),
-]
-const sharedFields: Record<string, string[]> = {
-  pages: ['title', 'slug', 'sourceKey', '_status'],
-  products: ['name', 'slug', 'sourceId', 'category', 'gallery'],
-  categories: ['name', 'slug', 'sourceId', 'icon', 'description', 'page.artwork'],
-  media: ['url', 'width', 'height', 'mimeType', 'filename', 'prefix', 'alt'],
-  translations: ['key', 'text'],
-}
-export const sharedResources = [
-  ...Object.keys(sharedFields),
-  ...publicGlobals.map((slug) => `globals/${slug}`),
-]
+import { publicResources, sharedFields, projectionDependencies } from './publicContentPolicy'
+export { publicResources, sharedResources } from './publicContentPolicy'
 
 function forLocale(value: unknown, locale: string): unknown {
   if (!value || typeof value !== 'object') return value
@@ -67,6 +34,10 @@ function summary(resource: string, content: Record<string, unknown>) {
     ...content,
     docs: (content.docs as Record<string, unknown>[]).map((doc) => {
       const result: Record<string, unknown> = { id: doc.id }
+      if (resource === 'pages') {
+        const layout = doc.layout as { blockType: string; enabled?: boolean }[] | undefined
+        result.sectionTypes = [...new Set(layout?.filter(block => block.enabled !== false).map(block => block.blockType) ?? [])]
+      }
       if (resource === 'products') {
         const layout = doc.layout as
           { blockType: string; enabled?: boolean; data?: { gallery?: unknown[] } }[] | undefined
@@ -118,11 +89,10 @@ export async function refreshPublicContent(
   try {
     await lockPublicContent(req)
     const affected = new Set(
-      resources.filter((resource) =>
+      projectionDependencies(resources).filter((resource) =>
         publicResources.includes(resource as (typeof publicResources)[number]),
       ),
     )
-    if (affected.has('categories')) affected.add('forms')
     for (const resource of affected) {
       const content = resource.startsWith('globals/')
         ? await payload.findGlobal({

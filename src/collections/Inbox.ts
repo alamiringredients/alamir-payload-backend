@@ -1,9 +1,10 @@
-import {deliveryFields,queueReservationEmail} from '../services/emails'
+import {deliveryFields} from '../services/emails'
 import {revalidatePage,revalidateDeletedPage} from '../hooks/revalidate'
-import type { CollectionConfig, Field, CollectionBeforeValidateHook } from 'payload'
+import type { CollectionConfig, Field } from 'payload'
 import { ValidationError } from 'payload'
 import { authenticated } from '../access'
 import { requiresConsent } from '../services/formPolicy'
+import { bookingHooks } from '../services/meetingBooking'
 
 const submissionAccess: CollectionConfig['access'] = {
   create: () => true,
@@ -92,33 +93,10 @@ export const MeetingSlots: CollectionConfig = {
   ],
 }
 
-const validateSlot: CollectionBeforeValidateHook = async ({ data, req }) => {
-  if (!data?.slot) return data
-  const slot = req.context.submissionSlot as import('../payload-types').MeetingSlot | undefined ?? await req.payload.findByID({ collection: 'meeting-slots', id: data.slot, depth: 1, req })
-  const event = slot.event
-  if (new Date(slot.startsAt) <= new Date() || typeof event !== 'object' || event._status !== 'published' || event.kind !== 'event') {
-    throw new ValidationError({ errors: [{ path: 'slot', message: 'This meeting slot is not available.' }] })
-  }
-  return data
-}
 export const Reservations: CollectionConfig = {
   slug: 'reservations', access: submissionAccess,
   admin: { group: 'Events', useAsTitle: 'name', defaultColumns: ['name', 'slot', 'email', 'createdAt'] },
-  hooks: {
-    beforeValidate: [validateSlot,({data,operation})=>{if(data && operation==='create')data.emailDelivery={status:'queued'};return data}],
-    afterChange: [queueReservationEmail, async ({ doc, req, operation, previousDoc }) => {
-      const slotID=typeof doc.slot==='object'?doc.slot.id:doc.slot
-      const previousSlot=typeof previousDoc?.slot==='object'?previousDoc.slot.id:previousDoc?.slot
-      if(operation!=='create' && slotID===previousSlot)return doc
-      if(previousSlot && previousSlot!==slotID)await req.payload.update({collection:'meeting-slots',id:previousSlot,data:{reserved:false},req})
-      await req.payload.update({ collection: 'meeting-slots', id: typeof doc.slot === 'object' ? doc.slot.id : doc.slot, data: { reserved: true }, req })
-      return doc
-    }],
-    afterDelete: [async ({ doc, req }) => {
-      await req.payload.update({ collection: 'meeting-slots', id: typeof doc.slot === 'object' ? doc.slot.id : doc.slot, data: { reserved: false }, req })
-      return doc
-    }],
-  },
+  hooks: bookingHooks,
   fields: [
     ...contactFields,
     deliveryFields,

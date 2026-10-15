@@ -6,6 +6,7 @@ import {
 import { productCategories } from '../fields/productSelect'
 import type { Form } from '../payload-types'
 import { formPolicies } from './formPolicy'
+import { createOwnerBooking } from './meetingBooking'
 const invalid = (path: string, message: string) =>
   new ValidationError({ errors: [{ path, message }] })
 export const validateSubmission: CollectionBeforeValidateHook = async ({
@@ -157,30 +158,7 @@ export const createSubmissionRecord: CollectionBeforeChangeHook = async ({
     })
     data.record = { relationTo: 'applications', value: doc.id }
   } else if (collection === 'reservations') {
-    const slot = await req.payload.findByID({
-      collection: 'meeting-slots',
-      id: data.slotId,
-      depth: 1,
-      req,
-    })
-    if (
-      form.owner.relationTo === 'events' &&
-      (typeof slot.event === 'object' ? slot.event.id : slot.event) !== owner.id
-    )
-      throw invalid('slotId', 'Choose a slot from this event.')
-    req.context.submissionSlot = slot
-    req.context.bookingReceipt = {
-      startsAt: slot.startsAt,
-      endsAt: slot.endsAt,
-      event: typeof slot.event === 'object' ? slot.event.name : '',
-      timezone: process.env.APP_TIMEZONE || undefined,
-    }
-    const doc = await req.payload.create({
-      collection,
-      req,
-      depth: 1,
-      data: { ...input, slot: slot.id } as never,
-    })
+    const doc = await createOwnerBooking(form, data.slotId, input, req)
     data.record = { relationTo: 'reservations', value: doc.id }
   } else {
     const doc = await req.payload.create({

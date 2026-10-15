@@ -60,6 +60,32 @@ describe('Event meeting schedule',()=>{
     const slots=await payload.find({collection:'meeting-slots',where:{event:{equals:doc.id}},sort:'startsAt',pagination:false,depth:0})
     expect(slots.docs.map(slot=>slot.startsAt)).toEqual([at('09:10'),at('10:30'),at('11:15')])
   })
+  it('moves a reservation between slots and releases the slot after deletion', async () => {
+    const doc = await event()
+    const slots = await Promise.all(['09:00', '10:00'].map(time =>
+      payload.create({ collection: 'meeting-slots', data: {
+        event: doc.id, startsAt: at(time), endsAt: at(time.replace(':00', ':30')),
+      } }),
+    ))
+    const booking = await payload.create({ collection: 'reservations', context: { disableEmails: true }, data: {
+      slot: slots[0].id, name: 'Moving guest', email: 'move@example.invalid', locale: 'en', consent: true, key: randomUUID(),
+    } })
+    reservations.push(booking.id)
+    await payload.update({ collection: 'reservations', id: booking.id, data: { slot: slots[1].id } })
+    const availability = async () => (await payload.find({ collection: 'meeting-slots', where: {
+      event: { equals: doc.id },
+    }, sort: 'startsAt', depth: 0 })).docs.map(slot => slot.reserved)
+    expect(await availability()).toEqual([false, true])
+    expect((await payload.findByID({ collection: 'reservations', id: booking.id, depth: 0 })).slot).toBe(slots[1].id)
+    await payload.delete({ collection: 'reservations', id: booking.id })
+    reservations.splice(reservations.indexOf(booking.id), 1)
+    expect(await availability()).toEqual([false, false])
+    const replacement = await payload.create({ collection: 'reservations', context: { disableEmails: true }, data: {
+      slot: slots[1].id, name: 'Next guest', email: 'next@example.invalid', locale: 'en', consent: true, key: randomUUID(),
+    } })
+    reservations.push(replacement.id)
+    expect(await availability()).toEqual([false, true])
+  })
   it('rejects invalid windows, overlapping windows and invalid gap durations',async()=>{
     const doc=await event()
     for(const meetingSchedule of [

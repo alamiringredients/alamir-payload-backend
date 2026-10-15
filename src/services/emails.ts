@@ -1,5 +1,6 @@
 import type { CollectionAfterChangeHook, Field, PayloadRequest, TaskConfig } from 'payload'
 import type { Reservation } from '../payload-types'
+import { bookingDetails } from './meetingBooking'
 import { meetingEmail } from './emailTemplates'
 import { replyEmail } from './replyEmail'
 
@@ -21,16 +22,6 @@ type EmailInput = {
   recordId?: number
   message?: Record<string, unknown>
 }
-export const queueReservationEmail: CollectionAfterChangeHook = async ({ doc, operation, req }) => {
-  if (operation === 'create' && !req.context.disableEmails)
-    await req.payload.jobs.queue({
-      task: 'send-email',
-      queue: 'emails',
-      input: { kind: 'reservation', recordId: doc.id },
-      req,
-    })
-  return doc
-}
 export const queueReplyEmail: CollectionAfterChangeHook = async ({ doc, operation, req }) => {
   if (operation === 'create' && !req.context.disableEmails)
     await req.payload.jobs.queue({
@@ -42,24 +33,8 @@ export const queueReplyEmail: CollectionAfterChangeHook = async ({ doc, operatio
   return doc
 }
 async function reservationMessage(reservation: Reservation, req: PayloadRequest) {
-  const slot =
-    typeof reservation.slot === 'object'
-      ? reservation.slot
-      : await req.payload.findByID({
-          collection: 'meeting-slots',
-          id: reservation.slot,
-          depth: 0,
-          req,
-          joins: false as never,
-        })
+  const meeting = await bookingDetails(reservation, req)
   const locale = reservation.locale
-  const event = await req.payload.findByID({
-    collection: 'events',
-    id: typeof slot.event === 'object' ? slot.event.id : slot.event,
-    locale,
-    depth: 0,
-    req,
-  })
   const translations = await req.payload.find({
     collection: 'translations',
     locale,
@@ -86,23 +61,23 @@ async function reservationMessage(reservation: Reservation, req: PayloadRequest)
   const when = new Intl.DateTimeFormat(locale, {
     dateStyle: 'full',
     timeStyle: 'short',
-    timeZone: process.env.APP_TIMEZONE || undefined,
-  }).format(new Date(slot.startsAt))
+    timeZone: meeting.timezone,
+  }).format(new Date(meeting.startsAt))
   const settings = await req.payload.findGlobal({
     slug: 'website-settings',
     locale: 'en',
     depth: 0,
     req,
   })
-  if (!settings.page?.siteName || !event.name)
+  if (!settings.page?.siteName || !meeting.event)
     throw new Error('Configure the site name and event title.')
   return meetingEmail({
     brandName: settings.page.siteName,
     to: reservation.email,
     name: reservation.name,
-    title: event.name,
+    title: meeting.event,
     when,
-    timezone: process.env.APP_TIMEZONE || undefined,
+    timezone: meeting.timezone,
     locale,
     copy: copy as Record<string, string>,
   })
