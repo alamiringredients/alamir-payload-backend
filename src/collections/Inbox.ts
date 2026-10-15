@@ -3,6 +3,7 @@ import {revalidatePage,revalidateDeletedPage} from '../hooks/revalidate'
 import type { CollectionConfig, Field, CollectionBeforeValidateHook } from 'payload'
 import { ValidationError } from 'payload'
 import { authenticated } from '../access'
+import { requiresConsent } from '../services/formPolicy'
 
 const submissionAccess: CollectionConfig['access'] = {
   create: () => true,
@@ -36,7 +37,7 @@ export const Enquiries: CollectionConfig = {
   fields: [
     ...contactFields.filter(field => !('name' in field) || !['phone', 'consent'].includes(field.name)),
     { name: 'phone', type: 'text', maxLength: 50 },
-    { name: 'consent', type: 'checkbox', validate: (value, { siblingData }) => (siblingData as {kind?:string}).kind === 'home' || value === true || 'Consent is required.' },
+    { name: 'consent', type: 'checkbox', validate: (value, { siblingData }) => !requiresConsent((siblingData as {kind:'home' | 'contact' | 'quote'}).kind ?? 'contact') || value === true || 'Consent is required.' },
     { name: 'kind', type: 'select', options: ['contact', 'quote', 'home'], required: true },
     { name: 'jobTitle', type: 'text' },
     { name: 'website', type: 'text' },

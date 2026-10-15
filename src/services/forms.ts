@@ -1,6 +1,6 @@
 import type { CollectionAfterChangeHook, CollectionBeforeDeleteHook, PayloadRequest } from 'payload'
 import type { Form } from '../payload-types'
-export type FormPurpose = 'home' | 'contact' | 'quote' | 'application' | 'reservation' | 'search'
+import { ownerFormPurposes } from './formPolicy'
 type FormData = Record<string, unknown>
 function localized(value: unknown, locale: string, previous?: unknown): unknown {
   if (Array.isArray(value))
@@ -81,22 +81,6 @@ export async function copyForm(
     req.fallbackLocale = fallbackLocale
   }
 }
-function purposes(
-  collection: string,
-  doc: { id: number; kind?: unknown; sourceKey?: unknown },
-): FormPurpose[] {
-  if (collection === 'jobs') return ['application']
-  if (collection === 'events') return doc.kind === 'event' ? ['reservation'] : []
-  if (collection === 'products') return ['quote']
-  const keys: Record<string, FormPurpose[]> = {
-    'home-page': ['home'],
-    'contact-page': ['contact', 'quote'],
-    'careers-page': ['application'],
-    'book-a-meeting-page': ['reservation'],
-    'search-page': ['search'],
-  }
-  return keys[String(doc.sourceKey)] ?? []
-}
 export const createOwnerForms: CollectionAfterChangeHook = async ({
   doc,
   req,
@@ -106,10 +90,12 @@ export const createOwnerForms: CollectionAfterChangeHook = async ({
 }) => {
   if (
     req.context.disableOwnerForms ||
-    (operation !== 'create' && !(collection.slug === 'events' && previousDoc.kind !== doc.kind))
+    (operation !== 'create' &&
+      !(collection.slug === 'pages' && (doc.sourceKey === 'booking-page' || previousDoc.sourceKey !== doc.sourceKey)) &&
+      !(collection.slug === 'events' && previousDoc.kind !== doc.kind))
   )
     return doc
-  const types = purposes(collection.slug, doc)
+  const types = ownerFormPurposes(collection.slug, doc)
   if (!types.length) return doc
   const locale = req.locale
   const fallbackLocale = req.fallbackLocale

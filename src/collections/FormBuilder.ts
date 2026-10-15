@@ -4,6 +4,7 @@ import { productSelect } from '../fields/productSelect'
 import { authenticated } from '../access'
 import { can } from '../access/permissions'
 import { applyFormDefaults } from '../services/forms'
+import { formPolicies, type FormPurpose } from '../services/formPolicy'
 import { revalidatePage, revalidateDeletedPage } from '../hooks/revalidate'
 import { validateSubmission, createSubmissionRecord } from '../services/formSubmissions'
 
@@ -122,20 +123,7 @@ export const formsPlugin = formBuilderPlugin({
             if (field.visible === false) field.required = false
           }
           const purpose = data.purpose ?? originalDoc?.purpose ?? 'custom'
-          const protectedNames =
-            purpose === 'custom'
-              ? []
-              : purpose === 'search'
-              ? ['q']
-              : [
-                  'name',
-                  'email',
-                  ...(['application', 'contact', 'quote', 'reservation'].includes(purpose)
-                    ? ['consent']
-                    : []),
-                  ...(purpose === 'application' ? ['cv'] : []),
-                ]
-          for (const name of protectedNames) {
+          for (const { name, type, required } of formPolicies[purpose as FormPurpose]?.fields ?? []) {
             const field = data.fields.find(
               (field: { name: string; visible: boolean; required: boolean; blockType: string }) =>
                 field.name === name,
@@ -149,14 +137,6 @@ export const formsPlugin = formBuilderPlugin({
                   },
                 ],
               })
-            const type =
-              name === 'email'
-                ? 'email'
-                : name === 'consent'
-                  ? 'checkbox'
-                  : name === 'cv'
-                    ? 'upload'
-                    : 'text'
             if (field.blockType !== type)
               throw new ValidationError({
                 errors: [
@@ -166,7 +146,7 @@ export const formsPlugin = formBuilderPlugin({
                   },
                 ],
               })
-            if (name !== 'q') field.required = true
+            if (required) field.required = true
           }
           return data
         },
@@ -225,7 +205,7 @@ export const formsPlugin = formBuilderPlugin({
       {
         name: 'purpose',
         type: 'select',
-        options: ['custom', 'home', 'contact', 'quote', 'application', 'reservation', 'search'],
+        options: Object.keys(formPolicies),
         defaultValue: 'custom',
         required: true,
         admin: { position: 'sidebar', readOnly: true },

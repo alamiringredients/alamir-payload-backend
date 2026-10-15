@@ -22,7 +22,9 @@
     "migrate": "cross-env NODE_ENV=production payload migrate",
     "migrate:status": "cross-env NODE_ENV=production payload migrate:status",
     "jobs:work": "cross-env NODE_ENV=production node --import dotenv/config node_modules/payload/bin.js jobs:run --cron \"*/5 * * * * *\" --queue emails --limit 25",
-    "jobs:run": "cross-env NODE_ENV=production node --import dotenv/config node_modules/payload/bin.js jobs:run --queue emails --limit 25"
+    "jobs:run": "cross-env NODE_ENV=production node --import dotenv/config node_modules/payload/bin.js jobs:run --queue emails --limit 25",
+    "content:sync": "tsx scripts/export-frontend-content.ts",
+    "content:check": "tsx scripts/export-frontend-content.ts --check"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.90.2",

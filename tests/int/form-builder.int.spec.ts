@@ -144,6 +144,39 @@ function submission(formID: number, slotId: number, extra: Record<string, string
   }
 }
 describe('Owned Payload Form Builder forms', () => {
+  it('rejects an invalid enquiry kind with a validation error', async () => {
+    await expect(payload.create({
+      collection: 'enquiries',
+      req,
+      data: { name: 'Visitor', email: 'visitor@example.test', locale: 'en', key: randomUUID(), kind: '__proto__' as never, consent: false },
+    })).rejects.toMatchObject({ status: 400 })
+  })
+  it('creates the booking page reservation form and preserves local changes on page saves', async () => {
+    const page = await payload.create({
+      collection: 'pages',
+      req,
+      data: { title: 'Book a meeting', slug: randomUUID(), sourceKey: 'booking-page', _status: 'published' },
+    })
+    const owned = () => payload.find({
+      collection: 'forms',
+      where: { key: { equals: `pages:${page.id}:reservation` } },
+      depth: 0,
+      locale: 'all',
+      req,
+    })
+    const original = (await owned()).docs[0]
+    expect(original).toMatchObject({ purpose: 'reservation', owner: { relationTo: 'pages', value: page.id } })
+    await payload.update({ collection: 'forms', id: original.id, locale: 'en', data: { submitButtonLabel: 'Reserve my meeting' }, req })
+    await payload.update({ collection: 'pages', id: page.id, data: { title: 'Book your meeting' }, req })
+    const saved = (await owned()).docs
+    expect(saved).toHaveLength(1)
+    expect(saved[0]).toMatchObject({ id: original.id, submitButtonLabel: { en: 'Reserve my meeting' } })
+    for (const locale of ['en', 'ar', 'fr'])
+      expect((saved[0].submitButtonLabel as unknown as Record<string, string>)[locale]).toBeTruthy()
+    await payload.delete({ collection: 'forms', id: original.id, req })
+    await payload.update({ collection: 'pages', id: page.id, data: { title: 'Reserve a time' }, req })
+    expect((await owned()).docs).toHaveLength(1)
+  })
   it('publishes a new event, its localized owner form and generated slots once per resource', async () => {
     const startsAt = '2099-10-15T09:00:00.000Z'
     const endsAt = '2099-10-15T11:00:00.000Z'
@@ -405,6 +438,14 @@ describe('Owned Payload Form Builder forms', () => {
         req,
       }),
     ).rejects.toMatchObject({ status: 400 })
+    for (const [name, blockType] of [['email', 'text'], ['consent', 'text'], ['name', 'email']]) {
+      await expect(payload.update({
+        collection: 'forms',
+        id: f.id,
+        data: { fields: f.fields!.map(field => 'name' in field && field.name === name ? { ...field, blockType } : field) as never },
+        req,
+      })).rejects.toMatchObject({ status: 400 })
+    }
   })
   it('creates a form when a draft becomes a bookable event and preserves it through type changes', async () => {
     const draft = await payload.create({

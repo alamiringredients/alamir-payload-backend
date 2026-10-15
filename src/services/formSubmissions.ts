@@ -4,6 +4,8 @@ import {
   type CollectionBeforeChangeHook,
 } from 'payload'
 import { productCategories } from '../fields/productSelect'
+import type { Form } from '../payload-types'
+import { formPolicies } from './formPolicy'
 const invalid = (path: string, message: string) =>
   new ValidationError({ errors: [{ path, message }] })
 export const validateSubmission: CollectionBeforeValidateHook = async ({
@@ -124,9 +126,8 @@ export const createSubmissionRecord: CollectionBeforeChangeHook = async ({
   operation,
 }) => {
   if (operation !== 'create') return data
-  const form = req.context.submittedForm as
-    { purpose: string; owner: { relationTo: string; value: { id: number } } } | undefined
-  if (!form || form.purpose === 'search')
+  const form = req.context.submittedForm as Form | undefined
+  if (!form || (form.purpose !== 'custom' && !formPolicies[form.purpose].record))
     throw invalid('form', 'This form cannot accept submissions.')
   if (form.purpose === 'custom') return data
   const values = Object.fromEntries(
@@ -141,19 +142,21 @@ export const createSubmissionRecord: CollectionBeforeChangeHook = async ({
     key: data.key,
     consent: ['true', 'on'].includes(values.consent),
   }
-  const owner = form.owner.value
-  if (form.purpose === 'application') {
+  const owner = form.owner?.value
+  if (!form.owner || !owner || typeof owner !== 'object') throw invalid('form', 'This form is not available.')
+  const collection = formPolicies[form.purpose].record!
+  if (collection === 'applications') {
     const cv = data.submissionUploads?.find((upload: { field: string }) => upload.field === 'cv')
       ?.value?.[0]?.value
     if (!cv) throw invalid('cv', 'A CV is required.')
     const doc = await req.payload.create({
-      collection: 'applications',
+      collection,
       req,
       depth: 0,
       data: { ...input, cv, job: form.owner.relationTo === 'jobs' ? owner.id : undefined } as never,
     })
     data.record = { relationTo: 'applications', value: doc.id }
-  } else if (form.purpose === 'reservation') {
+  } else if (collection === 'reservations') {
     const slot = await req.payload.findByID({
       collection: 'meeting-slots',
       id: data.slotId,
@@ -173,7 +176,7 @@ export const createSubmissionRecord: CollectionBeforeChangeHook = async ({
       timezone: process.env.APP_TIMEZONE || undefined,
     }
     const doc = await req.payload.create({
-      collection: 'reservations',
+      collection,
       req,
       depth: 1,
       data: { ...input, slot: slot.id } as never,
@@ -181,7 +184,7 @@ export const createSubmissionRecord: CollectionBeforeChangeHook = async ({
     data.record = { relationTo: 'reservations', value: doc.id }
   } else {
     const doc = await req.payload.create({
-      collection: 'enquiries',
+      collection,
       req,
       depth: 0,
       data: {

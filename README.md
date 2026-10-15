@@ -66,3 +66,9 @@ Keep both processes running. Open your backend URL followed by `/admin`, or [loc
 Then [install and start the website](../alamir-payload-frontend/README.md).
 
 For updates, back up the database, keep `.env` and its secrets, run `npm ci --include=dev`, `npm run migrate`, and `npm run build`, then restart both processes. After changing `.env`, rebuild and restart both processes.
+
+Section fields live with their definitions in `src/blocks/pages/` and `src/blocks/records/`.
+Owner form policy lives in `src/services/formPolicy.ts`. After changing these definitions,
+run `npm run content:sync` to update the frontend metadata in the sibling
+`alamir-payload-frontend` checkout, and commit both repositories' changes together.
+Run `npm run content:check` to detect stale metadata. Neither command accesses the database.
