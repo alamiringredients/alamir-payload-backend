@@ -8,6 +8,7 @@ import defaults from '../fixtures/forms.json'
 import { copyForm } from '../../src/services/forms'
 
 let payload: Payload, req: PayloadRequest
+const publications: string[] = []
 const schema = `forms_check_${randomUUID().replaceAll('-', '')}`
 const title = {
   root: {
@@ -41,6 +42,23 @@ beforeAll(async () => {
     key: schema,
     config: Promise.resolve({
       ...base,
+      collections: base.collections.map((collection) =>
+        collection.slug === 'public-content'
+          ? {
+              ...collection,
+              hooks: {
+                ...collection.hooks,
+                afterChange: [
+                  ...collection.hooks.afterChange,
+                  ({ doc }) => {
+                    publications.push(doc.resource)
+                    return doc
+                  },
+                ],
+              },
+            }
+          : collection,
+      ),
       db: {
         ...postgresAdapter({ blocksAsJSON:true,
           pool: { connectionString: process.env.DATABASE_URL },
@@ -63,6 +81,7 @@ beforeAll(async () => {
 }, 120000)
 beforeEach(() => {
   req.locale = 'en'
+  publications.length = 0
 })
 it('keeps contact and social settings together and accepts only PDF company profiles in every locale', async () => {
   const pdf = await payload.create({ collection: 'media', data: { alt: 'Company profile', filename: 'settings-profile.pdf', mimeType: 'application/pdf', prefix: 'tests/settings' } })
@@ -125,6 +144,104 @@ function submission(formID: number, slotId: number, extra: Record<string, string
   }
 }
 describe('Owned Payload Form Builder forms', () => {
+  it('publishes a new event, its localized owner form and generated slots once per resource', async () => {
+    const startsAt = '2099-10-15T09:00:00.000Z'
+    const endsAt = '2099-10-15T11:00:00.000Z'
+    const doc = await payload.create({
+      collection: 'events',
+      req,
+      data: {
+        title,
+        slug: randomUUID(),
+        kind: 'event',
+        _status: 'published',
+        meetingSchedule: [{ startsAt, endsAt, duration: 30, gap: 0 }],
+      },
+    })
+    expect(publications.sort()).toEqual(['events', 'forms', 'meeting-slots'])
+    const projected = await payload.find({
+      collection: 'public-content',
+      depth: 0,
+      pagination: false,
+    })
+    const content = (resource: string) =>
+      (
+        projected.docs.find((row) => row.resource === resource)!.content as {
+          docs: Record<string, unknown>[]
+        }
+      ).docs
+    expect(content('events').some((row) => row.id === doc.id)).toBe(true)
+    expect(content('meeting-slots').filter((row) => row.event === doc.id)).toHaveLength(4)
+    const ownerForm = await form(doc.id)
+    const publishedForm = content('forms').find((row) => row.id === ownerForm.id)!
+    for (const locale of ['en', 'ar', 'fr'] as const) {
+      const native = await payload.findByID({
+        collection: 'forms',
+        id: ownerForm.id,
+        locale,
+        depth: 0,
+      })
+      expect(publishedForm.submitButtonLabel).toMatchObject({ [locale]: native.submitButtonLabel })
+    }
+    expect(JSON.stringify(publishedForm)).not.toContain('emailTo')
+  })
+  it('rolls back source content, owner forms and projections together', async () => {
+    const transaction = await payload.db.beginTransaction()
+    if (!transaction) throw new Error('A transaction is required.')
+    const transactionReq = await createLocalReq(
+      { req: { transactionID: transaction }, context: { disableRevalidate: true } },
+      payload,
+    )
+    const before = await payload.find({
+      collection: 'public-content',
+      where: { resource: { in: ['events', 'forms'] } },
+      sort: 'resource',
+      depth: 0,
+    })
+    const doc = await payload.create({
+      collection: 'events',
+      req: transactionReq,
+      data: {
+        title,
+        slug: randomUUID(),
+        kind: 'event',
+        _status: 'published',
+      },
+    })
+    try {
+      const inside = await payload.find({
+        collection: 'public-content',
+        req: transactionReq,
+        where: { resource: { equals: 'events' } },
+        depth: 0,
+      })
+      expect(
+        (inside.docs[0].content as { docs: { id: number }[] }).docs.some(
+          (row) => row.id === doc.id,
+        ),
+      ).toBe(true)
+    } finally {
+      await payload.db.rollbackTransaction(transaction)
+    }
+    const after = await payload.find({
+      collection: 'public-content',
+      where: { resource: { in: ['events', 'forms'] } },
+      sort: 'resource',
+      depth: 0,
+    })
+    expect(after.docs).toEqual(before.docs)
+    expect(
+      (await payload.find({ collection: 'events', where: { id: { equals: doc.id } } })).docs,
+    ).toHaveLength(0)
+    expect(
+      (
+        await payload.find({
+          collection: 'forms',
+          where: { key: { equals: `events:${doc.id}:reservation` } },
+        })
+      ).docs,
+    ).toHaveLength(0)
+  })
   it('keeps local changes local and copies a chosen default into future events in all locales', async () => {
     const a = await event(),
       b = await event(),
@@ -176,7 +293,9 @@ describe('Owned Payload Form Builder forms', () => {
     expect(fc.fields?.find((field) => 'name' in field && field.name === 'phone')).toMatchObject({
       visible: false,
     })
+    publications.length = 0
     await payload.update({ collection: 'forms', id: fa.id, data: { applyToExisting: true }, req })
+    expect(publications).toEqual(['forms'])
     expect((await payload.findByID({ collection: 'forms', id: fb.id })).submitButtonLabel).toBe(
       'Meet with us',
     )

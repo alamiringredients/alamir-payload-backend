@@ -1,5 +1,5 @@
 import type { Field, Payload } from 'payload'
-import { standardBlocks } from '../src/blocks/pageSections'
+import { standardBlocks } from '../src/blocks/sharedSections'
 
 export type Data = Record<string, unknown>
 export const locales = ['en', 'ar', 'fr'] as const

@@ -8,7 +8,7 @@ import {
   enabledField,
   mediaPositionField,
   columnWidthField,
-} from './pageSections'
+} from './sharedSections'
 import { pageFields as products } from '../fields/pages/Products'
 import { pageFields as categories } from '../fields/pages/Categories'
 import { pageFields as news } from '../fields/pages/News'
@@ -16,7 +16,14 @@ import { pageFields as sustainability } from '../fields/pages/Sustainability'
 import { pageFields as jobs } from '../fields/pages/Jobs'
 import { pageFields as events } from '../fields/pages/Events'
 
-const schemas = { products, categories, news, sustainability, jobs, events }
+const schemas = {
+  products: flatten(products),
+  categories: flatten(categories),
+  news: flatten(news),
+  sustainability: flatten(sustainability),
+  jobs: flatten(jobs),
+  events: flatten(events),
+}
 export type ContentCollection = keyof typeof schemas
 const definitions: Record<
   ContentCollection,
@@ -140,18 +147,17 @@ const recordSections = Object.entries(definitions).flatMap(([collection, section
     slug: `${({ products: 'prd', categories: 'cat', news: 'news', sustainability: 'sus', jobs: 'job', events: 'event' } as Record<string, string>)[collection]}-${section.name === 'overview' ? 'info' : section.name === 'traceability' ? 'cta' : section.name}`,
   })),
 )
+const settings: Record<ContentCollection, string[]> = {
+  products: ['sort_order', 'artwork'],
+  categories: ['sort_order', 'artwork'],
+  news: ['metadata'],
+  sustainability: ['metadata'],
+  jobs: ['code'],
+  events: ['sort_order', 'seo'],
+}
 export function recordSettings(collection: ContentCollection): Field[] {
-  const owned = recordSections
-    .filter((section) => section.collection === collection)
-    .flatMap((section) => section.page)
-  return flatten(schemas[collection])
-    .filter(
-      (field) =>
-        'name' in field &&
-        !owned.includes(field.name) &&
-        !(collection === 'news' && field.name === 'article') &&
-        !(collection === 'events' && field.name === 'body'),
-    )
+  return schemas[collection]
+    .filter((field) => 'name' in field && settings[collection].includes(field.name))
     .map((field) => ({ ...field, admin: { ...field.admin, condition: undefined } }) as Field)
 }
 export function recordImageSettings(collection: 'products' | 'categories'): Field[] {
@@ -213,7 +219,7 @@ function recordBlocks(collection: ContentCollection): Block[] {
     .filter((section) => section.collection === collection)
     .map((section): Block => {
       const key = `${collection}_${collection}-detail-${section.name}`
-      const fields = flatten(schemas[collection])
+      const fields = schemas[collection]
         .filter((field) => 'name' in field && section.page.includes(field.name))
         .map(
           (field) =>
