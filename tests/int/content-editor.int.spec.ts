@@ -10,17 +10,19 @@ afterAll(async()=>{await payload?.destroy()},60000)
 const heading={root:{type:'root',version:1,direction:null,format:'' as const,indent:0,children:[{type:'paragraph',version:1,direction:null,format:'',indent:0,children:[{type:'text',version:1,text:'Editable heading',format:1,detail:0,mode:'normal',style:''}]}]}}
 it('publishes formatted record sections, reorders them, and preserves gallery captions across locales',async()=>{
  const {docs:media}=await payload.find({collection:'media',where:{sourceUrl:{exists:true}},limit:1,depth:0})
- const category=await payload.create({collection:'categories',locale:'en',data:{title:heading,slug:`editor-verification-${randomUUID()}`,layout:[{blockType:'cat-hero',data:{}},{blockType:'gallery',images:[{image:media[0].id,caption:'English caption'}]}],_status:'published'},context:{disableRevalidate:true}})
+ const category=await payload.create({collection:'categories',locale:'en',data:{appearance:'muted',title:heading,slug:`editor-verification-${randomUUID()}`,layout:[{blockType:'cat-hero',data:{}},{blockType:'gallery',images:[{image:media[0].id,caption:'English caption'}]}],_status:'published'},context:{disableRevalidate:true}})
  try{
   const [hero,gallery]=category.layout!
   if(hero.blockType!=='cat-hero' || gallery.blockType!=='gallery')throw new Error('Unexpected sections')
-  await payload.update({collection:'categories',id:category.id,locale:'ar',data:{title:{...heading,root:{...heading.root,children:[{...heading.root.children[0],children:[{...heading.root.children[0].children[0],text:'اختبار المحرر'}]}]}},layout:[{...gallery,images:[{id:gallery.images![0].id,image:media[0].id,caption:'تعليق عربي'}]},{...hero,mediaPosition:'left'}]},context:{disableRevalidate:true}})
+  await payload.update({collection:'categories',id:category.id,locale:'ar',data:{slug:`renamed-category-${randomUUID()}`,title:{...heading,root:{...heading.root,children:[{...heading.root.children[0],children:[{...heading.root.children[0].children[0],text:'اختبار المحرر'}]}]}},layout:[{...gallery,images:[{id:gallery.images![0].id,image:media[0].id,caption:'تعليق عربي'}]},{...hero,mediaPosition:'left'}]},context:{disableRevalidate:true}})
   const english=await payload.findByID({collection:'categories',id:category.id,locale:'en',depth:1,overrideAccess:false})
   const arabic=await payload.findByID({collection:'categories',id:category.id,locale:'ar',depth:1,overrideAccess:false})
   expect(english.layout?.map(block=>block.id)).toEqual([gallery.id,hero.id])
   expect(english.layout?.[1]).toMatchObject({blockType:'cat-hero',mediaPosition:'left',data:{}})
   expect(english.layout?.[0]).toMatchObject({images:[{caption:'English caption',image:{id:media[0].id,url:media[0].url}}]})
   expect(arabic.layout?.[0]).toMatchObject({images:[{caption:'تعليق عربي'}]})
+  expect(english.appearance).toBe('muted')
+  expect(english.slug).toMatch(/^renamed-category-/)
   expect(english.title).toMatchObject(heading)
   expect(arabic.name).toBe('اختبار المحرر')
  }finally{await payload.delete({collection:'categories',id:category.id,context:{disableRevalidate:true}})}

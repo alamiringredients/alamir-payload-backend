@@ -4,7 +4,7 @@ import { productSelect } from '../fields/productSelect'
 import { authenticated } from '../access'
 import { can } from '../access/permissions'
 import { applyFormDefaults } from '../services/forms'
-import { revalidateTranslation, revalidateDeletedPage } from '../hooks/revalidate'
+import { revalidatePage, revalidateDeletedPage } from '../hooks/revalidate'
 import { validateSubmission, createSubmissionRecord } from '../services/formSubmissions'
 
 function formFields(fields: Field[]): Field[] {
@@ -171,7 +171,7 @@ export const formsPlugin = formBuilderPlugin({
           return data
         },
       ],
-      afterChange: [applyFormDefaults, revalidateTranslation],
+      afterChange: [applyFormDefaults, revalidatePage],
       afterDelete: [revalidateDeletedPage],
     },
     fields: ({ defaultFields }) => [

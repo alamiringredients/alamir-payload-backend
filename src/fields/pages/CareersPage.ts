@@ -70,58 +70,6 @@ export const pageFields: Field[] = [
             ]
           },
           {
-            "label": "News",
-            "fields": [
-              {
-                "name": "news",
-                "type": "group",
-                "label": false,
-                "fields": [
-                  {
-                    "name": "articles",
-                    "label": "News articles",
-                    "type": "relationship",
-                    "relationTo": "news",
-                    "hasMany": true,
-                    "admin": {
-                      "isSortable": true
-                    }
-                  },
-                  {
-                    "name": "image",
-                    "label": "News image",
-                    "type": "upload",
-                    "relationTo": "media"
-                  },
-                  {
-                    "name": "intro",
-                    "label": "News intro",
-                    "type": "richText",
-                    "localized": true
-                  },
-                  {
-                    "name": "title",
-                    "label": "News title",
-                    "type": "richText",
-                    "localized": true
-                  },
-                  {
-                    "name": "kicker",
-                    "label": "News kicker",
-                    "type": "text",
-                    "localized": true
-                  },
-                  {
-                    "name": "imageAlt",
-                    "label": "News image alt",
-                    "type": "text",
-                    "localized": true
-                  }
-                ]
-              }
-            ]
-          },
-          {
             "label": "Vacancies",
             "fields": [
               {
@@ -192,11 +140,6 @@ export const pageFields: Field[] = [
                   {
                     "name": "hero",
                     "label": "Hero",
-                    "type": "checkbox"
-                  },
-                  {
-                    "name": "news",
-                    "label": "News",
                     "type": "checkbox"
                   },
                   {

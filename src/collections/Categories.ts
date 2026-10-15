@@ -35,6 +35,7 @@ export const Categories: CollectionConfig = {
     },
     ...titleFields,
     ...recordRelationships('categories'),
+    {name:'appearance',label:'Page appearance',type:'select',required:true,defaultValue:'standard',options:[{label:'Standard',value:'standard'},{label:'Muted labels',value:'muted'}],admin:{description:'Controls the category presentation independently of its URL.'}},
     slugField({ useAsSlug: 'name' }),
     { type: 'tabs', tabs: [{"label": "Page content", "fields": [recordLayoutField('categories')]}, {"label": "Details", "fields": [{"name": "description", "type": "textarea", "localized": true}]}, {label:"Images and settings",fields:[{name:"icon",label:"Menu thumbnail",type:"upload",relationTo:"media",admin:{description:"Shown beside this category in the Products navigation menu."}},{name:"page",type:"group",label:false,fields:recordImageSettings('categories')}]}, {"label": "SEO", "fields": [{"name": "seoTitle", "type": "text", "localized": true}, {"name": "seoDescription", "type": "textarea", "localized": true}]}] }
   ],

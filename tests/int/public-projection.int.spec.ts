@@ -42,7 +42,7 @@ describe('Published public read model',()=>{
   expect((await publishedPages()).some(doc=>doc.id===page.id)).toBe(false)
  })
  it('does not expose private form recipients or allow anonymous projection changes',async()=>{
-  const {docs}=await payload.find({collection:'forms',locale:'en',depth:0,limit:1})
+  const {docs}=await payload.find({collection:'forms',where:{key:{equals:'default:contact'}},locale:'en',depth:0,limit:1})
   const copy={...docs[0]}
   for(const key of ['id','key','createdAt','updatedAt'])Reflect.deleteProperty(copy,key)
   const recipient='private-projection-recipient@example.invalid'

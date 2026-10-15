@@ -326,7 +326,7 @@ describe('Owned Payload Form Builder forms', () => {
     })
     const category = await payload.create({
       collection: 'categories',
-      data: { title: heading('Fresh ingredients'), slug: randomUUID(), _status: 'published' },
+      data: { appearance: 'standard', title: heading('Fresh ingredients'), slug: randomUUID(), _status: 'published' },
     })
     await payload.update({
       collection: 'categories',
@@ -342,7 +342,7 @@ describe('Owned Payload Form Builder forms', () => {
     })
     const draft = await payload.create({
       collection: 'categories',
-      data: { title: heading('Unpublished category'), slug: randomUUID(), _status: 'draft' },
+      data: { appearance: 'standard', title: heading('Unpublished category'), slug: randomUUID(), _status: 'draft' },
     })
     const e = await event(),
       f = await form(e.id)

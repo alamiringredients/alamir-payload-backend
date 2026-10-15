@@ -31,6 +31,10 @@ The 196 media records link existing R2 files by filename and prefix. Seeding doe
 
 Seeding only creates missing records and uninitialized globals. Existing administrator edits and bookings are preserved; booked flags are not copied into fresh defaults because reservations are not seeded. Source writes run in one PostgreSQL transaction, then published projections and caches are refreshed. Accounts, passwords, enquiries, applications, reservations, form submissions and private CVs are excluded. The first account created through `/admin` receives Super Admin.
 
+The shared **Two columns** block and existing section blocks expose **Column widths**. **Original design** preserves each layout's original proportions; editors can choose 50/50, 55/45, 60/40, 70/30, or the reversed proportions. The shared-columns migration converts the retired careers News block in pages and saved versions, preserving its localized content, media and article order. The careers form-copy migration aligns unchanged application-form defaults with the original website. Both changes are included in the seed for fresh installations.
+
+Category **Page appearance** controls the category label treatment independently of its slug. News and event content sections expose **Introduction style** (body text or lead paragraph). The presentation migration preserves the original choices in existing documents and saved versions; the seeder includes the same settings. URL changes do not select a different design. Frontend template metadata identifies copy roles and accordion formats explicitly, rather than inspecting English labels.
+
 To capture future intentional dashboard changes as the new defaults, run `NODE_ENV=production npm run seed:export` locally against the source dashboard database, review `seed/content.json`, and deploy that file with the application. Do not run export against an empty production database before seeding.
 
 ## Production deployment
@@ -217,3 +221,13 @@ In **Website pages → Page content**, add a **Form** section, select the custom
 Answers appear in **Inbox → Form submissions**, including the originating page. Forms permissions control access to custom submissions; existing enquiry, application and reservation permissions continue to control their workflow submissions. Submissions require an enabled Form section on a published page.
 
 Run `npm run migrate` before deploying to apply all pending production migrations. Development uses Payload schema push.
+
+## Where to make changes
+
+- **Content fields:** `src/collections/` owns record schemas; `src/blocks/` owns reusable page and record sections. Use the existing blocks before adding a new one.
+- **Business behavior:** `src/services/` owns forms, bookings, email delivery, and published content. Collection hooks call those functions.
+- **Publication:** `src/hooks/revalidate.ts` refreshes the public read model and invalidates caches. `src/hooks/publicContentWrites.ts` acquires the shared publication lock before content writes; nested operations must pass the same `req` to keep one transaction.
+- **Defaults:** export intentional dashboard changes with `npm run seed:export`, review `seed/content.json`, and verify fresh migrations and seeding with `tests/int/seed.int.spec.ts` using a disposable `SEED_VERIFY_DATABASE_URL`.
+- **Schema changes:** add a migration and run `npm run generate:types`. Keep migrations: Payload discovers them at runtime even when static analysis reports them as unused.
+
+The backend owns persistence, permissions, and submissions. The sibling frontend owns rendering and browser interactions. Keep new code in those existing locations; no additional repository, controller, or dependency-injection layer is needed for ordinary content changes.

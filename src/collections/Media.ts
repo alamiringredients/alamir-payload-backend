@@ -1,11 +1,11 @@
 import type { CollectionConfig } from 'payload'
-import {revalidateTranslation,revalidateDeletedPage} from '../hooks/revalidate'
+import {revalidatePage,revalidateDeletedPage} from '../hooks/revalidate'
 import {mediaURL} from '../storage/mediaURL'
 import { authenticated } from '../access'
 
 export const Media: CollectionConfig = {
   slug: 'media',
-  hooks:{afterChange:[revalidateTranslation],afterDelete:[revalidateDeletedPage]},
+  hooks:{afterChange:[revalidatePage],afterDelete:[revalidateDeletedPage]},
   admin: { group: 'Library', useAsTitle: 'filename', defaultColumns: ['filename','alt','mimeType','filesize'], listSearchableFields: ['filename','alt'], pagination: {defaultLimit:24,limits:[24,48,96]}, components: {views:{list:{Component:'/components/MediaList#MediaList'}}} },
   access: { read: () => true, create: authenticated, update: authenticated, delete: authenticated },
   defaultPopulate: { url: true, alt: true, mimeType: true, width: true, height: true, filename: true, prefix: true, thumbnailURL:true },

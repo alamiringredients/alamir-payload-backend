@@ -1,5 +1,5 @@
 import {deliveryFields,queueReservationEmail} from '../services/emails'
-import {revalidateTranslation,revalidateDeletedPage} from '../hooks/revalidate'
+import {revalidatePage,revalidateDeletedPage} from '../hooks/revalidate'
 import type { CollectionConfig, Field, CollectionBeforeValidateHook } from 'payload'
 import { ValidationError } from 'payload'
 import { authenticated } from '../access'
@@ -78,7 +78,7 @@ export const Applications: CollectionConfig = {
 
 export const MeetingSlots: CollectionConfig = {
   slug: 'meeting-slots',
-  hooks:{afterChange:[revalidateTranslation],afterDelete:[revalidateDeletedPage]},
+  hooks:{afterChange:[revalidatePage],afterDelete:[revalidateDeletedPage]},
   indexes: [{fields:['event','startsAt'],unique:true}],
   admin: { hidden: true, group: 'Events', useAsTitle: 'startsAt', defaultColumns: ['event', 'startsAt', 'endsAt'] },
   access: { read: () => true, create: authenticated, update: authenticated, delete: authenticated },

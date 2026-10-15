@@ -1,3 +1,4 @@
+import {publicContentWrites} from './hooks/publicContentWrites'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
 import { EmailReplies } from './collections/EmailReplies'
 import { sendEmailTask } from './services/emails'
@@ -129,5 +130,6 @@ export default buildConfig({
       },
     }),
     dashboardPermissions,
+    publicContentWrites,
   ],
 })

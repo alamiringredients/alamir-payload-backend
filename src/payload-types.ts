@@ -593,6 +593,8 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -624,9 +626,27 @@ export interface Page {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -723,6 +743,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text6?: {
                 values?: string | null;
@@ -782,6 +803,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -808,6 +830,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -860,6 +883,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -906,6 +930,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -952,6 +977,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -1010,6 +1036,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -1192,6 +1219,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -1256,6 +1284,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -1329,6 +1358,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               image?: {
                 value?: (number | null) | Media;
@@ -1409,6 +1439,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               alt?: string | null;
               image?: (number | null) | Media;
@@ -1451,6 +1482,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1539,6 +1571,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1618,6 +1651,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1656,6 +1690,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1755,6 +1790,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1788,6 +1824,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               alt?: string | null;
               image?: (number | null) | Media;
@@ -1830,6 +1867,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1890,6 +1928,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1935,6 +1974,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -1973,6 +2013,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               ctaHref?: string | null;
               eyebrow?: string | null;
@@ -2014,6 +2055,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2066,6 +2108,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2141,6 +2184,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2187,6 +2231,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               image?: (number | null) | Media;
               eyebrow?: string | null;
@@ -2215,6 +2260,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               eyebrow?: string | null;
               heading?: {
@@ -2240,6 +2286,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               profileLabel?: string | null;
               eyebrow?: string | null;
@@ -2266,6 +2313,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               title?: {
                 root: {
@@ -2294,6 +2342,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               empty?: string | null;
             };
@@ -2304,6 +2353,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               eventsTitle?: {
                 root: {
@@ -2330,6 +2380,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               heading?: {
                 values?: {
@@ -2374,6 +2425,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2403,6 +2455,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2449,6 +2502,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               alt?: string | null;
               image?: (number | null) | Media;
@@ -2491,49 +2545,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
-            content?: {
-              articles?: (number | News)[] | null;
-              image?: (number | null) | Media;
-              intro?: {
-                root: {
-                  type: string;
-                  children: {
-                    type: any;
-                    version: number;
-                    [k: string]: unknown;
-                  }[];
-                  direction: ('ltr' | 'rtl') | null;
-                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                  indent: number;
-                  version: number;
-                };
-                [k: string]: unknown;
-              } | null;
-              title?: {
-                root: {
-                  type: string;
-                  children: {
-                    type: any;
-                    version: number;
-                    [k: string]: unknown;
-                  }[];
-                  direction: ('ltr' | 'rtl') | null;
-                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                  indent: number;
-                  version: number;
-                };
-                [k: string]: unknown;
-              } | null;
-              kicker?: string | null;
-              imageAlt?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'careers-news';
-          }
-        | {
-            enabled?: boolean | null;
-            mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               intro?: {
                 root: {
@@ -2574,6 +2586,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               intro?: {
                 root: {
@@ -2614,6 +2627,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               image?: {
                 value?: (number | null) | Media;
@@ -2660,6 +2674,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2689,6 +2704,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2718,6 +2734,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2765,6 +2782,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -2817,6 +2835,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3014,6 +3033,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3066,6 +3086,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3081,6 +3102,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3127,6 +3149,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text10?: {
                 values?: string | null;
@@ -3311,6 +3334,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3357,6 +3381,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text10?: {
                 values?: string | null;
@@ -3532,6 +3557,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3578,6 +3604,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text7?: {
                 values?: string | null;
@@ -3696,6 +3723,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               heading?: {
                 values?: {
@@ -3739,6 +3767,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3870,6 +3899,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3916,6 +3946,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               text?: {
                 values?: string | null;
@@ -3934,6 +3965,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               heading?: {
                 values?: {
@@ -3977,6 +4009,7 @@ export interface Page {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             content?: {
               cards?:
                 | {
@@ -4387,6 +4420,10 @@ export interface Category {
   };
   name?: string | null;
   /**
+   * Controls the category presentation independently of its URL.
+   */
+  appearance: 'standard' | 'muted';
+  /**
    * When enabled, the slug will auto-generate from the title field on save and autosave.
    */
   generateSlug?: boolean | null;
@@ -4512,6 +4549,8 @@ export interface Category {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -4543,9 +4582,27 @@ export interface Category {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -4641,6 +4698,7 @@ export interface Category {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               hero?: {
@@ -4661,6 +4719,7 @@ export interface Category {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               productRange?: {
@@ -4705,6 +4764,7 @@ export interface Category {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               galleryIntro?: {
@@ -4745,6 +4805,7 @@ export interface Category {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               traceability?: {
@@ -4824,6 +4885,420 @@ export interface Category {
   };
   seoTitle?: string | null;
   seoDescription?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news".
+ */
+export interface News {
+  id: number;
+  _order?: string | null;
+  sourceId?: number | null;
+  title: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  name?: string | null;
+  relationships?: {
+    category?: (number | null) | NewsTaxonomy;
+    tags?: (number | NewsTaxonomy)[] | null;
+    previousArticle?: (number | null) | News;
+    nextArticle?: (number | null) | News;
+    relatedArticles?: (number | News)[] | null;
+  };
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  layout?:
+    | (
+        | {
+            enabled?: boolean | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            form: number | Form;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'form';
+          }
+        | {
+            enabled?: boolean | null;
+            mediaPosition?: ('original' | 'left' | 'right') | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            media?: (number | null) | Media;
+            poster?: (number | null) | Media;
+            caption?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | {
+            enabled?: boolean | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'text';
+          }
+        | {
+            enabled?: boolean | null;
+            mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            media?: (number | null) | Media;
+            poster?: (number | null) | Media;
+            caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'text-media';
+          }
+        | {
+            enabled?: boolean | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            images?:
+              | {
+                  image: number | Media;
+                  caption?: string | null;
+                  alt?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'gallery';
+          }
+        | {
+            enabled?: boolean | null;
+            eyebrow?: string | null;
+            heading?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            actions?:
+              | {
+                  label: string;
+                  href: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'call-to-action';
+          }
+        | {
+            enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            mediaPosition?: ('original' | 'left' | 'right') | null;
+            data?: {
+              summary?: string | null;
+              cardTitle?: {
+                root: {
+                  type: string;
+                  children: {
+                    type: any;
+                    version: number;
+                    [k: string]: unknown;
+                  }[];
+                  direction: ('ltr' | 'rtl') | null;
+                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                  indent: number;
+                  version: number;
+                };
+                [k: string]: unknown;
+              } | null;
+              cardSummary?: string | null;
+              hero?: (number | null) | Media;
+              heroAlt?: string | null;
+              heroCaption?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'news-hero';
+          }
+        | {
+            enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            mediaPosition?: ('original' | 'left' | 'right') | null;
+            data: {
+              body?: {
+                root: {
+                  type: string;
+                  children: {
+                    type: any;
+                    version: number;
+                    [k: string]: unknown;
+                  }[];
+                  direction: ('ltr' | 'rtl') | null;
+                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                  indent: number;
+                  version: number;
+                };
+                [k: string]: unknown;
+              } | null;
+              introStyle: 'body' | 'lead';
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'news-body';
+          }
+        | {
+            enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'news-related';
+          }
+        | {
+            enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'news-contact';
+          }
+      )[]
+    | null;
+  page?: {
+    metadata?: {
+      date?: string | null;
+      featured?: boolean | null;
+    };
+  };
+  seoTitle?: string | null;
+  seoDescription?: string | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "news-taxonomies".
+ */
+export interface NewsTaxonomy {
+  id: number;
+  sourceId?: number | null;
+  name: string;
+  /**
+   * When enabled, the slug will auto-generate from the title field on save and autosave.
+   */
+  generateSlug?: boolean | null;
+  slug: string;
+  kind: 'category' | 'tag';
+  page?: {
+    sort_order?: number | null;
+    metadata?: {
+      localeTree?: {
+        description?: string | null;
+      };
+    };
+  };
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -4979,6 +5454,8 @@ export interface Job {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -5010,9 +5487,27 @@ export interface Job {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -5108,6 +5603,7 @@ export interface Job {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               summary?: string | null;
@@ -5120,6 +5616,7 @@ export interface Job {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               body?: {
@@ -5144,12 +5641,14 @@ export interface Job {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'job-apply';
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'job-related';
@@ -5326,6 +5825,8 @@ export interface Event {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -5357,9 +5858,27 @@ export interface Event {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -5455,6 +5974,7 @@ export interface Event {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               eyebrow?: string | null;
@@ -5469,8 +5989,9 @@ export interface Event {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
-            data?: {
+            data: {
               bodyCopy?: {
                 root: {
                   type: string;
@@ -5486,6 +6007,7 @@ export interface Event {
                 };
                 [k: string]: unknown;
               } | null;
+              introStyle: 'body' | 'lead';
             };
             id?: string | null;
             blockName?: string | null;
@@ -5929,6 +6451,8 @@ export interface Product {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -5960,9 +6484,27 @@ export interface Product {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -6058,6 +6600,7 @@ export interface Product {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               hero?: {
@@ -6078,6 +6621,7 @@ export interface Product {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               overview?: {
@@ -6316,6 +6860,7 @@ export interface Product {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               galleryIntro?: {
@@ -6353,6 +6898,7 @@ export interface Product {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               relatedProducts?: {
@@ -6385,6 +6931,7 @@ export interface Product {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               enquiry?: {
@@ -6461,379 +7008,6 @@ export interface Product {
   };
   seoTitle?: string | null;
   seoDescription?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "news".
- */
-export interface News {
-  id: number;
-  _order?: string | null;
-  sourceId?: number | null;
-  title: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
-  name?: string | null;
-  relationships?: {
-    category?: (number | null) | NewsTaxonomy;
-    tags?: (number | NewsTaxonomy)[] | null;
-    previousArticle?: (number | null) | News;
-    nextArticle?: (number | null) | News;
-    relatedArticles?: (number | News)[] | null;
-  };
-  /**
-   * When enabled, the slug will auto-generate from the title field on save and autosave.
-   */
-  generateSlug?: boolean | null;
-  slug: string;
-  layout?:
-    | (
-        | {
-            enabled?: boolean | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            form: number | Form;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'form';
-          }
-        | {
-            enabled?: boolean | null;
-            mediaPosition?: ('original' | 'left' | 'right') | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            media?: (number | null) | Media;
-            poster?: (number | null) | Media;
-            caption?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'hero';
-          }
-        | {
-            enabled?: boolean | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'text';
-          }
-        | {
-            enabled?: boolean | null;
-            mediaPosition?: ('original' | 'left' | 'right') | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            media?: (number | null) | Media;
-            poster?: (number | null) | Media;
-            caption?: string | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'text-media';
-          }
-        | {
-            enabled?: boolean | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            images?:
-              | {
-                  image: number | Media;
-                  caption?: string | null;
-                  alt?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'gallery';
-          }
-        | {
-            enabled?: boolean | null;
-            eyebrow?: string | null;
-            heading?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            actions?:
-              | {
-                  label: string;
-                  href: string;
-                  id?: string | null;
-                }[]
-              | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'call-to-action';
-          }
-        | {
-            enabled?: boolean | null;
-            mediaPosition?: ('original' | 'left' | 'right') | null;
-            data?: {
-              summary?: string | null;
-              hero?: (number | null) | Media;
-              heroAlt?: string | null;
-              heroCaption?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'news-hero';
-          }
-        | {
-            enabled?: boolean | null;
-            mediaPosition?: ('original' | 'left' | 'right') | null;
-            data?: {
-              body?: {
-                root: {
-                  type: string;
-                  children: {
-                    type: any;
-                    version: number;
-                    [k: string]: unknown;
-                  }[];
-                  direction: ('ltr' | 'rtl') | null;
-                  format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                  indent: number;
-                  version: number;
-                };
-                [k: string]: unknown;
-              } | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'news-body';
-          }
-        | {
-            enabled?: boolean | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'news-related';
-          }
-        | {
-            enabled?: boolean | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'news-contact';
-          }
-      )[]
-    | null;
-  page?: {
-    metadata?: {
-      date?: string | null;
-      featured?: boolean | null;
-    };
-  };
-  seoTitle?: string | null;
-  seoDescription?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "news-taxonomies".
- */
-export interface NewsTaxonomy {
-  id: number;
-  sourceId?: number | null;
-  name: string;
-  /**
-   * When enabled, the slug will auto-generate from the title field on save and autosave.
-   */
-  generateSlug?: boolean | null;
-  slug: string;
-  kind: 'category' | 'tag';
-  page?: {
-    sort_order?: number | null;
-    metadata?: {
-      localeTree?: {
-        description?: string | null;
-      };
-    };
-  };
   updatedAt: string;
   createdAt: string;
   _status?: ('draft' | 'published') | null;
@@ -7038,6 +7212,8 @@ export interface Sustainability {
         | {
             enabled?: boolean | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
+            theme?: ('plain' | 'tint' | 'deep') | null;
             eyebrow?: string | null;
             heading?: {
               root: {
@@ -7069,9 +7245,27 @@ export interface Sustainability {
               };
               [k: string]: unknown;
             } | null;
+            rightContent?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             media?: (number | null) | Media;
             poster?: (number | null) | Media;
             caption?: string | null;
+            mediaAlt?: string | null;
+            articles?: (number | News)[] | null;
+            articleLinkLabel?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'text-media';
@@ -7167,6 +7361,7 @@ export interface Sustainability {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               summary?: string | null;
@@ -7182,6 +7377,7 @@ export interface Sustainability {
           }
         | {
             enabled?: boolean | null;
+            columnWidth?: ('original' | '50-50' | '55-45' | '60-40' | '70-30' | '40-60' | '30-70') | null;
             mediaPosition?: ('original' | 'left' | 'right') | null;
             data?: {
               railIntro?: string | null;
@@ -7877,12 +8073,18 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -7926,6 +8128,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -7970,6 +8173,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8003,6 +8207,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8040,6 +8245,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8067,6 +8273,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8094,6 +8301,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8141,6 +8349,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8208,6 +8417,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8265,6 +8475,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8337,6 +8548,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8374,6 +8586,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8391,6 +8604,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8448,6 +8662,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8476,6 +8691,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8505,6 +8721,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8559,6 +8776,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8583,6 +8801,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8600,6 +8819,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8623,6 +8843,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8645,6 +8866,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8674,6 +8896,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8710,6 +8933,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8747,6 +8971,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8799,6 +9024,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8826,6 +9052,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8843,6 +9070,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8857,6 +9085,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8872,6 +9101,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8889,6 +9119,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8902,6 +9133,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8917,6 +9149,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8940,6 +9173,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8962,6 +9196,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -8989,6 +9224,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9001,29 +9237,12 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
-        'careers-news'?:
-          | T
-          | {
-              enabled?: T;
-              mediaPosition?: T;
-              content?:
-                | T
-                | {
-                    articles?: T;
-                    image?: T;
-                    intro?: T;
-                    title?: T;
-                    kicker?: T;
-                    imageAlt?: T;
-                  };
-              id?: T;
-              blockName?: T;
-            };
         'careers-jobs'?:
           | T
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9039,6 +9258,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9054,6 +9274,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9081,6 +9302,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9103,6 +9325,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9125,6 +9348,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9177,6 +9401,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9214,6 +9439,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9306,6 +9532,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9343,6 +9570,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9365,6 +9593,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9392,6 +9621,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9509,6 +9739,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9536,6 +9767,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9638,6 +9870,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9665,6 +9898,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9742,6 +9976,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9764,6 +9999,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9816,6 +10052,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9843,6 +10080,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9870,6 +10108,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9892,6 +10131,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
               content?:
                 | T
                 | {
@@ -9955,6 +10195,7 @@ export interface CategoriesSelect<T extends boolean = true> {
   sourceId?: T;
   title?: T;
   name?: T;
+  appearance?: T;
   generateSlug?: T;
   slug?: T;
   layout?:
@@ -10000,12 +10241,18 @@ export interface CategoriesSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -10048,6 +10295,7 @@ export interface CategoriesSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10079,6 +10327,7 @@ export interface CategoriesSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10126,6 +10375,7 @@ export interface CategoriesSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10161,6 +10411,7 @@ export interface CategoriesSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10293,12 +10544,18 @@ export interface ProductsSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -10341,6 +10598,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10372,6 +10630,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10461,6 +10720,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10491,6 +10751,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10518,6 +10779,7 @@ export interface ProductsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10721,12 +10983,18 @@ export interface NewsSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -10769,11 +11037,14 @@ export interface NewsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
                 | {
                     summary?: T;
+                    cardTitle?: T;
+                    cardSummary?: T;
                     hero?: T;
                     heroAlt?: T;
                     heroCaption?: T;
@@ -10785,11 +11056,13 @@ export interface NewsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
                 | {
                     body?: T;
+                    introStyle?: T;
                   };
               id?: T;
               blockName?: T;
@@ -10798,6 +11071,7 @@ export interface NewsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               id?: T;
               blockName?: T;
             };
@@ -10805,6 +11079,7 @@ export interface NewsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               id?: T;
               blockName?: T;
             };
@@ -10886,12 +11161,18 @@ export interface SustainabilitySelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -10934,6 +11215,7 @@ export interface SustainabilitySelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -10952,6 +11234,7 @@ export interface SustainabilitySelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -11036,12 +11319,18 @@ export interface JobsSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -11084,6 +11373,7 @@ export interface JobsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -11099,6 +11389,7 @@ export interface JobsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -11112,6 +11403,7 @@ export interface JobsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               id?: T;
               blockName?: T;
             };
@@ -11119,6 +11411,7 @@ export interface JobsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               id?: T;
               blockName?: T;
             };
@@ -11195,12 +11488,18 @@ export interface EventsSelect<T extends boolean = true> {
           | {
               enabled?: T;
               mediaPosition?: T;
+              columnWidth?: T;
+              theme?: T;
               eyebrow?: T;
               heading?: T;
               body?: T;
+              rightContent?: T;
               media?: T;
               poster?: T;
               caption?: T;
+              mediaAlt?: T;
+              articles?: T;
+              articleLinkLabel?: T;
               id?: T;
               blockName?: T;
             };
@@ -11243,6 +11542,7 @@ export interface EventsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
@@ -11260,11 +11560,13 @@ export interface EventsSelect<T extends boolean = true> {
           | T
           | {
               enabled?: T;
+              columnWidth?: T;
               mediaPosition?: T;
               data?:
                 | T
                 | {
                     bodyCopy?: T;
+                    introStyle?: T;
                   };
               id?: T;
               blockName?: T;
