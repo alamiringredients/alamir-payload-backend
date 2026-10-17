@@ -5,6 +5,7 @@ import { ValidationError } from 'payload'
 import { authenticated } from '../access'
 import { requiresConsent } from '../services/formPolicy'
 import { bookingHooks } from '../services/meetingBooking'
+import { validateCVUpload } from '../services/cvUpload'
 
 const submissionAccess: CollectionConfig['access'] = {
   create: () => true,
@@ -58,12 +59,12 @@ export const Enquiries: CollectionConfig = {
 }
 
 export const Applications: CollectionConfig = {
-  slug: 'applications', access: submissionAccess,
+  slug: 'applications', access: { ...submissionAccess, create: authenticated },
   admin: { group: 'Careers', useAsTitle: 'name', defaultColumns: ['name', 'job', 'department', 'status', 'createdAt'] },
   hooks:{beforeValidate:[({data,operation,req})=>{
     if(operation==='create' && !req.file && !(data?.cv && (req.user || req.context.submittedForm)))throw new ValidationError({errors:[{path:'cv',message:'A CV is required.'}]})
     return data
-  }]},
+  }], beforeOperation: [validateCVUpload]},
   // Existing CV uploads remain available; Form Builder stores new attachments privately.
   upload: { staticDir: 'private/cv', mimeTypes: ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'], filesRequiredOnCreate: false },
   fields: [

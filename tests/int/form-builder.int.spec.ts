@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest'
-import { createLocalReq, getPayload, type Payload, type PayloadRequest } from 'payload'
+import { createLocalReq, getPayload, handleEndpoints, type Payload, type PayloadRequest } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { randomUUID } from 'node:crypto'
 import config from '../../src/payload.config'
@@ -576,6 +576,27 @@ describe('Owned Payload Form Builder forms', () => {
     expect(enquiry).toMatchObject({category:category.id,product:'Renamed ingredients'})
 
   })
+  it('rejects anonymous applications submitted outside the owning form', async () => {
+    const data = Buffer.from('%PDF-1.4\nxref\n%%EOF')
+    await expect(payload.create({
+      collection: 'applications',
+      overrideAccess: false,
+      context: { disableRevalidate: true },
+      file: { name: `legacy-${randomUUID()}.pdf`, data, mimetype: 'application/pdf', size: data.length },
+      data: { name: 'Applicant', email: 'applicant@example.invalid', locale: 'en', key: randomUUID(), consent: true },
+    })).rejects.toMatchObject({ status: 403 })
+  })
+  it('rejects oversized CVs through the legacy upload API too', async () => {
+    const data = Buffer.alloc(10 * 1024 * 1024 + 1, ' ')
+    data.write('%PDF-1.4\n')
+    data.write('xref\n%%EOF', data.length - 10)
+    await expect(payload.create({
+      collection: 'applications',
+      context: { disableRevalidate: true },
+      file: { name: `oversized-${randomUUID()}.pdf`, data, mimetype: 'application/pdf', size: data.length },
+      data: { name: 'Applicant', email: 'applicant@example.invalid', locale: 'en', key: randomUUID(), consent: true },
+    })).rejects.toMatchObject({ status: 400 })
+  })
   it('stores a private CV and binds the application to its owning job', async () => {
     const job = await payload.create({
       collection: 'jobs',
@@ -619,6 +640,12 @@ describe('Owned Payload Form Builder forms', () => {
     const application = (await payload.find({ collection: 'applications', depth: 0 })).docs[0]
     expect(application.job).toBe(job.id)
     expect(application.cv).toBeDefined()
+    const attachment = await payload.findByID({ collection: 'application-files', id: application.cv as number, depth: 0 })
+    const download = await handleEndpoints({
+      config: payload.config, payloadInstanceCacheKey: schema,
+      request: new Request(attachment.url!),
+    })
+    expect(download.status).toBe(403)
     await expect(
       payload.create({
         collection: 'applications',
@@ -632,7 +659,7 @@ describe('Owned Payload Form Builder forms', () => {
           cv: application.cv,
         },
       }),
-    ).rejects.toMatchObject({ status: 400 })
+    ).rejects.toMatchObject({ status: 403 })
     expect(doc.record).toMatchObject({ relationTo: 'applications' })
     await expect(
       payload.find({ collection: 'application-files', overrideAccess: false }),
