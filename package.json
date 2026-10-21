@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "prebuild": "npm run generate:importmap && npm run generate:types",
-    "build": "cross-env NODE_OPTIONS=\"--no-deprecation\" next build",
+        "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=3072\" next build --webpack && echo 'y' | cross-env NODE_ENV=production node --import dotenv/config node_modules/payload/bin.js migrate",
     "dev": "node --import dotenv/config node_modules/next/dist/bin/next dev",
     "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
